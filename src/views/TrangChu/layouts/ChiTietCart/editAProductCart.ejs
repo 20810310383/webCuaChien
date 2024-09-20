@@ -1,0 +1,223 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>SHOP KHẮC TÚ -- Chỉnh sửa Size và Số lượng đặt</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Favicon -->
+        <link rel="shortcut icon" type="image/x-icon" href="assets\img\logo\khactu-logo.png">
+		
+		<!-- all css here -->
+       <link rel="stylesheet" href="assets\css\bootstrap.min.css">
+        <link rel="stylesheet" href="assets\css\plugin.css">
+        <link rel="stylesheet" href="assets\css\bundle.css">
+        <link rel="stylesheet" href="assets\css\style.css">
+        <link rel="stylesheet" href="assets\css\responsive.css">
+        <script src="assets\js\vendor\modernizr-2.8.3.min.js"></script>
+
+        <!-- Thêm Thư Viện Flash -->
+        <script src="link-to-flash-library.js"></script>
+        <!-- Ví dụ với thư viện sweetalert2 -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <style>
+            #group_2 {
+                width: auto; /* Đặt chiều rộng tự động để các tùy chọn có thể hiển thị trên một hàng */
+                display: flex; /* Sử dụng flexbox để xếp các tùy chọn theo hàng ngang */
+                flex-wrap: wrap; /* Cho phép các tùy chọn chồng lên nhau khi không còn đủ không gian */
+            }
+            #group_2 option {
+                width: auto; /* Đặt chiều rộng tự động cho mỗi tùy chọn */
+                margin: 0 5px; /* Khoảng cách giữa các tùy chọn */
+                padding: 5px; /* Để tùy chọn trông đẹp hơn */
+                background-color: #f0f0f0; /* Màu nền cho các tùy chọn */
+                border: none; /* Loại bỏ đường viền */
+            }
+        </style>
+    </head>
+    <body>
+            <!-- Add your site or application content here -->
+            
+            <!--pos page start-->
+            <div class="pos_page">
+                <div class="container">
+                    <!--pos page inner-->
+                    <div class="pos_page_inner">  
+
+                       <!--header area -->
+                       <div class="header_area">
+                        <!--header top-->                                 
+                         <%- include('../../partials/header_top.ejs') %>
+                         <!--header top end-->
+
+                         <!--header middel--> 
+                         <%- include('../../partials/header_middel.ejs') %>
+                         <!--header middel end-->      
+                     
+                         <!--header bottom--> 
+                         <%- include('../../partials/header_bottom.ejs') %>
+                         <!--header bottom end-->    
+                        </div>
+                        <!--header end -->
+                        
+                         <!--breadcrumbs area start-->
+                        <div class="breadcrumbs_area">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="breadcrumb_content">
+                                        <ul>
+                                            <li><a href="/">home</a></li>
+                                            <li><i class="fa fa-angle-right"></i></li>
+                                            <li style="font-family: Arial, Helvetica, sans-serif;">Chỉnh sửa Size và Số lượng đặt </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--breadcrumbs area end-->
+
+
+                         <!--Chỉnh sửa Size và Số lượng đặt start -->
+                         <div class="shopping_cart_area" style="padding: 35px 100px 0;">
+                            <div class="row">      
+                                <div class="col-12">                        
+                                    <div class="table_desc" >
+                                        <div class="cart_page table-responsive" >
+                                            <div class="scrollable-content" style="max-width: 1020px;overflow-x: auto; overflow-y: auto;">
+                                                <table style="height: 500px;">
+                                                    <thead>
+                                                        <tr>
+                                                            <th style="font-family: Arial, Helvetica, sans-serif;">Options</th>
+                                                            <th style="font-family: Arial, Helvetica, sans-serif; width: 200px;">Hình Ảnh</th>
+                                                            <th class="product_name" style="font-family: Arial, Helvetica, sans-serif;">Sản Phẩm</th>
+                                                            <th class="product-price" style="font-family: Arial, Helvetica, sans-serif;">Giá Bán</th>
+                                                            <th style="font-family: Arial, Helvetica, sans-serif; width: 100px;">Size</th>
+                                                            <th style="font-family: Arial, Helvetica, sans-serif; width: 120px;">Số Lượng</th>
+                                                            <th style="font-family: Arial, Helvetica, sans-serif; width: 120px;">Tổng Tiền</th>
+                                                        </tr>
+                                                    </thead> 
+                                                    <tbody > 
+                                                        <form >
+                                                            <tr>
+                                                                <td class="product_total">  
+                                                                    <a  style="cursor: pointer;font-size: 18px;color: white;"                                              
+                                                                        class="btn btn-primary" 
+                                                                        onclick="updateCart('<%= spEdit._id %>')"
+                                                                    >Update</a>                                                               
+                                                                    <br> <br>        
+                                                                    <input type="hidden" name="idupdateCart" value="<%= spEdit._id %>">                                          
+                                                                    <a href="#" style="cursor: pointer;font-size: 18px;" class="btn btn-success" onclick="history.go(-1);" >Back</a>
+                                                                </td>
+                                                                <td class="product_thumb">
+                                                                    <a href="#">
+                                                                        <img src="images/upload/<%= getRelativeImagePath(spEdit.productId.Image) %>" alt="">
+                                                                    </a>
+                                                                </td>
+                                                                <td class="product_name" ><a style="font-family: Arial, Helvetica, sans-serif; font-size: 18px;"><%= spEdit.productId.TenSP %></a></td>
+                                                                <td class="product-price">
+                                                                    <!-- <%= formatCurrency(spEdit.productId.GiaBan) %> -->
+
+                                                                    <!--  thẻ này chỉ là để ấy giá trị giá xuống js xử lý -->
+                                                                    <input type="hidden" value="<%= (spEdit.productId.GiaBan) %>" id="PriceBanConvert">
+
+                                                                    <!-- còn đây là để truyền sang bên controller để lấy được 2 giá trị giá mới -->
+                                                                    <input type="hidden" name="PriceBanMoi" value="<%= (spEdit.donGia) %>" >
+
+                                                                    <!-- hiển thị giá mới lên giao diện trang chủ -->
+                                                                    <input type="hidden" value="<%= (spEdit.donGia) %>" id="PriceBanConvertHT">
+                                                                    <span id="PriceBanMoi" ><%= formatCurrency(spEdit.donGia) %></span>
+                                                                </td>
+                                                                <td class="product_name" >                                                                      
+                                                                    <select name="size" id="group_2" onchange="changePrice()">
+                                                                        <option style="font-weight: bold; color: navy;" selected value="<%= spEdit.size %>"><%= spEdit.size %></option>
+                                                                        <% if(spEdit.size !== "100ml") { %> <option value="100ml">100ml</option> <% } %>
+                                                                        <% if(spEdit.size !== "200ml") { %> <option value="200ml">200ml</option> <% } %>
+                                                                        <% if(spEdit.size !== "300ml") { %> <option value="300ml">300ml</option> <% } %>
+                                                                        <% if(spEdit.size !== "400ml") { %> <option value="400ml">400ml</option> <% } %>                                                                                                                                        
+                                                                    </select>                                                                                                                                   
+                                                                </td>                                                            
+                                                                <td class="product_total">
+                                                                    <input onchange="changePrice()" id="quantity" type="number" name="quantity"  value="<%= spEdit.qty %>" style="text-align: center; font-size: 18px;">
+                                                                </td>
+                                                                <td class="product-price">
+                                                                    <!-- thẻ này chỉ là để ấy giá trị 2 giá xuống js xử lý -->
+                                                                    <!-- <input type="hidden" name="" value="<%= (spEdit.qty * spEdit.donGia) %>"> -->
+
+                                                                    <span id="PriceTongTien" ><%= formatCurrency(spEdit.qty * spEdit.donGia) %></span>
+                                                                </td>
+                                                            </tr>    
+                                                        </form>    
+                                                        <script>                                                         
+
+                                                            function changePrice(){
+                                                                var selectedSize = document.getElementById("group_2").value;
+                                                                var giaBan = document.getElementById("PriceBanConvert").value
+                                                                var SL = document.getElementsByName("quantity")[0].value
+
+                                                                console.log("giaban:", giaBan);
+                                                                console.log("selectedSize:", selectedSize);
+                                                                var newGiaBanMoi;
+                                                                var tongtien;
+                                                                switch(selectedSize) {
+                                                                    case "100ml": 
+                                                                        newGiaBanMoi = giaBan * 1;
+                                                                        tongtien = SL * newGiaBanMoi;
+                                                                        break;
+                                                                    case "200ml": 
+                                                                        newGiaBanMoi = giaBan * 1.2;
+                                                                        tongtien = SL * newGiaBanMoi;
+                                                                        break;
+                                                                    case "300ml": 
+                                                                        newGiaBanMoi = giaBan * 1.4;
+                                                                        tongtien = SL * newGiaBanMoi;
+                                                                        break;
+                                                                    case "400ml": 
+                                                                        newGiaBanMoi = giaBan * 1.6;
+                                                                        tongtien = SL * newGiaBanMoi;
+                                                                        break;
+                                                                    default: 
+                                                                        newGiaBanMoi = giaBan;
+                                                                        tongtien = SL * newGiaBanMoi;
+                                                                        break;
+                                                                }
+                                                                document.getElementsByName("PriceBanMoi")[0].value = parseInt(newGiaBanMoi);
+                                                                document.getElementById("PriceBanMoi").innerHTML = formatCurrency(parseInt(newGiaBanMoi));
+
+                                                                document.getElementById("PriceTongTien").innerHTML = formatCurrency(parseInt(tongtien));
+                                                            }
+                                                        </script>                      
+                                                    </tbody>
+                                                </table>  
+                                            </div>  
+                                        </div>
+                                    </div>
+                                </div>  
+                            </div>
+                        </div>
+                         <!--Chỉnh sửa Size và Số lượng đặt end -->
+
+                        
+                    </div>
+                    <!--pos page inner end-->
+                </div>
+            </div>
+            <!--pos page end-->
+            
+            <!--footer area start-->
+            <%- include('../../partials/footer.ejs') %>            
+            <!--footer area end-->
+		<!-- all js here -->
+        <script src="assets\js\vendor\jquery-1.12.0.min.js"></script>
+        <script src="assets\js\popper.js"></script>
+        <script src="assets\js\bootstrap.min.js"></script>
+        <script src="assets\js\ajax-mail.js"></script>
+        <script src="assets\js\plugins.js"></script>
+        <script src="assets\js\main.js"></script>
+        <script src="assets\js\hamDinhDangTien_VaLinkAnh.js"></script>
+        <script src="assets\js\xuLyNutSaveMotSanPhamTrongGioHang.js"></script>
+
+        
+    </body>
+</html>

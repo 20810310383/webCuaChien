@@ -1,0 +1,218 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Đăng Nhập - Đăng Ký Tài Khoản Khách Hàng</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Favicon -->
+        <link rel="shortcut icon" type="image/x-icon" href="assets\img\logo\khactu-logo.png">
+		
+		<!-- all css here -->
+       <link rel="stylesheet" href="assets\css\bootstrap.min.css">
+        <link rel="stylesheet" href="assets\css\plugin.css">
+        <link rel="stylesheet" href="assets\css\bundle.css">
+        <link rel="stylesheet" href="assets\css\style.css">
+        <link rel="stylesheet" href="assets\css\responsive.css">
+        <script src="assets\js\vendor\modernizr-2.8.3.min.js"></script>
+
+        <!-- Ví dụ với thư viện sweetalert2 -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+        <link rel="stylesheet" href="AdminQL/HomeAdminQL/thuVienToastr/toastr.min.css">
+
+        <style>
+            .toast {
+                font-size: 18px;
+                width: 200px;
+            }
+        </style>
+    </head>
+    <body>
+            <!-- Add your site or application content here -->
+            
+            <!--pos page start-->
+            <div class="pos_page">
+                <div class="container"> 
+                    <!--pos page inner-->
+                    <div class="pos_page_inner">  
+                       <!--header area -->
+                        <div class="header_area">
+
+                            <!--header top-->                                 
+                            <%- include('../TrangChu/partials/header_top.ejs') %>
+                            <!--header top end-->
+
+                            <!--header middel--> 
+                            <%- include('../TrangChu/partials/header_middel.ejs') %>
+                            <!--header middel end-->      
+                        
+                            <!--header bottom--> 
+                            <%- include('../TrangChu/partials/header_bottom.ejs') %>
+                            <!--header bottom end-->  
+
+                        </div>
+                        <!--header end -->
+                         <!--breadcrumbs area start-->
+                        <div class="breadcrumbs_area">
+                            <div class="row">
+                                    <div class="col-12">
+                                        <div class="breadcrumb_content">
+                                            <ul>
+                                                <li><a href="/">home</a></li>
+                                                <li><i class="fa fa-angle-right"></i></li>
+                                                <li>login</li>
+                                            </ul>
+
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                        <!--breadcrumbs area end-->
+
+                         <!-- Thêm loader.svg vào trang HTML -->
+                         <div id="loader" class="loader">
+                            <img id="loader_page_img" src="assets/css/loader.svg" alt="Loader">
+                        </div>
+
+                       <!-- customer login start -->
+                        <div class="customer_login">
+                            <div class="row">
+                                       <!--login area start-->
+                                        <div class="col-lg-6 col-md-6">
+                                            <div class="account_form">
+                                                <h2>login</h2>
+                                                <form action="/dang-nhap-tkkh" method="post" id="login-form">
+                                                    <p>   
+                                                        <label for="username_email">Username or email <span style="color: red;">*</span></label>
+                                                        <input required id="username_email" type="email" name="username_email">
+                                                     </p>
+                                                     <p>   
+                                                        <label for="passLogin">Passwords <span style="color: red;">*</span></label>
+                                                        <input required id="passLogin" type="password" name="passLogin">
+                                                     </p>   
+                                                    <div class="login_submit">
+                                                        <button type="submit">login</button>
+                                                        <label for="remember">
+                                                            <input id="remember" type="checkbox">
+                                                            Remember me
+                                                        </label>
+                                                        <a href="#" style="font-size: 18px;" data-toggle="modal" data-target="#exampleModalCenter">Bấm vào đây để lấy lại mật khẩu?</a>
+                                                    </div>
+                                                    <span id="statusMessageLogin" style="color: blue; font-size: 18px; position: relative; top: 5px;"></span>                                                    
+
+                                                </form>
+
+                                                <!-- Modal -->
+                                                <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="exampleModalLongTitle" style="color: red; font-family: Arial, Helvetica, sans-serif;">Nhập Email đăng nhập của bạn để lấy lại mật khẩu?</h5>
+                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <form id="doi-mk" method="post" action="/quen-mat-khau">
+                                                            <div class="modal-body">
+                                                                <!-- <form> -->
+                                                                    <div class="form-group">
+                                                                    <label for="recipient-name" class="col-form-label">Email của bạn:</label>
+                                                                    <input name="email_doimk" type="text" class="form-control" id="recipient-name" placeholder="Nhập email của bạn...">
+                                                                        <span></span>
+                                                                    </div>
+                                                                    
+                                                                <!-- </form> -->
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button style="border-radius: 5px; cursor: pointer;" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                                <button style="border-radius: 5px; cursor: pointer;" type="submit" class="btn btn-primary">Lấy lại mật khẩu</button>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                    </div>
+                                                </div>
+
+                                             </div>     
+                                        </div>
+                                        <!--login area start-->
+
+                                        <!--register area start-->
+                                        <div class="col-lg-6 col-md-6">
+                                            <div class="account_form register">
+                                                <h2>Register</h2>
+                                                <form action="/dang-ky-tkkh" method="post" id="register-form">
+                                                    <p>   
+                                                        <label for="emaildk">Email address  <span style="color: red;">*</span></label>
+                                                        <input required id="emaildk" type="email" name="emaildk">
+                                                     </p>
+                                                     <p>   
+                                                        <label for="name">Name  <span style="color: red;">*</span></label>
+                                                        <input required id="name" type="text" name="name">
+                                                     </p>
+                                                     <p>   
+                                                        <label for="passdk">Passwords <span style="color: red;">*</span></label>
+                                                        <input required id="passdk" type="password" name="passdk">
+                                                     </p>
+                                                    <div class="login_submit">
+                                                        <button type="submit" style="border: none;">Register</button>                                                      
+                                                        <span id="statusMessage" style="color: blue; font-size: 18px;"></span>
+                                                    </div>
+                                                </form>
+                                            </div>    
+                                        </div>                                       
+                                        <!--register area end-->                                       
+                                        
+                            </div>
+                        </div>
+                        <!-- customer login end -->
+
+                    </div>
+                    <!--pos page inner end-->
+                </div> 
+            </div>
+            <!--pos page end-->
+            
+            <!--footer area start-->
+            <%- include('../TrangChu/partials/footer.ejs') %>
+            <!--footer area end-->
+            
+            
+            
+            
+      
+		
+		<!-- all js here -->
+        <script src="assets\js\vendor\jquery-1.12.0.min.js"></script>
+        <script src="assets\js\popper.js"></script>
+        <script src="assets\js\bootstrap.min.js"></script>
+        <script src="assets\js\ajax-mail.js"></script>
+        <script src="assets\js\plugins.js"></script>
+        <script src="assets\js\main.js"></script>
+
+        <script src="assets\js\dangnhap_dangky_tkkh.js"></script>
+        <script src="AdminQL/HomeAdminQL/thuVienToastr/toastr.min.js"></script>
+       
+        <!-- xu ly loader page -->
+        <!-- <script src="assets\js\loader_dathang.js"></script> -->
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                var formmm = document.getElementById("doi-mk");
+                var loader = document.getElementById("loader");
+
+                formmm.addEventListener("submit", function (event) {
+                    event.preventDefault();
+
+                    loader.style.display = "flex";
+
+                    setTimeout(function () {
+                        loader.style.display = "none";
+                    }, 3000);
+                });
+            });
+        </script>
+
+    </body>
+</html>

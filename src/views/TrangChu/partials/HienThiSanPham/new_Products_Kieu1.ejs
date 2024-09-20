@@ -1,0 +1,148 @@
+<% if (logIn) { %>                 
+                  
+    <% } else { %>
+    <div 
+        style="background-color: rgb(249 232 232); 
+                border: 1px solid #ff0000;
+                margin: 0 auto;
+                border-radius: 5px;
+                font-weight: bold;
+                /* display: none; */
+                text-align: center;
+                padding: 10px 5px 0 5px;                                                                    
+                justify-content: center;                                                                   
+        "                     
+    >
+    <marquee onmouseover="this.stop()" onmouseout="this.start()" scrollamount="7">
+        <p style="color: red; font-size: 20px;">Vui lòng Login trước khi thêm sản phẩm vào giỏ hàng</p>
+    </marquee>
+        
+    </div> 
+    <% } %>
+</br>
+<!-- kiểu 1 -- có 3 sản phẩm 1 dòng -->
+<div class="new_product_area">
+    <div class="block_title">
+        <h3 style="font-family: Verdana, Geneva, Tahoma, sans-serif; color: navy;">Sản Phẩm Mới</h3>
+    </div>
+    <div class="row">
+        <% if (spNew && spNew.length > 0) { %>
+        <div class="product_active owl-carousel">
+                <% spNew.forEach(function(spNew, index) { %>
+            <div class="col-lg-3">
+                
+                    <div class="single_product">
+                        <form id="form-addtocart-new" action="/addtocart?productId=<%= spNew._id %>" method="POST">
+                            <div class="product_thumb">
+                            <a href="/detailt-sp-ht1?idDetailtSP=<%= spNew._id %>"><img height="336.50px" src="images/upload/<%= getRelativeImagePath(spNew.Image) %>" alt=""></a> 
+                            <% if (spNew.New_Hot === "New") { %>
+                                <div class="img_icone">
+                                    <img src="assets\img\cart\span-new.png" alt="">
+                                </div>
+                                <% } else { %> 
+                                <div class="hot_img">
+                                    <img src="assets\img\cart\span-hot.png" alt="">
+                                </div>
+                                <% } %> 
+                                <div class="product_action">
+                                    <!-- <a href="#"> <i class="fa fa-shopping-cart"></i> Add to cart</a> -->
+                                    <!-- <input type="submit" value="Add to cart" style="cursor: pointer;"> -->
+                                    <button type="submit" style="cursor: pointer;" class="btn-addtocart">
+                                        <i class="fa fa-shopping-cart"></i> Add to cart
+                                    </button>
+                                    
+                                    <!-- <a href="#"> <i class="fa fa-eye"></i> &ensp; View Detail</a> -->
+                                    <input value="1" type="hidden" name="quantity" data-product-id="<%= spNew._id %>">
+                                    <input value="100ml" type="hidden" name="size" >
+                                    <input value="<%= spNew.GiaBan %>" type="hidden" name="PriceBanMoi" >
+                                    <input value="<%= spNew.SoLuongTon %>" type="hidden" name="SoLuongTon" >
+                                </div>
+                            </div>
+                            <div class="product_content">
+                                <span class="product_price" style="color: red;"><%= formatCurrency(spNew.GiaBan) %></span>
+                                <h3 class="product_title"><a style="font-size: 18px ;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif" href="/detailt-sp-ht1?idDetailtSP=<%= spNew._id %>"><%= spNew.TenSP %></a></h3>
+                            </div>
+                        </form>
+                            <div class="product_info">
+                                <ul>
+                                    <li><a href="#" title=" Add to Wishlist ">Add to Wishlist</a></li>
+                                    <input type="hidden" name="idDetailtSPP" value="<%= spNew._id %>">
+                                    <li><a id="viewDetailt" href="#" data-product-id="<%= spNew._id %>"  data-toggle="modal" data-target="#modal_box" title="Quick view" >View Detail</a></li>                                                                                
+                                    <!-- <li><a id="viewDetailt" href="#"  title="Quick view" >View Detail</a></li>                                                                                 -->                                    
+                                </ul>
+                            </div>                                                                              
+                    </div>
+            </div>
+                <% }); %> 
+            </div> 
+            <% } else { %> 
+                <p>Admin chưa update sản phẩm</p>
+            <% } %>            
+    </div>       
+</div> 
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var viewDetailLinks = document.querySelectorAll('#viewDetailt');
+        viewDetailLinks.forEach(function(link) {
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+                var productId = link.dataset.productId;
+                fetch('/detailt-sp', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ idDetailtSPP: productId })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    // Lấy dữ liệu từ API
+                    const product = data.productDetails;
+                    console.log("pro: ", product);
+
+                    // Cập nhật nội dung các phần tử modal với dữ liệu sản phẩm
+                    document.getElementById('anh1').src = product.Image;
+                    document.getElementById('anh1_1').src = product.Image;
+                    document.getElementById('anh2').src = product.Image1;
+                    document.getElementById('anh1_2').src = product.Image1;
+                    document.getElementById('anh3').src = product.Image2;
+                    document.getElementById('anh1_3').src = product.Image2;
+                    document.getElementById('productName').innerHTML = product.TenSP;
+
+                    // Lấy giá trị sản phẩm từ dữ liệu nhận được từ API
+                    const productPrice = product.GiaBan;
+                    // Lấy thẻ input bằng id
+                    const priceBanConvertInput = document.getElementById('PriceBanConvert');
+                    // Đặt giá trị của input là giá trị sản phẩm
+                    priceBanConvertInput.value = productPrice;
+                    document.getElementById('PriceBanMoi').innerHTML = formatCurrency(productPrice);
+                    document.getElementsByName('PriceBanMoi')[0].value = (productPrice);
+
+                    const productPriceCu = product.GiaCu;
+                    const priceCuConvertInput = document.getElementById('PriceCuConvert');
+                    priceCuConvertInput.value = productPriceCu;
+                    document.getElementById('PriceCuMoi').innerHTML = formatCurrency(productPriceCu);
+                    document.getElementsByName('PriceCuMoi')[0].value = (productPriceCu);
+
+                    document.getElementById("idVaoDay").value = product._id
+                    document.getElementById("SoLuongTon").value = product.SoLuongTon
+                    document.getElementById("SoLuongBan").value = product.SoLuongBan
+                    document.getElementById("slBan").textContent = product.SoLuongBan
+
+                    document.getElementById('productDescription').innerHTML = (product.MoTa);
+                })
+                .catch(error => console.error('Error:', error));
+            });
+        });
+    });
+
+    // Đoạn mã JavaScript để chuyển đổi HTML thành văn bản
+    function convertHtml(html) {
+        const $ = cheerio.load(html);
+        return $('body').text();
+    }
+</script>
+
+
+

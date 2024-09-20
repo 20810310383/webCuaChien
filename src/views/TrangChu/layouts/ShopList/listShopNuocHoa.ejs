@@ -1,0 +1,335 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Shop Nước Hoa Khắc Tú</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Favicon -->
+        <link rel="shortcut icon" type="image/x-icon" href="assets\img\logo\khactu-logo.png">
+		
+		<!-- all css here -->
+       <link rel="stylesheet" href="assets\css\bootstrap.min.css">
+        <link rel="stylesheet" href="assets\css\plugin.css">
+        <link rel="stylesheet" href="assets\css\bundle.css">
+        <link rel="stylesheet" href="assets\css\style.css">
+        <link rel="stylesheet" href="assets\css\responsive.css">
+        <script src="assets\js\vendor\modernizr-2.8.3.min.js"></script>
+
+        <!-- Thêm Thư Viện Flash -->
+        <script src="link-to-flash-library.js"></script>
+        <!-- Ví dụ với thư viện sweetalert2 -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+        <link rel="stylesheet" href="AdminQL/HomeAdminQL/thuVienToastr/toastr.min.css">
+
+        <style>
+            .toast {
+                font-size: 18px;
+            }
+        </style>
+    </head>
+    <body>
+            <!-- Add your site or application content here -->
+            
+            <!--pos page start-->
+            <div class="pos_page">
+                <div class="container">
+                   <!--pos page inner-->
+                    <div class="pos_page_inner">  
+                       <!--header area -->
+                       <div class="header_area">
+                        <!--header top-->                                 
+                         <%- include('../../partials/header_top.ejs') %>
+                         <!--header top end-->
+
+                         <!--header middel--> 
+                         <%- include('../../partials/header_middel.ejs') %>
+                         <!--header middel end-->      
+                     
+                         <!--header bottom--> 
+                         <%- include('../../partials/header_bottom.ejs') %>
+                         <!--header bottom end-->    
+                        </div>
+                        <!--header end -->
+                        <!--breadcrumbs area start-->
+                        <div class="breadcrumbs_area">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="breadcrumb_content">
+                                        <ul>
+                                            <li><a href="/">home</a></li>
+                                            <li><i class="fa fa-angle-right"></i></li>
+                                            <li>shop Nước Hoa</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--breadcrumbs area end-->
+
+                        <!--pos home section-->
+                        <div class=" pos_home_section">
+                            <div class="row">
+                                    <div class="col-lg-9 col-md-12">
+                                        <!--banner slider start-->
+                                        <div class="banner_slider mb-35">
+                                            <img src="assets\img\slider\nuochoa3.jpg" alt="">
+                                        </div> 
+                                        <!--banner slider start-->
+                                        <% if (logIn) { %>                 
+                  
+                                            <% } else { %>
+                                            <div 
+                                                style="background-color: rgb(249 232 232); 
+                                                        border: 1px solid #ff0000;
+                                                        margin: 0 auto;
+                                                        border-radius: 5px;
+                                                        font-weight: bold;
+                                                        /* display: none; */
+                                                        text-align: center;
+                                                        padding: 10px 5px 0 5px;                                                                    
+                                                        justify-content: center;                                                                   
+                                                "                     
+                                            >
+                                            <marquee onmouseover="this.stop()" onmouseout="this.start()" scrollamount="7">
+                                                <p style="color: red; font-size: 20px;">Vui lòng Login trước khi thêm sản phẩm vào giỏ hàng</p>
+                                            </marquee>
+                                                
+                                            </div> 
+                                            <% } %>
+                                        </br>
+                                        <!--shop toolbar start-->
+                                        <div class="shop_toolbar mb-35">
+                                            <div class="list_button">
+                                                <ul class="nav" role="tablist">
+                                                    <li>
+                                                        <a class="active" data-toggle="tab" href="#large" role="tab" aria-controls="large" aria-selected="true"><i class="fa fa-th-large"></i></a>
+                                                    </li>
+                                                    <li>
+                                                        <a  data-toggle="tab" href="#list" role="tab" aria-controls="list" aria-selected="false"><i class="fa fa-th-list"></i></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <!-- <div class="page_amount">
+                                                <p>Showing 1–9 of 21 results</p>
+                                            </div> -->
+                                            
+                                            <%- include("../../partials/phanLoaiNH_ChiTiet.ejs") %>
+                                            
+                                        </div>
+                                        <!--shop toolbar end-->
+
+                                        <!--shop tab product-->
+                                        <div class="shop_tab_product">   
+                                            <div class="tab-content" id="myTabContent">
+                                                <%- include('../../layouts/ShopList/viewPartials_NuocHoa/shop_trai.ejs') %>
+
+                                                <%- include('../../layouts/ShopList/viewPartials_NuocHoa/shop_phai.ejs') %>                                                                                                
+                                            </div>
+                                        </div>    
+                                        <!--shop tab product end-->
+
+                                        <!--pagination style start phan trang 123--> 
+                                        <%- include('../../layouts/ShopList/viewPartials_NuocHoa/phan_trang_pagination.ejs') %>       
+                                        <!--pagination style phan trang 123 end--> 
+                                    </div>
+
+                                    <!-- thanh ben phai -->
+                                    <div class="col-lg-3 col-md-12">
+                                       <!--layere categorie"-->
+                                          <div class="sidebar_widget shop_c">
+                                            <div class="categorie__titile">
+                                                <h4 style="font-family: Arial, Helvetica, sans-serif;">Loại sản phẩm</h4>
+                                            </div>
+                                            <div class="layere_categorie">
+                                                <ul>
+                                                    <li>
+                                                        <a href="/shop-list-ht1?idPL=">
+                                                            <label for="acces">
+                                                                <input type="hidden" name="idPL" value="">
+                                                                <span style="font-size: 16px;">Tất cả</span>                                                                    
+                                                            </label>
+                                                        </a>                                                            
+                                                    </li>
+                                                    <% tongSL.forEach(function(tongSL) { %>                                                           
+                                                    <li>
+                                                        <a href="/shop-list-ht1?idPL=<%= tongSL.IDLoaiSP %>">
+                                                            <label for="acces">
+                                                                <input type="hidden" name="idPL" value="<%= tongSL.IDLoaiSP %>">
+                                                                <span style="font-size: 16px;"><%= tongSL.TenLoaiSP %></span>
+                                                                <span style="font-size: 16px;">(<%= tongSL.soLuongSanPham %>)</span>
+                                                            </label>
+                                                        </a>                                                            
+                                                    </li>                                                        
+                                                    <% }); %>                                                                                                     
+                                                </ul>
+                                            </div>
+                                            </div>
+                                        <!--layere categorie end-->
+                                        
+
+                                       <!--price slider start-->                                     
+                                       <div class="sidebar_widget price">
+                                            <h2 style="font-family: Arial, Helvetica, sans-serif;">Lọc theo giá</h2>
+                                            <div class="ca_search_filters">
+                                                <form action="/shop-list-ht1" method="get" id="searchForm">
+                                                    <input title="Click vào đây để tìm sản phẩm" style="font-size: 17px;" type="text" name="price" id="amount" readonly value="<%= cleanedString %>"> 
+                                                    <input type="hidden" value="<%= cleanedString %>"> 
+                                                    <div title="Click vào đây để tìm sản phẩm" id="slider-range"></div> 
+                                                    <button type="submit" id="submitButton" style="display: none;"></button>
+                                                </form>
+                                            </div>
+                                        </div>                                                       
+                                        <!--price slider end-->
+
+                                        <script>                                           
+                                            // Lắng nghe sự kiện nhấn phím trên trường input
+                                            document.getElementById("amount").addEventListener("dblclick", function(event) {
+                                                // Nếu phím nhấn là phím Enter
+                                                // if (event.keyCode === 13) {
+                                                //     // Ngăn chặn hành động mặc định của phím Enter
+                                                //     event.preventDefault();
+                                                //     // Kích hoạt sự kiện click trên nút gửi
+                                                    
+                                                // };
+                                                document.getElementById("submitButton").click();
+                                            });
+
+                                            
+                                            // Lưu trạng thái của thông báo vào sessionStorage khi click vào nút gửi
+                                            document.getElementById("submitButton").addEventListener("click", function() {
+                                                // Lấy giá trị của input hidden
+                                                const cleanedString = document.querySelector('input[type="hidden"]').value;
+                                                // Lưu thông báo vào sessionStorage
+                                                sessionStorage.setItem('toastrStatus', 'visible');
+                                            });
+
+                                            // Kiểm tra trạng thái của thông báo trong sessionStorage khi trang được load lại
+                                            window.onload = function() {
+                                                if (sessionStorage.getItem('toastrStatus') === 'visible') {
+                                                    // Hiển thị lại thông báo
+                                                    toastr.options = {
+                                                        "closeButton": true,
+                                                        "debug": false,
+                                                        "newestOnTop": true,
+                                                        "progressBar": true,
+                                                        "positionClass": "toast-top-right",
+                                                        "preventDuplicates": false,
+                                                        "onclick": null,
+                                                        "showDuration": "300",
+                                                        "hideDuration": "1000",
+                                                        "timeOut": "10000",
+                                                        "extendedTimeOut": "1000",
+                                                        "showEasing": "swing",
+                                                        "hideEasing": "linear",
+                                                        "showMethod": "fadeIn",
+                                                        "hideMethod": "fadeOut"
+                                                    };
+                                                    toastr["success"]("Đã tìm thấy sản phẩm", "Thành Công!");
+                                                    // Xóa trạng thái của thông báo sau khi hiển thị
+                                                    sessionStorage.removeItem('toastrStatus');
+                                                }
+                                            }
+                                        </script>
+
+                                        <!--popular tags area-->
+                                        <div class="sidebar_widget tags  mb-30">
+                                            <div class="block_title">
+                                                <h3 style="font-family: Arial, Helvetica, sans-serif;">thẻ danh mục</h3>
+                                            </div>
+                                            <div class="block_tags">
+                                                <% tongSL.forEach(function(tongSL) { %> 
+                                                <input type="hidden" name="idPL" value="<%= tongSL.IDLoaiSP %>">
+                                                <a href="/shop-list-ht1?idPL=<%= tongSL.IDLoaiSP %>"><%= tongSL.TenLoaiSP %></a>
+                                                <% }); %> 
+                                            </div>
+                                        </div>
+                                        <!--popular tags end-->
+
+                                        <!--newsletter block start-->
+                                        <div class="sidebar_widget newsletter mb-30">
+                                            <div class="block_title">
+                                                <h3>newsletter</h3>
+                                            </div> 
+                                            <form action="#">
+                                                <p>Sign up for your newsletter</p>
+                                                <input placeholder="Your email address" type="text">
+                                                <button type="submit">Subscribe</button>
+                                            </form>   
+                                        </div>
+                                        <!--newsletter block end--> 
+
+                                        <!--special product start-->
+                                        <div class="sidebar_widget special">
+                                            <div class="block_title">
+                                                <h3 style="font-family: Arial, Helvetica, sans-serif;">Sản phẩm bán chạy</h3>
+                                            </div>
+                                            <% spBanChay.forEach(function(spBanChay) { %> 
+                                            <div class="special_product_inner mb-20">
+                                                <div class="special_p_thumb">
+                                                    <a href="/detailt-sp-ht1?idDetailtSP=<%= spBanChay._id %>"><img width="120" height="110" src="images/upload/<%= getRelativeImagePath(spBanChay.Image) %>" alt=""></a>
+                                                </div>
+                                                <div class="small_p_desc">
+                                                    <div class="product_ratting">
+                                                       <ul>
+                                                           <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                           <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                           <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                           <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                           <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                       </ul>
+                                                   </div>
+                                                    <h3><a href="/detailt-sp-ht1?idDetailtSP=<%= spBanChay._id %>"><%= spBanChay.TenSP %></a></h3>
+                                                    <div class="special_product_proce">
+                                                        <span class="old_price"><%= formatCurrency(spBanChay.GiaCu) %></span>
+                                                        <span class="new_price"><%= formatCurrency(spBanChay.GiaBan) %></span>
+                                                    </div>
+                                                    <p style="position: relative; left: -50px;">Số lượng bán: <%= spBanChay.SoLuongBan %></p>
+                                                </div>
+                                            </div>   
+                                            <% }); %>                                          
+                                        </div>
+                                        <!--special product end-->
+
+
+                                    </div>
+                                    <!-- thanh ben phai end -->
+                                </div>  
+                        </div>
+                        <!--pos home section end-->
+                    </div>
+                    <!--pos page inner end-->
+                </div>        
+            </div>
+            <!--pos page end-->
+            
+            <!--footer area start-->
+           <%- include('../../partials/footer.ejs') %>
+            <!--footer area end-->
+            
+            
+             <!-- modal area start --> 
+             <%- include('../../partials/HienThiSanPham/viewDetailt_Kieu1.ejs') %>
+           
+            
+          <!-- modal area end --> 
+            
+      
+		
+		<!-- all js here -->
+        <script src="assets\js\vendor\jquery-1.12.0.min.js"></script>
+        <script src="assets\js\popper.js"></script>
+        <script src="assets\js\bootstrap.min.js"></script>
+        <script src="assets\js\ajax-mail.js"></script>
+        <script src="assets\js\plugins.js"></script>
+        <script src="assets\js\main.js"></script>
+        <script src="assets\js\hamDinhDangTien_VaLinkAnh.js"></script>
+        <script src="assets\js\thongBaoAddToCart_NgoaiHome.js"></script>
+
+        <script src="AdminQL/HomeAdminQL/thuVienToastr/toastr.min.js"></script>
+
+    </body>
+</html>

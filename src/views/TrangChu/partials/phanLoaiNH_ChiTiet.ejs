@@ -1,0 +1,85 @@
+<div class="select_option">
+    <form action="/search-nuoc-hoa" method="get">       
+        <ul class="nav" role="tablist">
+            <li>
+                <select name="giaSP" id="short">
+                    <option selected value="10-50">____  Chọn theo giá  ____</option>
+                    <option value="50-500"> Nhỏ hơn 500k</option>
+                    <option value="500-1900">500k đến 1M9</option>
+                    <option value="2000-4500">2M đến 4M5</option>
+                    <option value="5000-10000">5M đến 10M</option>
+                    <option value="10000-99999">Trên 10M</option>                                                                            
+                </select>
+            </li>
+            <li>
+                <select name="tenloaiNH" id="short1">
+                    <option selected value="">____  Chọn theo loại  ____</option>                    
+                    <% loaiSPNamNu.forEach(function(loaiSPNamNu) { %> 
+                    <option value="<%= loaiSPNamNu._id %>">Nước hoa <%= loaiSPNamNu.TenLoaiNamNu %></option>
+                    <% }); %>                                                                      
+                </select>
+            </li>
+            <li><button style="margin-left: 10px;cursor: pointer;border-radius: 5px;" type="submit" class="btn btn-primary">Xem Sản Phẩm</button></li>
+        </ul>
+    </form>
+</div>
+
+
+
+<div class="page_amount">
+    <ul class="nav" role="tablist">
+        <li>
+            <select name="SapXepTheoGia" id="SapXepTheoGia" onchange="handleChange(this)">
+                <optgroup label="Sắp xếp">
+                    <% if(ss === 1) { %>
+                        <option value="1" selected>Tăng dần theo giá</option>
+                        <option value="0">Không sắp xếp</option>
+                        <option value="-1">Giảm dần theo giá</option>
+                        <% } else if(ss === -1) { %>
+                            <option value="-1" selected>Giảm dần theo giá</option>
+                            <option value="0">Không sắp xếp</option>
+                            <option value="1">Tăng dần theo giá</option>
+                            <%  } else { %>
+                                <option value="0" selected>Không sắp xếp</option>
+                                <option value="-1" >Giảm dần theo giá</option>
+                                <option value="1">Tăng dần theo giá</option>
+                                <% } %>                    
+                </optgroup>                                                         
+            </select>
+        </li>
+    </ul>
+</div> 
+
+<script>
+    function handleChange(selectElement) {
+        const selectedValue = selectElement.value;
+
+        if (!selectedValue) {
+            selectedValue = "0"; // Đặt mặc định là 0 nếu không có giá trị từ máy chủ
+        }
+
+        const idPL = '<%= searchSPSession || "" %>'; 
+        const price = '<%= price || "" %>'; 
+        let url = '/shop-list-ht1';
+        
+        if (idPL) {
+            url += `?idPL=${idPL}`;
+        }
+
+        if (price) {
+            if (url.includes('?')) { 
+                url += `&price=${price}`;
+            } else {
+                url += `?price=${price}`;
+            }
+        }
+
+        if (url.includes('?')) {    // kiểm tra xem URL đã chứa dấu ? hay chưa
+            url += `&SapXepTheoGia=${selectedValue}`;
+        } else {
+            url += `?SapXepTheoGia=${selectedValue}`;
+        }
+        
+        window.location.href = url;
+    }
+</script>

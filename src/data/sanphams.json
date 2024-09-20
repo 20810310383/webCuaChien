@@ -1,0 +1,526 @@
+[{
+  "_id": {
+    "$oid": "65e62eb7a93c0033356cb1d0"
+  },
+  "TenSP": "Viktor & Rolf Spicebomb Infrared",
+  "GiaBan": 222222,
+  "GiaCu": 250999,
+  "MoTa": "<p><img alt=\"sad\" src=\"http://localhost:8073/ckeditor/plugins/smiley/images/sad_smile.png\" style=\"height:23px; width:23px\" title=\"sad\" /><img alt=\"\" src=\"/images/upload/3-5.jpg\" style=\"height:200px; width:200px\" />Viktor &amp; Rolf l&agrave; một nh&agrave; l&agrave;m hương thẳng thắn, ta phải thừa nhận l&agrave; như vậy. Những ấn phẩm m&ugrave;i hương từ Viktor &amp; Rolf lu&ocirc;n trực diện, kh&ocirc;ng đ&aacute;nh đố v&agrave; dễ nhận ra. Lần n&agrave;y với Viktor &amp; Rolf Spicebomb Infrared, bạn sẽ được trải nghiệm một &ldquo;quả bom&rdquo; chứa đầy ắp những nồng say từ nh&oacute;m hương Gia vị.</p>\r\n",
+  "New_Hot": "New",
+  "SpMoi_SpNoiBat": "Nổi Bật",
+  "Size": "100ml",
+  "SoLuongBan": 1013,
+  "SoLuotDanhGia": 1000,
+  "Image": "\\images\\upload/Viktor-Rolf-Spicebomb-Infrared-2-600x600-1709657805192.jpg",
+  "Image1": "\\images\\upload/Viktor-Rolf-Spicebomb-Infrared-4-600x580-1709657805197.jpg",
+  "Image2": "\\images\\upload/Viktor-Rolf-Spicebomb-Infrared-600x596-1709657805199.jpg",
+  "IdLoaiSP": {
+    "$oid": "65ac1bcdb4ef2e1feba5d642"
+  },
+  "IdNam_Nu": {
+    "$oid": "65afdaabc4bf079712aa5943"
+  },
+  "deleted": false,
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1709584055732"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1712859532721"
+    }
+  },
+  "__v": 0,
+  "SoLuongTon": 5
+},{
+  "_id": {
+    "$oid": "65e62f4fa93c0033356cb1dd"
+  },
+  "TenSP": "Replica Jazz Club",
+  "GiaBan": 3200000,
+  "GiaCu": 3900000,
+  "MoTa": "<p><span style=\"color:#e74c3c\">Bạn th&iacute;ch kh&ocirc;ng kh&iacute; v&agrave; m&ugrave;i hương trong một c&acirc;u lạc bộ nhạc Jazz (Jazz club</span>), t<span style=\"color:#27ae60\">hoang thoảng hương Thuốc l&aacute;, &aacute;m Kh&oacute;i, rồi chuếnh cho&aacute;ng say sưa của Rượu Rum v&agrave; ngọt ng&agrave;o của Vanilla. Jazz club, đ&uacute;ng như c&aacute;i t&ecirc;n của n&oacute; sẽ khiến bạn h&agrave;i l&ograve;ng, bởi Maison Margiela đ&atilde; l&agrave;m ra một m&ugrave;i hương m&ocirc; tả ch&acirc;n thật khung cảnh m&agrave; nh&agrave; mốt muốn hướng tới.</span></p>\r\n\r\n<p>&nbsp;</p>\r\n",
+  "New_Hot": "Hot",
+  "SpMoi_SpNoiBat": "Mới",
+  "Size": "100ml",
+  "SoLuongBan": 120,
+  "SoLuotDanhGia": 1000,
+  "Image": "\\images\\upload/replica-jazz-club-1709657839582.jpg",
+  "Image1": "\\images\\upload/replica-jazz-club-2-1709657839585.jpg",
+  "Image2": "\\images\\upload/replica-jazz-club-3-600x400-1709657839587.jpg",
+  "IdLoaiSP": {
+    "$oid": "65ad1ff2c0f3fb826e485365"
+  },
+  "IdNam_Nu": {
+    "$oid": "65afdaabc4bf079712aa5943"
+  },
+  "deleted": false,
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1709584207405"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1712859422900"
+    }
+  },
+  "__v": 0,
+  "SoLuongTon": 0
+},{
+  "_id": {
+    "$oid": "65e63048a93c0033356cb207"
+  },
+  "TenSP": "Dior Sauvage Elixir",
+  "GiaBan": 5299999,
+  "GiaCu": 6999000,
+  "MoTa": "<p><strong>Dior Sauvage Elixir</strong>&nbsp;vẫn mang được vẻ phong độ của người đại diện Johnny Depp c&ugrave;ng thiết kế chai đầy t&aacute;o bạo khi h&igrave;nh ảnh thon gọn, bo tr&ograve;n đ&atilde; kh&ocirc;ng c&ograve;n nữa, thay v&agrave;o đ&oacute; l&agrave; một h&igrave;nh d&aacute;ng nhỏ gọn, chỉ vỏn vẹn 60ml cho phi&ecirc;n bản full thuận tiện cho việc mang đi b&ecirc;n m&igrave;nh một c&aacute;ch dễ d&agrave;ng.</p>\r\n",
+  "New_Hot": "Hot",
+  "SpMoi_SpNoiBat": "Nổi Bật",
+  "Size": "100ml",
+  "SoLuongTon": 9,
+  "SoLuongBan": 43,
+  "SoLuotDanhGia": 1000,
+  "Image": "\\images\\upload/Dior-sauvage-elixir-3-600x600-1709584456178.jpg",
+  "Image1": "\\images\\upload/Dior-sauvage-elixir-2-600x600-1709584456181.jpg",
+  "Image2": "\\images\\upload/Dior-sauvage-elixir-6-600x800-1709584456185.jpg",
+  "IdLoaiSP": {
+    "$oid": "65ac1bb3b4ef2e1feba5d641"
+  },
+  "IdNam_Nu": {
+    "$oid": "65afdaabc4bf079712aa5943"
+  },
+  "deleted": false,
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1709584456190"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1712687355115"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "65e7431f140f21e65f6a2879"
+  },
+  "TenSP": "Gucci Flora Gorgeous Gardenia Gift Set 3pcs",
+  "GiaBan": 38999999,
+  "GiaCu": 39000000,
+  "MoTa": "<p><strong><span style=\"color:#e74c3c\">Gucci Flora Gorgeous </span></strong>Gardenia kỉ niệm về m&ugrave;a hoa năm ấy vẫn c&ograve;n thoang thoảng đ&acirc;u đ&acirc;y. Thứ hương s&aacute;ng trong mở ra một khu vườn thơ mộng với sự tươi m&aacute;t từ hoa l&ecirc; v&agrave; đường n&acirc;u ngọt ng&agrave;o, dần dần Gucci Flora Gorgeous Gardenia trở n&ecirc;n hiền dịu, nhẹ nh&agrave;ng v&agrave; nữ t&iacute;nh một c&aacute;ch kh&oacute; giải th&iacute;ch với hương Hoa d&agrave;nh d&agrave;nh trắng trong, m&ugrave;i hương chu du qua từng c&aacute;i chạm để biến những lời n&oacute;i, &aacute;nh mắt v&agrave; nụ cười của c&ocirc; g&aacute;i ấy trở th&agrave;nh những k&yacute; ức kh&ocirc;ng thể n&agrave;o qu&ecirc;n .</p>\r\n",
+  "New_Hot": "Hot",
+  "SpMoi_SpNoiBat": "Nổi Bật",
+  "Size": "100ml",
+  "SoLuongTon": 0,
+  "SoLuongBan": 21,
+  "SoLuotDanhGia": 1000,
+  "Image": "\\images\\upload/Gucci-Flora-Gorgeous-Gardenia-Gift-Set-3pcs-4-300x300@2x-1709657860346.jpg",
+  "Image1": "\\images\\upload/Gucci-Flora-Gorgeous-Gardenia-Gift-Set-3pcs-1-300x300@2x-1709657860351.jpg",
+  "Image2": "\\images\\upload/Gucci-Flora-Gorgeous-Gardenia-Gift-Set-3pcs-2-300x300@2x-1709657860354.jpg",
+  "IdLoaiSP": {
+    "$oid": "65ad1ff2c0f3fb826e485365"
+  },
+  "IdNam_Nu": {
+    "$oid": "65afdaabc4bf079712aa5943"
+  },
+  "deleted": false,
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1709654815784"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1712859579352"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "65e743cf140f21e65f6a288e"
+  },
+  "TenSP": "Montblanc Signature Gift Set",
+  "GiaBan": 2450000,
+  "GiaCu": 2900000,
+  "MoTa": "<p>&nbsp;Một n&agrave;ng thơ mới của Mont blanc với c&aacute;i t&ecirc;n đầy chất thơ: &ldquo;Signature&rdquo; &ndash; Chữ k&yacute;. Montblanc Signature với thiết kế mang h&igrave;nh d&aacute;ng lọ mực nhằm t&ocirc;n vinh những nữ thi h&agrave;o với ng&ocirc;n từ kh&eacute;o l&eacute;o v&agrave; uyển chuyển đ&atilde; khẳng định sức mạnh nữ quyền một c&aacute;ch đầy tinh tế.</p>\r\n",
+  "New_Hot": "",
+  "SpMoi_SpNoiBat": "",
+  "Size": "100ml",
+  "SoLuongTon": 3,
+  "SoLuongBan": 128,
+  "SoLuotDanhGia": 1000,
+  "IdLoaiSP": {
+    "$oid": "65ad1ff2c0f3fb826e485365"
+  },
+  "IdNam_Nu": {
+    "$oid": "65afdaccc4bf079712aa5944"
+  },
+  "deleted": false,
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1709654991904"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1712859411229"
+    }
+  },
+  "__v": 0,
+  "Image": "\\images\\upload/12-1709660576493.jpg",
+  "Image1": "\\images\\upload/123-1709660576501.jpg",
+  "Image2": "\\images\\upload/Dior-sauvage-elixir-2-600x600-1709660576503.jpg"
+},{
+  "_id": {
+    "$oid": "65e75c8ad1b03e785d6f1959"
+  },
+  "TenSP": "Maison Francis Kurkdjian Fragrance Wardrobe 8x11ml For Her",
+  "GiaBan": 9199888,
+  "GiaCu": 9999999,
+  "MoTa": "<p>Maison Francis Kurkdjian, hay được gọi tắt l&agrave; MFK, đ&acirc;y l&agrave; thương hiệu ri&ecirc;ng của Francis Kurkdjian &ndash; nh&agrave; s&aacute;ng tạo nước hoa nổi tiếng h&agrave;ng đầu thế giới, Sau khi l&agrave;m rất nhiều m&ugrave;i để đời cho c&aacute;c h&atilde;ng thời trang như Armani, Dior, YSL, Narciso th&igrave; &ocirc;ng đ&atilde; tự mở thương hiệu nước hoa ri&ecirc;ng m&igrave;nh. MKF nằm trong top những thương hiệu nước hoa sang trọng đi k&egrave;m với chất lượng tuyệt hảo, được bảo chứng bởi thi&ecirc;n t&agrave;i pha chế Francis Kurkdjian.</p>\r\n",
+  "New_Hot": "Hot",
+  "SpMoi_SpNoiBat": "Mới",
+  "Size": "100ml",
+  "SoLuongTon": 0,
+  "SoLuongBan": 15,
+  "SoLuotDanhGia": 1000,
+  "Image": "\\images\\upload/Maison-Francis-Kurkdjian-Fragrance-Wardrobe-8x11ml-For-Her-3-300x300@2x-1709661322855.jpg",
+  "Image1": "\\images\\upload/Maison-Francis-Kurkdjian-Fragrance-Wardrobe-8x11ml-For-Her-1-300x300@2x-1709661322862.jpg",
+  "Image2": "\\images\\upload/Maison-Francis-Kurkdjian-Fragrance-Wardrobe-8x11ml-For-Her-300x300@2x-1709661322866.jpg",
+  "IdLoaiSP": {
+    "$oid": "65ad1ff2c0f3fb826e485365"
+  },
+  "IdNam_Nu": {
+    "$oid": "65afdaccc4bf079712aa5944"
+  },
+  "deleted": false,
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1709661322889"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1712683797148"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "65eafd09c4bcf8258c5fcf8a"
+  },
+  "TenSP": "Jean Paul Gaultier Scandal Le Parfum",
+  "GiaBan": 57123456,
+  "GiaCu": 59888999,
+  "MoTa": "<p><span style=\"font-size:20px\"><span style=\"font-family:Georgia,serif\"><span style=\"color:#e74c3c\">Jean Paul Gaultier Scandal Le Parfum như một c&ocirc; n&agrave;ng n&oacute;ng bỏng với chiếc v&aacute;y đỏ v&agrave; đ&ocirc;i ch&acirc;n d&agrave;i gợi cảm, những người nắm lấy mọi ham muốn của họ m&agrave; kh&ocirc;ng cần phức tạp. Scandal Le Parfum l&agrave; sản phẩm g&acirc;y nghiện mới nhất từ ​​d&ograve;ng Scandal. &ldquo;H&atilde;y qu&ecirc;n đi những phi&ecirc;n bản đ&atilde; c&oacute; v&agrave; cho ph&eacute;p bản th&acirc;n trở n&ecirc;n t&aacute;o bạo m&agrave; kh&ocirc;ng cần phức tạp. C&ugrave;ng m&ugrave;i hương ngọt ng&agrave;o, dường như kh&ocirc;ng ai c&oacute; thể trốn chạy khỏi sự c&aacute;m dỗ mượt m&agrave; từ Jean Paul Gaultier Scandal Le Parfum mang lại.</span></span></span></p>\r\n",
+  "New_Hot": "Hot",
+  "SpMoi_SpNoiBat": "Nổi Bật",
+  "Size": "100ml",
+  "SoLuongTon": 5,
+  "SoLuongBan": 30,
+  "SoLuotDanhGia": 1000,
+  "Image": "\\images\\upload/Jean-Paul-Gaultier-Scandal-Le-Parfum-3-600x600-1709899017319.jpg",
+  "Image1": "\\images\\upload/Jean-Paul-Gaultier-Scandal-Le-Parfum-1-600x450-1709899017326.jpg",
+  "Image2": "\\images\\upload/Jean-Paul-Gaultier-Scandal-Le-Parfum-4-600x800-1709899017329.jpg",
+  "IdLoaiSP": {
+    "$oid": "65ad1ff2c0f3fb826e485365"
+  },
+  "IdNam_Nu": {
+    "$oid": "65afdaccc4bf079712aa5944"
+  },
+  "deleted": false,
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1709899017349"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1712488436343"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "65eafd90c4bcf8258c5fcf9b"
+  },
+  "TenSP": "Carolina Herrera Bad Boy Cobalt",
+  "GiaBan": 11599000,
+  "GiaCu": 12000000,
+  "MoTa": "<p>C&oacute; một Bad Boy kh&aacute;c vừa xuất hiện trong thị trấn &ndash; Bad Boy Cobalt &ndash; hương thơm trứ danh đ&atilde; được nh&agrave; mốt Carolina Herrera một lần nữa mang đến ch&uacute;ng ta một. Kh&aacute;c với những phi&ecirc;n bản trước đ&oacute;, Bad Boy Cobalt Parfum Electrique đ&atilde; được tạo ra như một &ldquo;cuộc c&aacute;ch mạng đưa ra bước ngoặt t&aacute;o bạo khi thể hiện những mặt đối lập b&ecirc;n trong sự nam t&iacute;nh hiện đại&rdquo; &ndash; một định nghĩa vốn đ&atilde; quen thuộc của d&ograve;ng nước hoa Bad Boy nổi tiếng của h&atilde;ng.</p>\r\n",
+  "New_Hot": "New",
+  "SpMoi_SpNoiBat": "Mới",
+  "Size": "100ml",
+  "SoLuongTon": 17,
+  "SoLuongBan": 33,
+  "SoLuotDanhGia": 1000,
+  "Image": "\\images\\upload/Carolina-Herrera-Bad-Boy-Cobalt-2-600x800-1709899152249.jpg",
+  "Image1": "\\images\\upload/Carolina-Herrera-Bad-Boy-Cobalt-3-1709899152253.jpg",
+  "Image2": "\\images\\upload/Carolina-Herrera-Bad-Boy-Cobalt-600x800-1709899152255.jpg",
+  "IdLoaiSP": {
+    "$oid": "65ad1ff2c0f3fb826e485365"
+  },
+  "IdNam_Nu": {
+    "$oid": "65afdaabc4bf079712aa5943"
+  },
+  "deleted": false,
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1709899152261"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1712687355327"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6601da47f6a450d8bf7b6dd3"
+  },
+  "TenSP": "nước hoa siêu vip",
+  "GiaBan": 150000,
+  "GiaCu": 200000,
+  "MoTa": "<p>,mmmmmmmmmmmmmmmm</p>\r\n",
+  "New_Hot": "New",
+  "SpMoi_SpNoiBat": "Mới",
+  "Size": "100ml",
+  "SoLuongTon": 7,
+  "SoLuongBan": 101,
+  "SoLuotDanhGia": 1000,
+  "Image": "\\images\\upload/12-1709654991892-1711397447837.jpg",
+  "Image1": "\\images\\upload/123-1709658028834-1711397447844.jpg",
+  "Image2": "\\images\\upload/ag-1709493318002-1711397447847.png",
+  "IdLoaiSP": {
+    "$oid": "65ad1ff2c0f3fb826e485365"
+  },
+  "IdNam_Nu": {
+    "$oid": "65afdaccc4bf079712aa5944"
+  },
+  "deleted": false,
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1711397447854"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1711984849472"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6601ddf0caaa44aea9be5c84"
+  },
+  "TenSP": "nước hoa pháp",
+  "GiaBan": 8888888,
+  "GiaCu": 9999999,
+  "MoTa": "<p>ppppppppppppppp</p>\r\n",
+  "New_Hot": "New",
+  "SpMoi_SpNoiBat": "Mới",
+  "Size": "100ml",
+  "SoLuongTon": 12,
+  "SoLuongBan": 103,
+  "SoLuotDanhGia": 1000,
+  "Image": "\\images\\upload/123-1709658028834-1711398384440.jpg",
+  "Image1": "\\images\\upload/Dior-sauvage-elixir-2-600x600-1709657938764-1711398384444.jpg",
+  "Image2": "\\images\\upload/Gucci-Flora-Gorgeous-Gardenia-Gift-Set-3pcs-2-300x300@2x-1709654815766-1711398384447.jpg",
+  "IdLoaiSP": {
+    "$oid": "65ad1ff2c0f3fb826e485365"
+  },
+  "IdNam_Nu": {
+    "$oid": "65afdaccc4bf079712aa5944"
+  },
+  "deleted": false,
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1711398384457"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1711985082785"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "66117f240dfa56b5e2145bd4"
+  },
+  "TenSP": "Nước hoa nữ Hugo Boss Alive For Women EDP",
+  "GiaBan": 1599999,
+  "GiaCu": 1999999,
+  "MoTa": "<p style=\"text-align:justify\"><span style=\"font-family:Arial,Helvetica,sans-serif\"><strong>Chắc hẳn nhắc đến Hugo Boss, ch&uacute;ng ta thường nghĩ ngay đến thương hiệu nổi tiếng với những thiết kế lịch l&atilde;m, nam t&iacute;nh d&agrave;nh cho c&aacute;c qu&yacute; &ocirc;ng. Nhưng&nbsp;<a href=\"https://www.thegioinuochoa.com.vn/\">Hugo Boss Alive EDP</a>&nbsp;<span style=\"color:#2ecc71\">sẽ khiến bạn tin rằng thương hiệu n&agrave;y kh&ocirc;ng chỉ d&agrave;nh ri&ecirc;ng cho nam giới m&agrave; c&ograve;n sở hữu những m&ugrave;i hương ph&aacute;i nữ kh&ocirc;ng n&ecirc;n bỏ qua!</span></strong></span></p>\r\n\r\n<h2 style=\"text-align:justify\"><span style=\"font-family:Arial,Helvetica,sans-serif\"><span style=\"font-size:20px\"><span style=\"color:#e74c3c\"><strong>1. HUGO BOSS ALIVE EDP - THIẾT KẾ ĐẬM CHẤT NỮ T&Iacute;NH&nbsp;</strong></span></span></span></h2>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-family:Times New Roman,Times,serif\">Khi nh&igrave;n thấy thiết kế đầy nữ t&iacute;nh của&nbsp;<strong><a href=\"https://www.thegioinuochoa.com.vn/\">Hugo Boss Alive EDP</a></strong>, bạn c&oacute; nghĩ rằng đ&acirc;y l&agrave; một m&ugrave;i hươ<span style=\"color:#2980b9\">ng đến từ thương hiệu chỉ d&agrave;nh cho nam giới? Thiết kế của chai tuy đơn giản nhưng vẫn rất bắt mắt. Chai thủy tinh v</span>ới phần viền &aacute;nh v&agrave;ng như một m&oacute;n trang sức lấp l&aacute;nh m&agrave; c&oacute; lẽ bất kỳ c&ocirc; g&aacute;i n&agrave;o cũng sẽ bị thu h&uacute;t. B&ecirc;n trong l&agrave; d&ograve;ng nước hoa cũng mang một m&agrave;u hồng hết sức ngọt ng&agrave;o. Tr&aacute;i ngược với đ&oacute; l&agrave; nắp chai kim loại mạnh mẽ thể hiện kh&iacute; chất quyền lực, kh&aacute;t vọng khẳng định bản th&acirc;n của mỗi người phụ nữ hiện đại.&nbsp;</span></p>\r\n\r\n<p style=\"text-align:justify\"><img src=\"\\images\\upload/230503_202600_442279-1712422692413.jpg\" /></p>\r\n\r\n<h2 style=\"text-align:justify\"><span style=\"font-size:20px\"><span style=\"font-family:Arial,Helvetica,sans-serif\"><span style=\"color:#e74c3c\"><strong>2. NĂNG LƯỢNG T&Iacute;CH CỰC TỪ HUGO BOSS ALIVE EDP</strong></span></span></span></h2>\r\n\r\n<p style=\"text-align:justify\">Ra mắt năm 2020,&nbsp;<strong><a href=\"https://www.thegioinuochoa.com.vn/hugo-boss\">Hugo Boss Alive EDP</a></strong>&nbsp;được lấy cảm hứng từ việc t&igrave;m ra con đường ri&ecirc;ng v&agrave; tận hưởng hết m&igrave;nh. Th&ocirc;ng điệp t&iacute;ch cực n&agrave;y dường như tiếp th&ecirc;m cho ph&aacute;i đẹp sức mạnh để tiếp tục h&agrave;nh tr&igrave;nh kh&aacute;m ph&aacute; bản th&acirc;n ở ph&iacute;a trước. Hương thơm tươi m&aacute;t từ hoa cỏ v&agrave; tr&aacute;i c&acirc;y của&nbsp;<em>nước hoa nữ Hugo Boss Alive EDP</em>&nbsp;c&oacute; lẽ l&agrave; vũ kh&iacute; mạnh mẽ nhất để truyền tải th&ocirc;ng điệp t&iacute;ch cực n&agrave;y.&nbsp;</p>\r\n\r\n<p style=\"text-align:justify\"><img alt=\"\" src=\"\\images\\upload/230503_202559_976766-1712422692410.png\" style=\"height:194px; width:200px\" /><img alt=\"\" src=\"\\images\\upload/230503_202559_976766-1712422692410.png\" style=\"height:194px; width:200px\" /></p>\r\n\r\n<p style=\"text-align:justify\"><em>Năng lượng t&iacute;ch cực từ&nbsp;<strong>Hugo Boss Alive EDP&nbsp;</strong></em></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-size:18px\"><span style=\"color:#8e44ad\">Hương đầu l&agrave; sự kết hợp của t&aacute;o,&nbsp;l&yacute; chua&nbsp;đen v&agrave; mận tươi m&aacute;t, căng mọng. Vị ngọt tươi m&aacute;t từ tr&aacute;i c&acirc;y mang đến nguồn năng lượng dồi d&agrave;o để n&agrave;ng lu&ocirc;n tr&agrave;n đầy sức sống. Đến hương giữa, vị vanilla Madagascar ngọt ng&agrave;o v&agrave; dư vị mạnh mẽ đặc trưng của quế mang đến hai sắc th&aacute;i tương phản nhưng cũng rất c&acirc;n bằng cho&nbsp;<em>m&ugrave;i hương của Hugo Boss Alive EDP.&nbsp;</em>Bạn c&oacute; thể li&ecirc;n tưởng đến h&igrave;nh ảnh c&ocirc; g&aacute;i tuy nữ t&iacute;nh, dịu d&agrave;ng nhưng b&ecirc;n trong vẫn rất ki&ecirc;n cường, mạnh mẽ. Hương cuối của&nbsp;</span><strong><a href=\"https://www.thegioinuochoa.com.vn/hugo-boss\"><span style=\"color:#8e44ad\">Hugo Boss Alive EDP</span></a></strong><span style=\"color:#8e44ad\"><strong>&nbsp;</strong>l&agrave; sự đơn giản nhưng quyến rũ đến từ sự h&ograve;a quyện của hoa nh&agrave;i Sambac v&agrave; h&uacute;ng t&acirc;y.&nbsp;<strong>Hugo Boss Alive EDP</strong>&nbsp;vừa nữ t&iacute;nh, tự nhi&ecirc;n&nbsp;l&agrave; lựa chọn l&yacute; tưởng&nbsp;c&ugrave;ng n&agrave;ng lan tỏa nguồn năng lượng t&iacute;ch cực đến người đối diện.&nbsp;</span></span></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-size:14px\"><span style=\"color:#16a085\">Sở hữu m&ugrave;i hương v&agrave; thiết kế vừa mang n&eacute;t tự nhi&ecirc;n, nữ t&iacute;nh nhưng cũng rất mạnh mẽ, t&aacute;o bạo,&nbsp;</span><a href=\"https://www.thegioinuochoa.com.vn/hugo-boss\"><span style=\"color:#16a085\">Hugo Boss Alive EDP</span></a><span style=\"color:#16a085\">&nbsp;l&agrave; bằng chứng thuyết phục cho việc Hugo Boss kh&ocirc;ng chỉ l&agrave; thương hiệu d&agrave;nh cho ph&aacute;i mạnh. Tr&ecirc;n con đường t&igrave;m kiếm &yacute; nghĩa của cuộc sống, c&aacute;c n&agrave;ng hẳn kh&ocirc;ng thể thiếu đi những yếu tố tr&agrave;n đầy t&iacute;ch cực cổ vũ bạn. V&agrave; nước hoa nữ Hugo Boss Alive EDP c&oacute; thể l&agrave; một trong những yếu tố nhỏ nhoi mang đến nguồn năng lực t&iacute;ch cực cho bạn.&nbsp;</span></span></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-size:14px\"><em>Đừng ngần ngại ấn n&uacute;t mua h&agrave;ng ngay để&nbsp;<a href=\"https://www.thegioinuochoa.com.vn/hugo-boss\">Hugo Boss Alive EDP</a>&nbsp;đồng h&agrave;nh c&ugrave;ng bạn!</em></span></p>\r\n",
+  "New_Hot": "Hot",
+  "SpMoi_SpNoiBat": "Nổi Bật",
+  "Size": "100ml",
+  "SoLuongTon": 13,
+  "SoLuongBan": 111,
+  "SoLuotDanhGia": 1000,
+  "Image": "\\images\\upload/230503_202559_976766-1712422692410.png",
+  "Image1": "\\images\\upload/230503_202600_156690-1712422692412.png",
+  "Image2": "\\images\\upload/230503_202600_442279-1712422692413.jpg",
+  "IdLoaiSP": {
+    "$oid": "6609be1e5b7c60829c9f5947"
+  },
+  "IdNam_Nu": {
+    "$oid": "65afdaccc4bf079712aa5944"
+  },
+  "deleted": false,
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1712422692420"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1712859427996"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6613f7d96c954092168cdd55"
+  },
+  "TenSP": "Nước hoa HUGO BOSS INFINITE EDP",
+  "GiaBan": 2850000,
+  "GiaCu": 3015000,
+  "MoTa": "<p><strong>Chai<span style=\"color:#16a085\">&nbsp;</span><a href=\"https://www.thegioinuochoa.com.vn/\"><span style=\"color:#16a085\">Hugo Boss Infinite EDP</span></a><span style=\"color:#16a085\">&nbsp;</span>sở hữu m&ugrave;i hương đầy năng lượng v&agrave; gợi cảm kết hợp từ sự tươi m&aacute;t của cam qu&yacute;t với cường độ của hương gỗ đầy nam t&iacute;nh. Hương thơm nam t&iacute;nh, mạnh mẽ n&agrave;y l&agrave; m&oacute;n qu&agrave; l&yacute; tưởng, mang đến sự tự tin v&agrave; năng động cho cho người đ&agrave;n &ocirc;ng hiện đại. H&atilde;y c&ugrave;ng giải m&atilde; sức h&uacute;t của<span style=\"color:#2980b9\">&nbsp;</span><a href=\"https://www.thegioinuochoa.com.vn/\"><span style=\"color:#2980b9\">Hugo Boss Infinite EDP</span></a></strong><span style=\"color:#2980b9\">!&nbsp;</span></p>\r\n\r\n<h2><span style=\"color:#c0392b\"><span style=\"font-size:18px\"><span style=\"font-family:Arial,Helvetica,sans-serif\"><strong>1. M&Ugrave;I HƯƠNG NAM T&Iacute;NH, MẠNH MẼ CỦA HUGO BOSS INFINITE EDP</strong></span></span></span></h2>\r\n\r\n<p>Để đ&aacute;nh gi&aacute; Hugo Boss Infinite EDP, m&ugrave;i hương l&agrave; điều đầu ti&ecirc;n phải kể đến.<span style=\"color:#2980b9\">&nbsp;</span><strong><a href=\"https://www.thegioinuochoa.com.vn/\"><span style=\"color:#2980b9\">Hugo Boss Infinite EDP</span></a></strong><strong>&nbsp;</strong>khởi đầu bằng vị tươi m&aacute;t, thơm ngon của cam qu&yacute;t v&agrave; t&aacute;o.&nbsp;<strong><a href=\"https://www.thegioinuochoa.com.vn/hugo-boss\">Hugo Boss Infinite EDP</a></strong>&nbsp;sẽ mang bạn đến một vườn c&acirc;y ăn quả mọng nước đầy sức sống. Tho&aacute;ng qua đ&oacute; l&agrave; vị cay ấm của quế v&agrave; m&ugrave;i thảo mộc của x&ocirc; thơm mang đến cảm gi&aacute;c thư th&aacute;i cho t&acirc;m hồn.</p>\r\n\r\n<p>Hương giữa l&agrave; sự kết hợp giữa sự m&ugrave;i mẫn của hương thảo, ch&uacute;t oải hương ngọt ng&agrave;o quyến rũ v&agrave; ch&uacute;t vị cay cay của hoắc hương.&nbsp;<em>Nước hoa nam Hugo Boss Infinite EDP</em>&nbsp;kh&eacute;p lại bằng sự ấm &aacute;p bởi hương gỗ đ&agrave;n hương h&ograve;a quyện c&ugrave;ng sự s&acirc;u lắng, nhẹ nh&agrave;ng của olive. Sự pha trộn đầy tinh tế của&nbsp;<em>m&ugrave;i hương Hugo Boss Infinite EDP</em>&nbsp;tạo n&ecirc;n sức h&uacute;t kh&ocirc;ng chỉ chinh phục ph&aacute;i mạnh m&agrave; c&ograve;n khiến ph&aacute;i đẹp phải xi&ecirc;u l&ograve;ng.&nbsp;</p>\r\n\r\n<p><img alt=\"\" src=\"/images/upload/1661137806.4135.jpg\" style=\"height:314px; width:600px\" /></p>\r\n\r\n<h2><span style=\"font-size:18px\"><span style=\"font-family:Arial,Helvetica,sans-serif\"><span style=\"color:#c0392b\"><strong>2. THIẾT KẾ CỦA HUGO BOSS INFINITE EDP</strong></span></span></span></h2>\r\n\r\n<p>Ngo&agrave;i m&ugrave;i hương cuốn h&uacute;t, thiết kế của nước hoa Hugo Boss Infinite EDP cũng l&agrave; một điểm cộng. Bao bọc lấy d&ograve;ng hương cuốn h&uacute;t b&ecirc;n trong l&agrave; vẻ ngo&agrave;i đầy mạnh mẽ của&nbsp;<strong><a href=\"https://www.thegioinuochoa.com.vn/hugo-boss\"><span style=\"color:#2980b9\"><span style=\"background-color:#ecf0f1\">Hugo Boss Bottled Infinite EDP</span></span></a></strong>. Chai nước hoa h&igrave;nh trụ, m&agrave;u xanh dương nam t&iacute;nh, ph&ugrave; hợp với người đ&agrave;n &ocirc;ng hiện đại, khao kh&aacute;t chinh phục th&aacute;ch thức. Thiết kế cũng thể hiện ti&ecirc;u ch&iacute; của&nbsp;<em>nước hoa nam Hugo Boss Infinite EDP</em>, rất đ&agrave;n &ocirc;ng, rất nam t&iacute;nh b&ecirc;n ngo&agrave;i nhưng cũng đầy ấm &aacute;p, y&ecirc;u thương nơi nội t&acirc;m.&nbsp;</p>\r\n\r\n<p><img alt=\"\" src=\"/images/upload/1661138384.9144.jpg\" style=\"height:351px; width:600px\" /></p>\r\n\r\n<p><em>Thiết kế của&nbsp;<strong>Hugo Boss Bottled Infinite EDP</strong></em></p>\r\n\r\n<p><strong>Nếu đang t&igrave;m kiếm một m&ugrave;i hương đầy nam t&iacute;nh, m&ecirc; lực th&igrave;&nbsp;<a href=\"https://www.thegioinuochoa.com.vn/hugo-boss\">Hugo Boss Infinite EDP</a>&nbsp;l&agrave; một lựa chọn l&yacute; tưởng d&agrave;nh cho bạn trong qu&aacute; tr&igrave;nh chinh phục hạnh ph&uacute;c.</strong></p>\r\n\r\n<p>Đừng ngần ngại nhấn N&Uacute;T MUA H&Agrave;NG ngay để sở hữu m&ugrave;i hương nam t&iacute;nh đầy l&ocirc;i cuốn n&agrave;y!</p>\r\n",
+  "New_Hot": "New",
+  "SpMoi_SpNoiBat": "Nổi Bật",
+  "Size": "100ml",
+  "SoLuongTon": 30,
+  "SoLuongBan": 100,
+  "SoLuotDanhGia": 1000,
+  "Image": "\\images\\upload/230503_200259_871335-1712584665121.png",
+  "Image1": "\\images\\upload/230503_202600_789344-1712584665124.jpg",
+  "Image2": "\\images\\upload/230503_202600_594378-1712584665128.jpg",
+  "IdLoaiSP": {
+    "$oid": "6609be325b7c60829c9f5948"
+  },
+  "IdNam_Nu": {
+    "$oid": "65afdaabc4bf079712aa5943"
+  },
+  "deleted": false,
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1712584665130"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1712859440548"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "661403206c954092168cdf50"
+  },
+  "TenSP": "Dior Sauvage EDP",
+  "GiaBan": 2569999,
+  "GiaCu": 3999999,
+  "MoTa": "<p><span style=\"font-size:16px\">V&agrave;o năm 2018,&nbsp;<a href=\"https://orchard.vn/dior-vn/\">Dior</a>&nbsp;giới thiệu phi&ecirc;n bản mới của&nbsp;<strong>Dior Sauvage</strong>&nbsp;đ&atilde; ra mắt v&agrave;o năm 2015 với nồng độ Eau De Parfum. C&aacute;c th&agrave;nh phần với hơi hướng phương Đ&ocirc;ng v&agrave; vani. Tạo n&ecirc;n m&ugrave;i hương ngọt ng&agrave;o, b&iacute; ẩn v&agrave; gợi cảm.</span></p>\r\n\r\n<p><span style=\"font-size:16px\"><img alt=\"\" src=\"/images/upload/dior-sauvage-edp_poster.jpg\" style=\"height:500px; width:500px\" /></span></p>\r\n\r\n<p><span style=\"font-size:16px\">Nh&agrave; chế tạo nước hoa Francois Demachy lấy sa mạc trong cảnh ho&agrave;ng h&ocirc;n l&agrave;m cảm hứng điều chế n&ecirc;n&nbsp;<strong>Dior Sauvage.&nbsp;</strong>Ng&agrave;i đ&atilde; đưa l&agrave;n gi&oacute; m&aacute;t, ngọt l&agrave;nh của m&agrave;n đ&ecirc;m ho&agrave; c&ugrave;ng kh&ocirc;ng kh&iacute; n&oacute;ng bỏng của sa mạc. Bằng c&aacute;ch đ&oacute; một m&ugrave;i hương&nbsp;<a href=\"https://orchard.vn/nuoc-hoa-nam-dior/\">nước hoa nam Dior</a>&nbsp;n&oacute;ng bỏng bậc nhất được ra đời.</span></p>\r\n\r\n<h3><span style=\"font-size:16px\"><strong>Hương thơm của Dior Sauvage EDP :</strong></span></h3>\r\n\r\n<ul>\r\n\t<li><span style=\"font-size:16px\">Hương đầu: cam Bergamot</span></li>\r\n\t<li><span style=\"font-size:16px\">Hương giữa: hoa oải hương, ti&ecirc;u Tứ Xuy&ecirc;n, đại hồi, hạt nhục đậu khấu</span></li>\r\n\t<li><span style=\"font-size:16px\">Hương cuối: nhựa Ambroxan, vanill<br />\r\n\t<img alt=\"\" src=\"/images/upload/dior-sauvage-edp_4.jpg\" style=\"height:500px; width:500px\" /></span>\r\n\t<p><span style=\"font-size:16px\">Sự tươi m&aacute;t mạnh mẽ của&nbsp;<strong>Dior Sauvage</strong>&nbsp;to&aacute;t l&ecirc;n c&aacute;c kh&iacute;a cạnh gợi cảm v&agrave; b&iacute; ẩn mới. Đổi mới dấu ấn của n&oacute; với một th&agrave;nh phần kh&eacute;o l&eacute;o. Th&agrave;nh phần được giữ ở phi&ecirc;n bản gốc gồm cam bergamot ngon ngọt. Cho bạn cảm gi&aacute;c fresh-tươi mới khi vừa xịt l&ecirc;n cơ thể. V&agrave; k&iacute;ch th&iacute;ch tinh thần hơn bao giờ hết, những note cay mới để th&ecirc;m v&agrave;o sự sung m&atilde;n v&agrave; gợi cảm. Cuối c&ugrave;ng, Hổ ph&aacute;ch ngọt dịu được bọc trong những note hương ngọt ng&agrave;o của vanilla.</span><br />\r\n\t<img alt=\"\" src=\"/images/upload/dior-sauvage-edp_3.jpg\" style=\"height:500px; width:500px\" /><br />\r\n\t&nbsp;</p>\r\n\r\n\t<h3><span style=\"font-size:16px\">Ph&ugrave; hợp với :</span></h3>\r\n\r\n\t<p><span style=\"font-size:16px\">Hương thơm ph&ugrave; hợp với những ch&agrave;ng trai tr&ecirc;n 25 tuổi muốn t&igrave;m kiếm một m&ugrave;i hương gợi cảm, ấm &aacute;p v&agrave; lịch l&atilde;m. Trở th&agrave;nh tu&yacute;p đ&agrave;n &ocirc;ng lịch l&atilde;m chỉ với m&ugrave;i hương sang trọng ng&uacute;t ng&agrave;n của Dior Sauvage.</span></p>\r\n\r\n\t<h3><span style=\"font-size:16px\">Đ&aacute;nh gi&aacute; :</span></h3>\r\n\t</li>\r\n\t<li><span style=\"font-size:16px\">Thời điểm khuy&ecirc;n d&ugrave;ng : Th&iacute;ch hợp sử dụng hằng ng&agrave;y.</span></li>\r\n\t<li><span style=\"font-size:16px\">Độ lưu hương : Tốt trong khoảng 7-12h.</span></li>\r\n\t<li><span style=\"font-size:16px\">Độ tỏa hương : Gần &ndash; Toả hương trong v&ograve;ng một c&aacute;nh tay.<br />\r\n\t<img alt=\"\" src=\"/images/upload/72582821_2509336859146876_2386418567076642816_n-600x600.jpg\" style=\"height:600px; width:600px\" /></span></li>\r\n</ul>\r\n",
+  "New_Hot": "Hot",
+  "SpMoi_SpNoiBat": "Nổi Bật",
+  "Size": "100ml",
+  "SoLuongTon": 35,
+  "SoLuongBan": 100,
+  "SoLuotDanhGia": 1000,
+  "Image": "\\images\\upload/dior-sauvage-edp_3-1712587552843.jpg",
+  "Image1": "\\images\\upload/dior-sauvage-edp_4-1712587552845.jpg",
+  "Image2": "\\images\\upload/dior-sauvage-edp_5-1712587552846.jpg",
+  "IdLoaiSP": {
+    "$oid": "65ac1bcdb4ef2e1feba5d642"
+  },
+  "IdNam_Nu": {
+    "$oid": "65afdaabc4bf079712aa5943"
+  },
+  "deleted": false,
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1712587552848"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1712587608936"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "66181e515b95abcf924b4b83"
+  },
+  "TenSP": "qqqqqqqqqqqqqqqqqqqqqqqqqq",
+  "GiaBan": 555000,
+  "GiaCu": 599000,
+  "MoTa": "<p><span style=\"color:#e74c3c\">qqqqqqqqqqqqqqqqqqqqqq</span></p>\r\n",
+  "New_Hot": "New",
+  "SpMoi_SpNoiBat": "",
+  "Size": "100ml",
+  "SoLuongTon": 11,
+  "SoLuongBan": 100,
+  "SoLuotDanhGia": 1000,
+  "Image": "\\images\\upload/anh-gau-bong-8-1712856657945.jpg",
+  "Image1": "\\images\\upload/3-5-1712856657947.jpg",
+  "Image2": "\\images\\upload/anh-gau-bong-16-1712856657948.jpg",
+  "IdLoaiSP": {
+    "$oid": "65ac1b92b4ef2e1feba5d640"
+  },
+  "IdNam_Nu": {
+    "$oid": "65afdaccc4bf079712aa5944"
+  },
+  "deleted": false,
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1712856657954"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1712857565215"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "661820795b95abcf924b4ba6"
+  },
+  "TenSP": "pppppppppppppp",
+  "GiaBan": 100000,
+  "GiaCu": 500000,
+  "MoTa": "<p><span style=\"color:#e74c3c\">oooooooooooooooooooooo</span></p>\r\n",
+  "New_Hot": "",
+  "SpMoi_SpNoiBat": "",
+  "Size": "100ml",
+  "SoLuongTon": 10,
+  "SoLuongBan": 100,
+  "SoLuotDanhGia": 1000,
+  "Image": "\\images\\upload/dior-sauvage-edp_4-1712857209623.jpg",
+  "Image1": "\\images\\upload/anh-gau-bong-16-1712857209624.jpg",
+  "Image2": "\\images\\upload/anh-gau-bong-13-1712857209625.jpg",
+  "IdLoaiSP": {
+    "$oid": "6609bec25b7c60829c9f5949"
+  },
+  "IdNam_Nu": {
+    "$oid": "65afdaccc4bf079712aa5944"
+  },
+  "deleted": false,
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1712857209628"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1712857209628"
+    }
+  },
+  "__v": 0
+}]

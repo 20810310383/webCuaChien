@@ -1,0 +1,432 @@
+[{
+  "_id": {
+    "$oid": "65d6e35da7608e17ef7fd96c"
+  },
+  "cart": {
+    "items": [],
+    "totalQuaty": 0,
+    "PhiShip": 59000,
+    "GiamGia": 0
+  },
+  "MaTKKH": {
+    "$oid": "65d6e138a7608e17ef7fd7ec"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "65d6e74b512e2b931a5543d3"
+  },
+  "cart": {
+    "items": [],
+    "totalQuaty": 0,
+    "PhiShip": 59000,
+    "GiamGia": 0
+  },
+  "MaTKKH": {
+    "$oid": "65d6e683512e2b931a554351"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "65dcb5bded0e5faa260afe8a"
+  },
+  "cart": {
+    "items": [],
+    "totalQuaty": 0,
+    "PhiShip": 59000,
+    "GiamGia": 0
+  },
+  "MaTKKH": {
+    "$oid": "65aaccde57734db901cfc993"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "65e76385a7dffcae99d2dfb1"
+  },
+  "cart": {
+    "items": [
+      {
+        "productId": {
+          "$oid": "65e75c8ad1b03e785d6f1959"
+        },
+        "qty": 17,
+        "size": "XXXL",
+        "_id": {
+          "$oid": "65e76389a7dffcae99d2dfbc"
+        }
+      }
+    ],
+    "totalQuaty": 17,
+    "PhiShip": 59000,
+    "GiamGia": 0
+  },
+  "MaTKKH": {
+    "$oid": "65e0ef80e87329941ef63d98"
+  },
+  "__v": 1
+},{
+  "_id": {
+    "$oid": "65ea132c30c3a9a07e69cfd6"
+  },
+  "cart": {
+    "items": [],
+    "totalQuaty": 0,
+    "PhiShip": 59000,
+    "GiamGia": 0
+  },
+  "MaTKKH": {
+    "$oid": "65bbe220de02495c0601a4ea"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "65efc0b0c214d72259d0e206"
+  },
+  "cart": {
+    "items": [],
+    "totalQuaty": 0,
+    "PhiShip": 59000,
+    "GiamGia": 0
+  },
+  "MaTKKH": {
+    "$oid": "65efc01bc214d72259d0e168"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "65f8807250930b6c6897d3ab"
+  },
+  "cart": {
+    "items": [
+      {
+        "productId": {
+          "$oid": "65e743cf140f21e65f6a288e"
+        },
+        "qty": 1,
+        "size": "S",
+        "_id": {
+          "$oid": "65f8807650930b6c6897d3b6"
+        }
+      }
+    ],
+    "totalQuaty": 1,
+    "PhiShip": 59000,
+    "GiamGia": 0
+  },
+  "MaTKKH": {
+    "$oid": "65f8806e50930b6c6897d3a7"
+  },
+  "__v": 1
+},{
+  "_id": {
+    "$oid": "6601cf9849e671e9838fbb6c"
+  },
+  "cart": {
+    "items": [
+      {
+        "productId": {
+          "$oid": "65e62f4fa93c0033356cb1dd"
+        },
+        "donGia": 3200000,
+        "qty": 1,
+        "size": "100ml",
+        "_id": {
+          "$oid": "6601cfbc49e671e9838fbb8b"
+        }
+      },
+      {
+        "productId": {
+          "$oid": "65e62eb7a93c0033356cb1d0"
+        },
+        "donGia": 100000,
+        "qty": 1,
+        "size": "100ml",
+        "_id": {
+          "$oid": "6601cfd049e671e9838fbb9e"
+        }
+      },
+      {
+        "productId": {
+          "$oid": "65e7431f140f21e65f6a2879"
+        },
+        "donGia": 54599998,
+        "qty": 5,
+        "size": "300ml",
+        "_id": {
+          "$oid": "6601cfd949e671e9838fbbb7"
+        }
+      },
+      {
+        "productId": {
+          "$oid": "65e63048a93c0033356cb207"
+        },
+        "donGia": 8479998,
+        "qty": 20,
+        "size": "400ml",
+        "_id": {
+          "$oid": "6601cfe449e671e9838fbbee"
+        }
+      },
+      {
+        "productId": {
+          "$oid": "65e62f4fa93c0033356cb1dd"
+        },
+        "donGia": 5120000,
+        "qty": 14,
+        "size": "400ml",
+        "_id": {
+          "$oid": "6601d04249e671e9838fbcab"
+        }
+      },
+      {
+        "productId": {
+          "$oid": "65e62f4fa93c0033356cb1dd"
+        },
+        "donGia": 4480000,
+        "qty": 40,
+        "size": "300ml",
+        "_id": {
+          "$oid": "6601d06049e671e9838fbd5f"
+        }
+      },
+      {
+        "productId": {
+          "$oid": "65e62f4fa93c0033356cb1dd"
+        },
+        "donGia": 3840000,
+        "qty": 81,
+        "size": "200ml",
+        "_id": {
+          "$oid": "6601d10649e671e9838fbdfc"
+        }
+      }
+    ],
+    "totalQuaty": 162,
+    "PhiShip": 59000,
+    "GiamGia": 0
+  },
+  "MaTKKH": {
+    "$oid": "6601cf9649e671e9838fbb68"
+  },
+  "__v": 7
+},{
+  "_id": {
+    "$oid": "6601ef74686713a2c93f9160"
+  },
+  "cart": {
+    "items": [
+      {
+        "productId": {
+          "$oid": "65e62eb7a93c0033356cb1d0"
+        },
+        "donGia": 355555,
+        "qty": 15,
+        "size": "400ml",
+        "_id": {
+          "$oid": "6601ef82686713a2c93f916b"
+        }
+      },
+      {
+        "productId": {
+          "$oid": "65e62f4fa93c0033356cb1dd"
+        },
+        "donGia": 3200000,
+        "qty": 1,
+        "size": "100ml",
+        "_id": {
+          "$oid": "6601efa5686713a2c93f917f"
+        }
+      },
+      {
+        "productId": {
+          "$oid": "65e62eb7a93c0033356cb1d0"
+        },
+        "donGia": 311110,
+        "qty": 10,
+        "size": "300ml",
+        "_id": {
+          "$oid": "6601efdd686713a2c93f91ac"
+        }
+      }
+    ],
+    "totalQuaty": 26,
+    "PhiShip": 59000,
+    "GiamGia": 0
+  },
+  "MaTKKH": {
+    "$oid": "6601ef69686713a2c93f915c"
+  },
+  "__v": 3
+},{
+  "_id": {
+    "$oid": "6606e92d2c4c1d46b90a9283"
+  },
+  "cart": {
+    "items": [],
+    "totalQuaty": 0,
+    "PhiShip": 59000,
+    "GiamGia": 0
+  },
+  "MaTKKH": {
+    "$oid": "6606e83f2c4c1d46b90a918a"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "660726f866f648d7d717ae92"
+  },
+  "cart": {
+    "items": [
+      {
+        "productId": {
+          "$oid": "65e743cf140f21e65f6a288e"
+        },
+        "donGia": 3920000,
+        "qty": 25,
+        "size": "400ml",
+        "_id": {
+          "$oid": "660860bf3ab7da6bf189b522"
+        }
+      }
+    ],
+    "totalQuaty": 25,
+    "PhiShip": 59000,
+    "GiamGia": 0
+  },
+  "MaTKKH": {
+    "$oid": "65fd7f99778079515676505b"
+  },
+  "__v": 3
+},{
+  "_id": {
+    "$oid": "6608587558ac8446e7e306d1"
+  },
+  "cart": {
+    "items": [
+      {
+        "productId": {
+          "$oid": "65e743cf140f21e65f6a288e"
+        },
+        "donGia": 2450000,
+        "qty": 1,
+        "size": "100ml",
+        "_id": {
+          "$oid": "6608587958ac8446e7e306dc"
+        }
+      },
+      {
+        "productId": {
+          "$oid": "6613f7d96c954092168cdd55"
+        },
+        "donGia": 4560000,
+        "qty": 10,
+        "size": "400ml",
+        "_id": {
+          "$oid": "66162423107356758f1e4710"
+        }
+      }
+    ],
+    "totalQuaty": 11,
+    "PhiShip": 59000,
+    "GiamGia": 0
+  },
+  "MaTKKH": {
+    "$oid": "660739aef8ad60fe57383ceb"
+  },
+  "__v": 2
+},{
+  "_id": {
+    "$oid": "66086f16876433c77b950041"
+  },
+  "cart": {
+    "items": [
+      {
+        "productId": {
+          "$oid": "65e743cf140f21e65f6a288e"
+        },
+        "donGia": 2450000,
+        "qty": 1,
+        "size": "100ml",
+        "_id": {
+          "$oid": "660fb5ab2e5ba59c9b58c095"
+        }
+      }
+    ],
+    "totalQuaty": 1,
+    "PhiShip": 59000,
+    "GiamGia": 0
+  },
+  "MaTKKH": {
+    "$oid": "660866900604ab826c024d45"
+  },
+  "__v": 1
+},{
+  "_id": {
+    "$oid": "660b366d2e4c9ec04c3be5a5"
+  },
+  "cart": {
+    "items": [
+      {
+        "productId": {
+          "$oid": "65e743cf140f21e65f6a288e"
+        },
+        "donGia": 3430000,
+        "qty": 5,
+        "size": "300ml",
+        "_id": {
+          "$oid": "66155f21d4eb9c13cf505b3d"
+        }
+      }
+    ],
+    "totalQuaty": 5,
+    "PhiShip": 59000,
+    "GiamGia": 0
+  },
+  "MaTKKH": {
+    "$oid": "660ad08a9952f3e92649a520"
+  },
+  "__v": 1
+},{
+  "_id": {
+    "$oid": "6613914c60e0f31f6b0b76c4"
+  },
+  "cart": {
+    "items": [],
+    "totalQuaty": 0,
+    "PhiShip": 59000,
+    "GiamGia": 0
+  },
+  "MaTKKH": {
+    "$oid": "6613914960e0f31f6b0b76c0"
+  },
+  "__v": 1
+},{
+  "_id": {
+    "$oid": "6617b639897f6f85e7225864"
+  },
+  "cart": {
+    "items": [],
+    "totalQuaty": 0,
+    "PhiShip": 59000,
+    "GiamGia": 0
+  },
+  "MaTKKH": {
+    "$oid": "66026b2eab91573170c48ffc"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "661fa18e60626541529eee0e"
+  },
+  "cart": {
+    "items": [],
+    "totalQuaty": 0,
+    "PhiShip": 59000,
+    "GiamGia": 0
+  },
+  "MaTKKH": {
+    "$oid": "661d9e882e68ae64f774f719"
+  },
+  "__v": 0
+}]

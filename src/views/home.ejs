@@ -1,0 +1,306 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>SHOP KHẮC TÚ</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Favicon -->
+        <link rel="shortcut icon" type="image/x-icon" href="assets\img\logo\khactu-logo.png">
+		
+		<!-- all css here -->
+        <link rel="stylesheet" href="assets\css\bootstrap.min.css">
+        <link rel="stylesheet" href="assets\css\plugin.css">
+        <link rel="stylesheet" href="assets\css\bundle.css">
+        <link rel="stylesheet" href="assets\css\style.css">
+        <link rel="stylesheet" href="assets\css\responsive.css">
+        <script src="assets\js\vendor\modernizr-2.8.3.min.js"></script>
+
+        <!-- Thêm Thư Viện Flash -->
+        <script src="link-to-flash-library.js"></script>
+        <!-- Ví dụ với thư viện sweetalert2 -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        
+        <meta name="google-site-verification" content="VW10YavVNdd6ObUCMfUppDVfKBtRYULKfmTBE8x0A0Q" />
+    </head>
+    <body>
+            <!-- Add your site or application content here -->
+            
+            <!--pos page start-->
+            <div class="pos_page">
+                <div class="container">
+                   <!--pos page inner-->
+                    <div class="pos_page_inner">  
+                       <!--header area -->
+                        <div class="header_area">
+                               <!--header top-->                                 
+                                <%- include('./TrangChu/partials/header_top.ejs') %>
+                                <!--header top end-->
+
+                                <!--header middel--> 
+                                <%- include('./TrangChu/partials/header_middel.ejs') %>
+                                <!--header middel end-->      
+                            
+                                <!--header bottom--> 
+                                <div class="header_bottom">
+                                    <div class="row">
+                                            <div class="col-12">
+                                                <div class="main_menu_inner">
+                                                    <div class="main_menu d-none d-lg-block">
+                                                        <nav>
+                                                            <ul>
+                                                                <li class="active"><a href="/">Home</a></li>
+                                                                <li><a href="#">shop</a>
+                                                                    <div class="mega_menu jewelry">
+                                                                        <div class="mega_items jewelry">
+                                                                            <ul>
+                                                                                <li><a href="/shop-list-ht1">Nước Hoa Đẳng Cấp</a></li>
+                                                                                <li><a href="#">Shop GAME</a></li>
+                                                                                
+                                                                            </ul>
+                                                                        </div>
+                                                                    </div>  
+                                                                </li>
+                                                                <!-- <li><a href="#">Product Category</a>
+                                                                    <div class="mega_menu">
+                                                                        <div class="mega_top fix">
+                                                                            <div class="mega_items">
+                                                                                <h3><a href="/shop-list-ht1">Nước Hoa</a></h3>
+                                                                                <ul>
+                                                                                    <li><a href="/shop-list-phan-loai-nuoc-hoa-nam">Dành Cho Nam</a></li>
+                                                                                    <li><a href="/shop-list-phan-loai-nuoc-hoa-nu">Dành Cho Nữ</a></li>                                                   
+                                                                                </ul>
+                                                                            </div>
+                                                                            <div class="mega_items">                                                                                
+                                                                                <div> &nbsp;</div>                                                                                
+                                                                            </div>
+                                                                            <div class="mega_items">
+                                                                                <h3><a href="#">GAME</a></h3>
+                                                                                <ul>
+                                                                                    <li><a href="#">Account Nam</a></li>
+                                                                                    <li><a href="#">Account Nữ</a></li>                                                    
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="mega_bottom fix">
+                                                                            <div class="mega_thumb">
+                                                                                <a href="#"><img src="assets\img\slider\upto40.jpg" alt=""></a>
+                                                                            </div>
+                                                                            <div class="mega_thumb">
+                                                                                <a href="#"><img src="assets\img\slider\avatar1.jpg" alt=""></a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </li> -->
+                                                                
+                                                               
+                                                                <li><a href="/contact">contact us</a></li>
+                                
+                                                            </ul>
+                                                        </nav>
+                                                    </div>
+                                                    <div class="mobile-menu d-lg-none">
+                                                        <nav>
+                                                            <ul>
+                                                                <li><a href="/">Trang Chủ</a></li>
+                                                                <li><a href="#">shop</a>
+                                                                    <div>
+                                                                        <div>
+                                                                            <ul>
+                                                                                <li><a href="/shop-list-ht1">Nước Hoa Đẳng Cấp</a></li>
+                                                                                <li><a href="#">Shop GAME</a></li>                                                
+                                                                            </ul>
+                                                                        </div>
+                                                                    </div>  
+                                                                </li>
+                                                                <!-- <li><a href="#">Product Category</a>
+                                                                    <div >
+                                                                        <div>
+                                                                            <div>
+                                                                                <h3><a href="/shop-list-ht1">Nước Hoa</a></h3>
+                                                                                <ul>
+                                                                                    <li><a href="/shop-list-phan-loai-nuoc-hoa-nam">Dành Cho Nam</a></li>
+                                                                                    <li><a href="/shop-list-phan-loai-nuoc-hoa-nu">Dành Cho Nữ</a></li>                                                   
+                                                                                </ul>
+                                                                            </div>
+                                                                            <div>                                                
+                                                                                <div> &nbsp;</div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div>
+                                                                            <div >
+                                                                                <a href="#"><img src="assets\img\slider\upto40.jpg" alt=""></a>
+                                                                            </div>
+                                                                            <div >
+                                                                                <a href="#"><img src="assets\img\slider\avatar1.jpg" alt=""></a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </li> -->
+                                                                
+                                                               
+                                                                <li><a href="/contact">contact us</a></li>
+                                
+                                                            </ul>
+                                                        </nav>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                </div>
+                                <!--header bottom end-->    
+                        </div>
+                        <!--header end -->
+
+                        <!--pos home section-->
+                        <div class=" pos_home_section">
+                            <div class="row pos_home">
+                               
+                                <!-- sidebar cot ben trai -->
+                                <%- include('./TrangChu/partials/sidebar_cotbentrai.ejs') %>
+                                <!-- sidebar cot ben trai end -->
+
+
+                                <div class="col-lg-9 col-md-12">
+                                    <!--banner slider start-->
+                                    <div class="banner_slider slider_1">
+                                        <div class="slider_active owl-carousel">
+                                            <div class="single_slider" style="background-image: url(assets/img/slider/bannerNuocHoa.jpg)">
+                                                <div class="slider_content">
+                                                    <div class="slider_content_inner">  
+                                                        <!-- <h1>Product Category's Fashion</h1>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p> -->
+                                                        <!-- <a href="#">shop now</a> -->
+                                                    </div>     
+                                                </div>    
+                                            </div>
+                                            <div class="single_slider" style="background-image: url(assets/img/slider/nuochoa3.jpg)">
+                                                <div class="slider_content">
+                                                    <div class="slider_content_inner">  
+                                                        <h1>NƯỚC HOA NAM</h1>
+                                                        <p>KHẲNG ĐỊNH ĐẲNG CẤP QUÝ ÔNG. </p>
+                                                        <a href="#">shop now</a>
+                                                    </div>         
+                                                </div>         
+                                            </div>
+                                            <div class="single_slider" style="background-image: url(assets/img/slider/nuochoa2.jpg)">
+                                                <div class="slider_content">  
+                                                    <div class="slider_content_inner">  
+                                                        <!-- <h1>Best Collection</h1>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+                                                        <a href="#">shop now</a> -->
+                                                    </div> 
+                                                </div> 
+                                            </div>
+                                        </div>
+                                    </div> 
+                                    <!--banner slider start-->
+
+                                    <!--new product area Kieu 1 -> 3 sp start-->
+                                    <%- include('./TrangChu/partials/HienThiSanPham/new_Products_Kieu1.ejs') %>
+                                    <!--new product area start-->  
+
+                                    <!--featured product Kieu 1 -> 3 sp start--> 
+                                    <%- include('./TrangChu/partials/HienThiSanPham/featured_Products_Kieu1.ejs') %>
+                                    <!--featured product end--> 
+
+                                    <!--banner area start-->
+                                    <div class="banner_area mb-60">
+                                        <div class="row">
+                                            <div class="col-lg-6 col-md-6">
+                                                <div class="single_banner">
+                                                    <a href="#"><img src="assets\img\slider\upto40.jpg" alt=""></a>
+                                                    <div class="banner_title">
+                                                        <p>Up to <span> 40%</span> off</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6">
+                                                <div class="single_banner">
+                                                    <a href="#"><img src="assets\img\slider\saleoff.png" alt=""></a>
+                                                    <div class="banner_title title_2">
+                                                        <p>sale off <span> 30%</span></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>     
+                                    <!--banner area end--> 
+
+                                    <!--brand logo strat--> 
+                                    <div class="brand_logo mb-60">
+                                        <div class="block_title">
+                                            <h3>Brands</h3>
+                                        </div>
+                                        <div class="row">
+                                            <div class="brand_active owl-carousel">
+                                                <div class="col-lg-2">
+                                                    <div class="single_brand">
+                                                        <a href="#"><img src="assets\img\brand\brand1.jpg" alt=""></a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-2">
+                                                    <div class="single_brand">
+                                                        <a href="#"><img src="assets\img\brand\brand2.jpg" alt=""></a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-2">
+                                                    <div class="single_brand">
+                                                        <a href="#"><img src="assets\img\brand\brand3.jpg" alt=""></a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-2">
+                                                    <div class="single_brand">
+                                                        <a href="#"><img src="assets\img\brand\brand4.jpg" alt=""></a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-2">
+                                                    <div class="single_brand">
+                                                        <a href="#"><img src="assets\img\brand\brand5.jpg" alt=""></a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-2">
+                                                    <div class="single_brand">
+                                                        <a href="#"><img src="assets\img\brand\brand6.jpg" alt=""></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>       
+                                    <!--brand logo end-->        
+                                </div>
+                            </div>  
+                        </div>
+                        <!--pos home section end-->
+                    </div>
+                    <!--pos page inner end-->
+                </div>
+            </div>
+            <!--pos page end-->
+
+            <!--footer area start-->
+            <%- include('./TrangChu/partials/footer.ejs') %>
+            <!--footer area end-->
+            
+            <!-- modal area start -->   
+            <%- include('./TrangChu/partials/HienThiSanPham/viewDetailt_Kieu1.ejs') %>                    
+            <!-- modal area end --> 
+            
+            
+		
+		<!-- all js here -->
+        <script src="assets\js\vendor\jquery-1.12.0.min.js"></script>
+        <script src="assets\js\popper.js"></script>
+        <script src="assets\js\bootstrap.min.js"></script>
+        <script src="assets\js\ajax-mail.js"></script>
+        <script src="assets\js\plugins.js"></script>
+        <script src="assets\js\main.js"></script>
+        <script src="assets\js\hamDinhDangTien_VaLinkAnh.js"></script>
+        <script src="assets\js\thongBaoAddToCart_NgoaiHome.js"></script>
+
+
+
+    </body>
+</html>

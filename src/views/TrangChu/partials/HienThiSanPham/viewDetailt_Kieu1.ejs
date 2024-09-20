@@ -1,0 +1,229 @@
+<div class="modal fade" id="modal_box" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <div class="modal_body">
+                <div class="container">
+                    <div class="scrollable-content" style="max-height: 750px; max-width: 880px;overflow-x: hidden; overflow-y: auto;">
+                        <div class="row">
+                            <div class="col-lg-5 col-md-5 col-sm-12">
+                                <div class="modal_tab">  
+                                    <div class="tab-content" id="pills-tabContent">
+                                        <div class="tab-pane fade show active" id="tab1" role="tabpanel">
+                                            <div class="modal_tab_img">
+                                                <a href="#"><img id="anh1" src="" alt=""></a>    
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="tab2" role="tabpanel">
+                                            <div class="modal_tab_img">
+                                                <a href="#"><img id="anh2" src="" alt=""></a>    
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="tab3" role="tabpanel">
+                                            <div class="modal_tab_img">
+                                                <a href="#"><img id="anh3" src="" alt=""></a>    
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal_tab_button">    
+                                        <ul class="nav product_navactive" role="tablist">
+                                            <li>
+                                                <a class="nav-link active" data-toggle="tab" href="#tab1" role="tab" aria-controls="tab1" aria-selected="false"><img id="anh1_1" src="" alt=""></a>
+                                            </li>
+                                            <li>
+                                                <a class="nav-link" data-toggle="tab" href="#tab2" role="tab" aria-controls="tab2" aria-selected="false"><img id="anh1_2" src="" alt=""></a>
+                                            </li>
+                                            <li>
+                                            <a class="nav-link button_three" data-toggle="tab" href="#tab3" role="tab" aria-controls="tab3" aria-selected="false"><img id="anh1_3" src="" alt=""></a>
+                                            </li>
+                                        </ul>
+                                    </div>    
+                                </div>  
+                            </div> 
+                            
+                            
+                            <div class="col-lg-7 col-md-7 col-sm-12">
+                                    <div class="modal_right">
+                                        <div class="modal_title mb-10">
+                                            <h2 id="productName"></h2>
+                                        </div>
+                                        <form id="form-addtocart" method="post" action="/addtocart">
+                                            <div class="modal_price mb-10">
+                                                
+                                                <!-- còn đây là để truyền sang bên controller để lấy được 2 giá trị giá mới -->
+                                                <input type="hidden" name="idVaoDay" id="idVaoDay" value="" >
+                                                <input type="hidden" name="PriceBanMoi" id="giabanmoii" value="" >
+                                                <input type="hidden" name="PriceCuMoi" value="" >                                                      
+
+                                                <!-- hiển thị giá mới lên giao diện trang chủ -->
+                                                <span class="new_price" id="PriceBanMoi"></span>
+                                                <span class="old_price" id="PriceCuMoi" class="old-price" style="font-style: italic;"></span>
+                                                
+                                                <!-- 2 thẻ này chỉ là để lấy giá trị 2 giá xuống js xử lý -->
+                                                <input type="hidden"  value="" id="PriceBanConvert">
+                                                <input type="hidden"  value="" id="PriceCuConvert"> 
+
+                                            </div>
+                                            <div class="modal_content mb-10">
+                                                <p id="productDescription1"></p>    
+                                            </div>
+                                            <div class="modal_size mb-15">
+                                            <h2>size</h2>
+                                            <select name="size" id="group_2" onchange="changePrice()">
+                                                    <option value="100ml">100ml</option>
+                                                    <option value="200ml">200ml</option>
+                                                    <option value="300ml">300ml</option>
+                                                    <option value="400ml">400ml</option>
+                                                </select>
+                                            </div>
+
+                                            <script>                                                         
+                                                function changePrice(){
+                                                    var selectedSize = document.getElementById("group_2").value;
+                                                    var giaBan = document.getElementById("PriceBanConvert").value
+                                                    var giaCu = document.getElementById("PriceCuConvert").value
+
+                                                    console.log("giaban:", giaBan);
+                                                    console.log("selectedSize:", selectedSize);
+                                                    var newGiaBanMoi;
+                                                    var newGiaCuMoi;
+                                                    switch(selectedSize) {
+                                                        case "100ml": 
+                                                            newGiaBanMoi = giaBan * 1;
+                                                            newGiaCuMoi = giaCu *1;
+                                                            break;
+                                                        case "200ml": 
+                                                            newGiaBanMoi = giaBan * 1.2;
+                                                            newGiaCuMoi = giaCu *1.2;
+                                                            break;
+                                                        case "300ml": 
+                                                            newGiaBanMoi = giaBan * 1.4;
+                                                            newGiaCuMoi = giaCu *1.4;
+                                                            break;
+                                                        case "400ml": 
+                                                            newGiaBanMoi = giaBan * 1.6;
+                                                            newGiaCuMoi = giaCu *1.6;
+                                                            break;
+                                                        default: 
+                                                            newGiaBanMoi = giaBan;
+                                                            newGiaCuMoi = giaCu;
+                                                            break;
+                                                    }
+                                                    document.getElementById("giabanmoii").value = parseInt(newGiaBanMoi);
+                                                    document.getElementsByName("PriceCuMoi")[0].value = parseInt(newGiaCuMoi);
+
+                                                    document.getElementById("PriceBanMoi").innerHTML = formatCurrency(parseInt(newGiaBanMoi));
+                                                    document.getElementById("PriceCuMoi").innerHTML = formatCurrency(parseInt(newGiaCuMoi))
+                                                }
+                                            </script>
+
+                                            <br>
+                                            <br>                                     
+                                            <p style="font-size: 16px; font-weight: bold;">QUANTITY</p>                                
+                                            <div class="modal_add_to_cart mb-15">
+                                                
+                                                <input min="0" max="1000" value="1" type="number" name="quantity" style="font-size: 18px;width: 100px;text-align: center;border-radius: 5px;">                                            
+                                                <button class="btn btn-success" style="cursor: pointer; height: 40px;font-size: 18px;border-radius: 5px;margin-left: 10px;" type="submit"><i style="margin-right: 10px;" class="fa fa-shopping-cart"></i>add to cart</button>
+                                                
+                                            </div>    
+                                        </form>                               
+                                        <div class="modal_description mb-15">
+                                            <p id="productDescription"></p>    
+                                        </div> 
+                                        <div class="product_stock mb-20">                           
+                                            <input type="hidden" name="SoLuongTon" id="SoLuongTon" value="" />
+                                            <input type="hidden" name="SoLuongBan" id="SoLuongBan" value="" />
+                                            <span > Đã bán: <span style="padding: 5px 0; left: -15px;position: relative;right: -10px;" id="slBan"></span></span>
+                                        </div> 
+                                        <div class="modal_social">
+                                            <h2>Share this product</h2>
+                                            <ul>
+                                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                            </ul>    
+                                        </div>      
+                                    </div>    
+                            </div>    
+                        </div>                                        
+                    </div>     
+                </div>
+            </div>    
+        </div>
+    </div>
+</div> 
+
+<!-- Thong Bao Add To Cart -->
+<script>
+    document.getElementById("form-addtocart").addEventListener("submit", function(event) {
+        // Ngăn chặn việc gửi form mặc định
+        event.preventDefault();
+        
+        // Lấy giá trị của trường input idVaoDay
+        var idVaoDayValue = document.getElementById("idVaoDay").value;
+        
+        // Tạo đối tượng FormData từ form
+        var formData = new FormData(this);
+        
+        // Thêm giá trị idVaoDay vào formData
+        formData.append("idVaoDay", idVaoDayValue);
+        
+        // Gửi yêu cầu fetch
+        fetch(`/addtocart?productId=${idVaoDayValue}`, {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            if(data.logged && data.hoten){
+                if (data.success ) {
+                    // Hiển thị thông báo thành công
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Thành công!',
+                        text: data.message,
+                        confirmButtonText: 'Mua Tiếp'
+                    })
+                    .then(() => {
+                        window.location.reload(); // Tải lại trang
+                    });
+                } else {
+                    // Hiển thị thông báo lỗi
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Hết hàng!',
+                        text: data.message,
+                        confirmButtonText: 'OK SHOP'
+                    });
+                }
+            } else {
+                if (data.success) {
+                    // Hiển thị thông báo yêu cầu đăng nhập
+                    Swal.fire({
+                        icon: 'warning',
+                        text: 'Bạn cần đăng nhập để tiến hành mua hàng',
+                        confirmButtonText: 'Đi tới đăng nhập'
+                    })
+                    .then(() => {
+                        window.location.href = '/login-tk-kh';
+                    });
+                } else {
+                    // Hiển thị thông báo lỗi khi hết hàng
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Hết hàng!',
+                        text: data.message,
+                        confirmButtonText: 'OK SHOP'
+                    });                       
+                }
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    });
+</script>

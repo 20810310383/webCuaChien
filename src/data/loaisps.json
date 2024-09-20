@@ -1,0 +1,41 @@
+[{
+  "_id": {
+    "$oid": "65ac1b92b4ef2e1feba5d640"
+  },
+  "TenLoaiSP": "Nước hoa Niche"
+},{
+  "_id": {
+    "$oid": "65ac1bb3b4ef2e1feba5d641"
+  },
+  "TenLoaiSP": "Nước hoa chiết",
+  "deleted": false
+},{
+  "_id": {
+    "$oid": "65ac1bcdb4ef2e1feba5d642"
+  },
+  "TenLoaiSP": "Nước hoa Pháp - Dior"
+},{
+  "_id": {
+    "$oid": "65ad1ff2c0f3fb826e485365"
+  },
+  "TenLoaiSP": "Nước hoa Maison Francis Kurkdjian (MFK)"
+},{
+  "_id": {
+    "$oid": "6609be1e5b7c60829c9f5947"
+  },
+  "TenLoaiSP": "Nước hoa Ý - Gucci"
+},{
+  "_id": {
+    "$oid": "661f7a3094b0f58a716780df"
+  },
+  "TenLoaiSP": "guciiiiii",
+  "deleted": false,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "661f7a3b94b0f58a716780eb"
+  },
+  "TenLoaiSP": "nước hoa pháp",
+  "deleted": false,
+  "__v": 0
+}]

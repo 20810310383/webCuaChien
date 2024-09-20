@@ -1,0 +1,37 @@
+[{
+  "_id": {
+    "$oid": "65eb06c95d2a4f66ed3852e4"
+  },
+  "TenChucNang": "Quản lý danh sách tài khoản",
+  "MaChucNang": "NhanVien_DanhSach"
+},{
+  "_id": {
+    "$oid": "65eb07065d2a4f66ed3852e5"
+  },
+  "TenChucNang": "Chức năng thêm",
+  "MaChucNang": "NhanVien_Them"
+},{
+  "_id": {
+    "$oid": "65eb076d5d2a4f66ed3852e6"
+  },
+  "TenChucNang": "Chức năng cập nhật",
+  "MaChucNang": "NhanVien_CapNhat"
+},{
+  "_id": {
+    "$oid": "65eb07a35d2a4f66ed3852e7"
+  },
+  "TenChucNang": "Chức năng xóa",
+  "MaChucNang": "NhanVien_Xoa"
+},{
+  "_id": {
+    "$oid": "65fffd74a8a948b402a806dd"
+  },
+  "TenChucNang": "Quản lý sản phẩm",
+  "MaChucNang": "QLSP"
+},{
+  "_id": {
+    "$oid": "65fffd9aa8a948b402a806de"
+  },
+  "TenChucNang": "Quản lý đơn hàng",
+  "MaChucNang": "QLDH"
+}]

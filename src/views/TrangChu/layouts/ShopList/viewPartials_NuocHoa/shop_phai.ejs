@@ -1,0 +1,84 @@
+<div class="tab-pane fade " id="list" role="tabpanel">
+    <% if (all && all.length > 0) { %>
+        <% all.forEach(function(all) { %>
+    <div class="scrollable-content" style="max-height: 500px; max-width: 880px;overflow-x: hidden; overflow-y: auto;">
+        <div class="product_list_item mb-35">
+            <div class="row align-items-center">
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="product_thumb">
+                        <a href="/detailt-sp-ht1?idDetailtSP=<%= all._id %>"><img src="images/upload/<%= getRelativeImagePath(all.Image) %>" alt=""></a> 
+                        <% if (all.New_Hot === "New") { %>
+                            <div class="img_icone">
+                                <img src="assets\img\cart\span-new.png" alt="">
+                            </div>
+                            <% } else { %> 
+                            <div class="hot_img">
+                                <img src="assets\img\cart\span-hot.png" alt="">
+                            </div>
+                            <% } %>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-6 col-sm-6">
+                    <div class="list_product_content">
+                    <div class="product_ratting">
+                        <ul>
+                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                        </ul>
+                    </div>
+                        <div class="list_title">
+                            <h3 class="product_title">
+                                <a style="font-size: 22px; color: navy; font-weight: bold ;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif" href="/detailt-sp-ht1?idDetailtSP=<%= all._id %>">
+                                    <%= all.TenSP %>
+                                </a>
+                            </h3>
+                        </div>
+                        <p class="design" id="motaODay<%= all._id %>"></p>
+                        
+                        <span style="display: none;" id="inpMoTa<%= all._id %>"><%= (all.MoTa) %></span>
+
+                        <p class="compare">
+                            <!-- <input id="select" type="checkbox">
+                            <label for="select">Select to compare</label> -->
+                        </p>
+                        <div class="content_price">
+                            <span style="color: red;"><%= formatCurrency(all.GiaBan) %></span>
+                            <span class="old-price" style="font-style: italic;"><%= formatCurrency(all.GiaCu) %></span>
+                        </div>
+                        <div class="add_links">
+                            <ul>
+                                <li><a href="/detailt-sp-ht1?idDetailtSP=<%= all._id %>" title="add to cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
+                                <li><a href="#" title="add to wishlist"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
+                                <!-- <li><a id="viewDetailt" href="#" data-product-id="<%= all._id %>"  data-toggle="modal" data-target="#modal_box" title="Quick view" >View Detail</a></li> -->
+                                <li><a id="viewDetailt" href="#" data-toggle="modal" data-product-id="<%= all._id %>" data-target="#modal_box" title="Quick view"><i class="fa fa-eye" aria-hidden="true"></i></a></li>
+                                <!-- <li><a href="/detailt-sp-ht1?idDetailtSP=<%= all._id %>"  title="Quick view"><i class="fa fa-eye" aria-hidden="true"></i></a></li> -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </div>
+    <script>
+        // Đợi cho trang được tải hoàn toàn trước khi thực hiện các thao tác JavaScript
+        document.addEventListener("DOMContentLoaded", function() {
+            // Lấy giá trị từ phần tử input có id là "inpMoTa"
+            var inpMoTa = document.getElementById("inpMoTa<%= all._id %>").innerText;
+            
+            // Gán giá trị vừa lấy được vào phần tử p có id là "motaODay"
+            document.getElementById("motaODay<%= all._id %>").innerHTML = inpMoTa;
+            // var elements = document.getElementsByClassName("motaODay");
+
+            // for (var i = 0; i < elements.length; i++) {
+            //     elements[i].innerHTML = inpMoTa;
+            // }
+        });  
+    </script>
+    <% }); %> 
+    <% } else { %> 
+        <p>Admin chưa update sản phẩm</p>
+    <% } %>                
+</div>

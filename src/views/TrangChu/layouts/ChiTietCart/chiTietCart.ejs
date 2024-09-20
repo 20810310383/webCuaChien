@@ -1,0 +1,277 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>SHOP KHẮC TÚ -- Chi Tiết Giỏ Hàng</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Favicon -->
+        <link rel="shortcut icon" type="image/x-icon" href="assets\img\logo\khactu-logo.png">
+		
+		<!-- all css here -->
+       <link rel="stylesheet" href="assets\css\bootstrap.min.css">
+        <link rel="stylesheet" href="assets\css\plugin.css">
+        <link rel="stylesheet" href="assets\css\bundle.css">
+        <link rel="stylesheet" href="assets\css\style.css">
+        <link rel="stylesheet" href="assets\css\responsive.css">
+        <script src="assets\js\vendor\modernizr-2.8.3.min.js"></script>
+        <link rel="stylesheet" href="AdminQL/HomeAdminQL/thuVienToastr/toastr.min.css">
+        <style>
+            .toast {
+                font-size: 17px;
+            }
+        </style>
+    </head>
+    <body>
+            <!-- Add your site or application content here -->
+            
+            <!--pos page start-->
+            <div class="pos_page">
+                <div class="container">
+                    <!--pos page inner-->
+                    <div class="pos_page_inner">  
+
+                       <!--header area -->
+                       <div class="header_area">
+                        <!--header top-->                                 
+                         <%- include('../../partials/header_top.ejs') %>
+                         <!--header top end-->
+
+                         <!--header middel--> 
+                         <%- include('../../partials/header_middel.ejs') %>
+                         <!--header middel end-->      
+                     
+                         <!--header bottom--> 
+                         <%- include('../../partials/header_bottom.ejs') %>
+                         <!--header bottom end-->    
+                        </div>
+                        <!--header end -->
+                        
+                         <!--breadcrumbs area start-->
+                        <div class="breadcrumbs_area">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="breadcrumb_content">
+                                        <ul>
+                                            <li><a href="/">home</a></li>
+                                            <li><i class="fa fa-angle-right"></i></li>
+                                            <li>Xem chi tiết giỏ hàng</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--breadcrumbs area end-->
+
+
+                         <!--shopping cart area start -->
+                         <div class="shopping_cart_area">
+                            <% if (productDetailsArray.length > 0) { %>                            
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="table_desc">
+                                                <div class="cart_page table-responsive">
+                                                    <div class="scrollable-content" style="max-height: 690px; max-width: 1655px;overflow-x: auto; overflow-y: auto;">
+                                                        <table>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th style="font-family: Arial, Helvetica, sans-serif;">STT</th>
+                                                                    <th class="product_remove" style="font-family: Arial, Helvetica, sans-serif;">Chức Năng</th>
+                                                                    <th class="product_thumb" style="font-family: Arial, Helvetica, sans-serif;">Hình Ảnh</th>
+                                                                    <th class="product_name" style="font-family: Arial, Helvetica, sans-serif;">Sản Phẩm</th>
+                                                                    <th style="font-family: Arial, Helvetica, sans-serif; width: 200px;">Size</th>
+                                                                    <th class="product-price" style="font-family: Arial, Helvetica, sans-serif;">Giá Bán</th>
+                                                                    <th style="font-family: Arial, Helvetica, sans-serif;">Số Lượng</th>
+                                                                    <th class="product_total" style="font-family: Arial, Helvetica, sans-serif;">Tổng Tiền</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody > 
+                                                                <% productDetailsArray.forEach(function(spDetailCart, index) { %>
+                                                                <tr>
+                                                                    <td style="font-size: 18px;">
+                                                                        <%= index + 1 %>
+                                                                    </td>
+                                                                <td class="product_remove">
+                                                                    <!-- <form action="/remove-mot-sp" method="post" >
+                                                                        <input type="hidden" name="idARemove" value="<%= spDetailCart._id %>">
+                                                                        <button style="border: none;background-color: white;" type="submit">
+                                                                            <i style="font-size: 24px;" id="dltSP" title="Xóa sản phẩm này" class="fa fa-trash-o"></i>
+                                                                        </button>
+                                                                    </form> -->
+
+                                                                    <a 
+                                                                        href="#"
+                                                                        data-toggle="modal" data-target="#exampleModalCenter<%= spDetailCart._id %>"
+                                                                    ><i title="Xóa sản phẩm này" class="fa fa-trash-o"></i></a>
+                                                                    
+                                                                    <!-- Modal -->
+                                                                    <div class="modal fade" id="exampleModalCenter<%= spDetailCart._id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                                                        <div class="modal-dialog modal-dialog-centered" role="document">
+                                                                        <div class="modal-content">
+                                                                            <div class="modal-header">
+                                                                            <h5 class="modal-title" id="exampleModalLongTitle">Xoá sản phẩm trong giỏ hàng?</h5>
+                                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                                <span aria-hidden="true">&times;</span>
+                                                                            </button>
+                                                                            </div>
+                                                                            <div class="modal-body" style="font-size: 18px;">
+                                                                                Bạn có chắc chắn muốn xóa sản phẩm <span style="color: red;"><%= spDetailCart.productDetails.TenSP %> <span style="color: blue;">(<%= spDetailCart.size %>)</span></span> trong giỏ hàng này không?
+                                                                            </div>
+                                                                            <div class="modal-footer">
+                                                                            <button style="cursor: pointer; border-radius: 5px; " type="button" class="btn btn-secondary" data-dismiss="modal">Không</button>
+                                                                            <button style="cursor: pointer; border-radius: 5px; " type="button" class="btn btn-danger" onclick="deleteSPCart('<%= spDetailCart._id %>')">Xoá ngay</button>
+                                                                            </div>
+                                                                        </div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                        <!-- <a href="#"><i title="Xóa sản phẩm này" class="fa fa-trash-o"></i></a> -->
+                                                                        <br>
+                                                                        <br>
+                                                                        <a href="/get-edit-sp-cart?getIdEditSPCart=<%= spDetailCart._id %>"><i style="font-size: 24px;" title="Edit số lượng và size của sản phẩm này"  class="fa fa-pencil"></i></a>
+                                                                    </td>
+
+                                                 
+                                                                        <td class="product_thumb"><a href="/detailt-sp-ht1?idDetailtSP=<%= spDetailCart.productDetails._id %>"><img src="images/upload/<%= getRelativeImagePath(spDetailCart.productDetails.Image) %>" alt=""></a></td>
+                                                                    
+                                                                    <td class="product_name" ><a style="font-family: Arial, Helvetica, sans-serif; font-size: 18px;"><%= spDetailCart.productDetails.TenSP %></a></td>
+                                                                    <td class="product_name" ><a style="font-family: Arial, Helvetica, sans-serif; font-size: 18px; width: 30px;"><%= spDetailCart.size %></a></td>
+                                                                    <td class="product-price"><%= formatCurrency(spDetailCart.donGia) %></td>
+                                                                    <td class="product_quantity"><input style="font-size: 20px;width: 100px;text-align: center;" min="1" max="1000" value="<%= spDetailCart.qty %>" type="number" disabled ></td>
+                                                                    <td class="product_total"><%= formatCurrency(spDetailCart.donGia * spDetailCart.qty ) %></td>
+                                                                </tr>
+                                                                <% }); %> 
+                                                            </tbody>
+                                                        </table>   
+                                                    </div>
+                                                </div>  
+                                                <div class="checkout_btn cart_submit">
+                                                    <a href="#" onclick="history.go(-1);" style="font-family: Arial, Helvetica, sans-serif; ">Back</a>
+                                                </div>  
+                                            </div>
+                                         </div>
+                                     </div>
+                                     <!--coupon code area start-->
+                                    <div class="coupon_area">
+                                        <div class="row">
+                                            <div class="col-lg-6 col-md-6">
+                                                <div class="coupon_code">
+                                                    <h3 style="font-family: Arial, Helvetica, sans-serif; font-size: 16px;">THÔNG TIN GIẢM GIÁ</h3>
+                                                    <div class=" col-md-12">
+                                                        <div class="contact_message ">
+                                                            <img src="assets/img/cart/KHUYEN-MAI.png" alt="">    
+                                                            <p style="font-family: Arial, Helvetica, sans-serif; font-size: 20px;line-height: 40px;">
+                                                                <span style="font-size: 30px; color: red;">&#9758;</span> FreeShip khi tổng đơn hàng từ <span style="color: navy;">1000K</span> trở lên  <br>
+                                                                <span style="font-size: 30px; color: red;">&#9758;</span> Mua tổng giá trị sản phẩm dưới <span style="color: navy;">500K</span> giảm 2% <br>
+                                                                <span style="font-size: 30px; color: red;">&#9758;</span> Mua tổng giá trị sản phẩm từ <span style="color: navy;">500K đến 1000k</span> giảm 3% <br>
+                                                                <span style="font-size: 30px; color: red;">&#9758;</span> Mua tổng giá trị sản phẩm từ <span style="color: navy;">1000K đến 20M</span> giảm 4% <br>
+                                                                <span style="font-size: 30px; color: red;">&#9758;</span> Mua tổng giá trị sản phẩm trên <span style="color: navy;">20M</span> giảm 5% <br>                                                               
+                                                            </p>
+                                                             <!-- <img src="assets/img/cart/sale_sale_sale.jpg" alt="">     -->
+                                                             
+                                                         </div> 
+                                                    </div>
+                                                    <!-- <div class="coupon_inner">   
+                                                        <p>Enter your coupon code if you have one.</p>                                
+                                                        <input placeholder="Coupon code" type="text">
+                                                        <button type="submit">Apply coupon</button>
+                                                    </div>     -->
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6">
+                                                <div class="coupon_code">
+                                                    <h3 style="font-family: Arial, Helvetica, sans-serif; font-size: 16px;">Tổng Số Giỏ Hàng</h3>
+                                                    <div class="coupon_inner">
+                                                       <div class="cart_subtotal">
+                                                           <p style="font-family: Arial, Helvetica, sans-serif; font-size: 16px;">Tổng giá <%= cartItemss.totalQuaty !== 0 ? cartItemss.totalQuaty : 0 %> sản phẩm</p>
+                                                           <p class="cart_amount" style="color: navy;"><%= formatCurrency(totalCartPrice) %></p>
+                                                       </div>
+                                                       <!-- Math.floor((data.giamGia / data.totalPrice) * 100) -->
+                                                        <div class="cart_subtotal"> 
+                                                            <% const giamgia = Math.floor((giam_Gia / totalCartPrice) * 100); %>
+                                                            <p style="font-family: Arial, Helvetica, sans-serif; font-size: 16px;">Giảm Giá &ensp;<span style="color: red;"><%= giamgia %>%</span></p>
+                                                            <p class="cart_amount" style="color: rgb(214, 0, 0);">-<%= formatCurrency(giam_Gia) %></p>
+                                                        </div>
+
+                                                       <div class="cart_subtotal " style="border-bottom: 1px solid rgb(172, 169, 169);">
+                                                           <p style="font-family: Arial, Helvetica, sans-serif; font-size: 16px;">Phí giao hàng</p>
+                                                           <% if (totalCartPrice >= 1000000) { %>
+                                                            <!-- <p class="cart_amount" style="color: red; text-decoration-line: line-through; font-style: italic;"> 30.000 đ</p> -->
+                                                            <a href="#" style="pointer-events: none; cursor: pointer; font-size: 16px;border-bottom: none;">Miễn Phí Vận Chuyển</a>
+                                                            <% } else { %>
+                                                                <p class="cart_amount" style="color: red;"> <%= formatCurrency(detailCart.cart.PhiShip) %></p>
+                                                            <% } %>                                                                                                                      
+                                                       </div>
+                                                       <br>
+                                                       
+
+                                                       <div class="cart_subtotal">
+                                                           <p style="font-family: Arial, Helvetica, sans-serif; font-size: 16px;">Số tiền cần thanh toán</p>
+
+                                                           <% if (totalCartPrice >= 1000000) { %>
+                                                            <p class="cart_amount" style="color: red; font-weight: bold;"><%= formatCurrency(totalCartPrice - giam_Gia ) %></p>
+                                                            <% } else { %>
+                                                            <p class="cart_amount" style="color: red; font-weight: bold;"><%= formatCurrency(detailCart.cart.PhiShip + totalCartPrice - giam_Gia ) %></p>
+                                                            <% } %>
+
+                                                       </div>
+                                                       <div class="checkout_btn">
+                                                           <a href="/checkout" style="font-family: Arial, Helvetica, sans-serif; font-size: 16px;">Tiến hành kiểm tra và đặt hàng</a>
+                                                       </div>
+                                                    </div>
+                                                </div>
+                                                <!-- <img src="assets/img/cart/kmkm.png" alt=""> -->
+                                                <img  src="assets/img/cart/tt.jpg" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--coupon code area end-->                           
+                            <% } else { %>
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="coupon_code">
+                                        <h3 style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; ">Tổng Số Giỏ Hàng</h3>
+                                        <div class="coupon_inner">
+                                           <div class="cart_subtotal">
+                                               <p style="font-family: Arial, Helvetica, sans-serif; font-size: 16px;color: red;">GIỎ HÀNG TRỐNG, ĐI MUA HÀNG THÔI CẬU</p>
+                                           </div>
+                                           <div class="cart_subtotal">
+                                               <p style="font-family: Arial, Helvetica, sans-serif; font-size: 16px;">Số tiền cần thanh toán</p>
+                                               <p class="cart_amount" style="color: red; font-weight: bold;">0đ</p>
+                                           </div>
+                                           <div class="checkout_btn">
+                                               <a href="/"  style="font-family: Arial, Helvetica, sans-serif; ">Trở lại trang trước</a>
+                                           </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>                            
+                            <% } %>
+                         </div>
+                         <!--shopping cart area end -->
+
+                        
+                    </div>
+                    <!--pos page inner end-->
+                </div>
+            </div>
+            <!--pos page end-->
+            
+            <!--footer area start-->
+            <%- include('../../partials/footer.ejs') %>            
+            <!--footer area end-->
+		<!-- all js here -->
+        <script src="assets\js\vendor\jquery-1.12.0.min.js"></script>
+        <script src="assets\js\popper.js"></script>
+        <script src="assets\js\bootstrap.min.js"></script>
+        <script src="assets\js\ajax-mail.js"></script>
+        <script src="assets\js\plugins.js"></script>
+        <script src="assets\js\main.js"></script>
+        <script src="assets\js\hamDinhDangTien_VaLinkAnh.js"></script>
+
+        <script src="assets\js\xuLyNutXoaSPTrongCart.js"></script>
+        <script src="AdminQL/HomeAdminQL/thuVienToastr/toastr.min.js"></script>
+
+    </body>
+</html>

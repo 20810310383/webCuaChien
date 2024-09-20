@@ -1,0 +1,26 @@
+<div class="header_middel">
+    <div class="row align-items-center">
+       <!--logo start-->
+        <div class="col-lg-3 col-md-3">
+            <div class="logo">
+                <a href="/"><img width="120" src="assets\img\logo\khactu-logo.jpg" alt=""></a>
+            </div>
+        </div>
+        <!--logo end-->
+        <div class="col-lg-9 col-md-9">
+            <div class="header_right_info">
+                <div class="search_bar">
+                    <form action="/search-game" method="get">
+                        <input placeholder="Tìm Kiếm Account Game ..." type="text" name="search_game">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                    </form>
+                </div>
+
+                <!-- giỏ hàng hiển thị ở đây -->
+                <%- include('../partials/gio_hang.ejs') %>
+                <!-- giỏ hàng hiển thị ở đây end -->
+                
+            </div>
+        </div>
+    </div>
+</div>    

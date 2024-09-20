@@ -1,0 +1,63 @@
+[{
+  "_id": {
+    "$oid": "65e061a95d2a4f66ed3852bd"
+  },
+  "TenDangNhap": "admin123",
+  "MatKhau": "admin123",
+  "HoTen": "Khắc Tú adminnnn",
+  "deleted": false
+},{
+  "_id": {
+    "$oid": "65eb08dc5d2a4f66ed3852f2"
+  },
+  "TenDangNhap": "dokhactu",
+  "MatKhau": "tu2002",
+  "HoTen": "Khắc Túu",
+  "SDT": "0972138493",
+  "DiaChi": "Hà Nội",
+  "NgaySinh": "1-1-2002",
+  "Note": "Nhân viên",
+  "deleted": false
+},{
+  "_id": {
+    "$oid": "65eb7c7b114eb01ac73e84ba"
+  },
+  "TenDangNhap": "test123",
+  "MatKhau": "test123",
+  "HoTen": "Khách Hàng",
+  "NgayTao": {
+    "$date": {
+      "$numberLong": "1709931590325"
+    }
+  },
+  "deleted": false,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "65ec2c77008db76faad39573"
+  },
+  "TenDangNhap": "khactu1234",
+  "MatKhau": "khactu1234",
+  "HoTen": "Khắc Túuuuuu",
+  "NgayTao": {
+    "$date": {
+      "$numberLong": "1709975773718"
+    }
+  },
+  "deleted": false,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "66136f29b3bb99217d8b4dd1"
+  },
+  "TenDangNhap": "admin1234",
+  "MatKhau": "admin1234",
+  "HoTen": "nhân viên quản lý",
+  "NgayTao": {
+    "$date": {
+      "$numberLong": "1712549293629"
+    }
+  },
+  "deleted": false,
+  "__v": 0
+}]

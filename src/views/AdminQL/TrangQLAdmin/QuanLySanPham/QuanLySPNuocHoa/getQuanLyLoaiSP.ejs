@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets\img\logo-KTT1.ico">
+
+    <title>Quản lý loại sản phẩm nước hoa</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="AdminQL/HomeAdminQL/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="AdminQL/HomeAdminQL/css/sb-admin-2.min.css" rel="stylesheet">
+    
+    <!-- Latest compiled and minified CSS -->
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <!-- Ví dụ với thư viện sweetalert2 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <link rel="stylesheet" href="AdminQL/HomeAdminQL/thuVienToastr/toastr.min.css">
+
+    <style>
+        .pagination-container {
+          display: flex;
+          justify-content: center;
+          margin-top: 50px;
+        }
+      
+        .pagination {
+          list-style: none;
+          padding: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .toast {
+                font-size: 17px;
+            }
+      </style>
+
+</head>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <%- include("../../partials/danhMuc.ejs") %>
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <!-- Topbar Search -->
+                    <form action="/search-qly-nuoc-hoa" method="get" class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search" id="search-ben-admin">
+                        <div class="input-group">
+                            <input type="text" class="form-control bg-light border-0 small" placeholder="Tìm kiếm nước hoa đi sếp..." name="search_ben_admin"
+                                aria-label="Search" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" type="submit">
+                                    <i class="fas fa-search fa-sm"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <!-- Topbar Navbar -->
+                    <%- include("../../partials/topAccount.ejs") %>
+
+                </nav>
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <!-- Page Heading -->
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <a ></a>                   
+                        <h1 class="h3 mb-0 text-gray-800">Quản lý loại sản phẩm nước hoa</h1>     
+                        <a href="#"  ></a>                   
+                    </div> 
+                    
+                    <!-- Modal thêm -->
+                    <div class="modal fade" id="exampleModalCenter-them" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">Thêm loại sản phẩm?</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            </div>
+                            <div class="modal-body">
+                                <input name="ThemTenLoaiSP" id="ThemTenLoaiSP" class="form-control" required placeholder="Nhập tên loại sản phẩm cần thêm..."/>
+                            </div>
+                            <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Không</button>
+                            <button type="button" class="btn btn-danger"  onclick="createLoaiSP()">Đồng ý thêm</button>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                   
+                    <!-- Content Row -->
+                    <div style="justify-content: center;text-align: center; margin-bottom: 20px;">
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter-them">Thêm loại sản phẩm</a>  
+                    </div>
+                    <div class="row justify-content-center" >
+                        <div class="scrollable-content" style="max-height: 500px; max-width: 1655px;overflow-x: auto; overflow-y: auto; text-align: center;">
+                            <table class="table table-hover" style="width: 1000px;">
+                                <thead>                                
+                                    <tr style="background-color: #DC143C; color: white; font-size: 18px; ">
+                                        <th style="text-align: center; vertical-align: middle;">STT</th>
+                                        <th style="text-align: center; vertical-align: middle;">Tên loại sản phẩm</th>                                                                       
+                                        <th style="text-align: center; vertical-align: middle;">Chức Năng</th>
+                                    </tr>
+                                </thead>
+                                <tbody>  
+                                    <!-- Hiển thị all sản phẩm - end -->  
+                                    <% all.forEach(function(allsp, index) { %>                                                       
+                                    <tr >   
+                                        <td style="font-weight: bold; color: #180766; font-size: 18px; text-align: center; vertical-align: middle;"><%= index + 1 %></td>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+                                        <td><%= allsp.TenLoaiSP %> <span style="color: navy;">&nbsp;&nbsp;
+                                            (Đang có: <span style="color: red;font-weight: bold;">
+                                                <% for (const item of tongSL) { %>
+                                                    <% if (item.IDLoaiSP.toString() === allsp._id.toString()) { %>
+                                                        <%= item.soLuongSanPham %>
+                                                    <% } %>
+                                                <% } %>
+                                            </span> sản phẩm)</span>
+                                        </td>
+                                        <td style="text-align: center; vertical-align: middle;">
+                                            <a 
+                                                class="btn btn-success button-SUA-XOA" data-toggle="modal" data-target="#exampleModalCenter-<%= allsp._id %>"
+                                                >Edit</a>   
+                                                <!-- href="/edit-loaiSP?idEdit=<%= allsp._id %>" -->
+                                                <% for (const item of tongSL) { %>
+                                                    <% if (item.IDLoaiSP.toString() === allsp._id.toString() && item.soLuongSanPham < 1) { %>
+                                                        <a id="deleteButton" class="btn btn-danger"  title="Bấm vào để xoá"
+                                                            data-toggle="modal" data-target="#exampleModalCenter<%= allsp._id %>">Delete</a>
+                                                    <% } else if(item.IDLoaiSP.toString() === allsp._id.toString() && item.soLuongSanPham > 0) { %>
+                                                        <a id="deleteButton" class="btn btn-dark" title="Không thể xoá khi đang có sản phẩm" 
+                                                            >cannot delete</a>
+                                                    <% } else { %>
+
+                                                    <% } %>
+                                                <% } %>
+                                            <!-- <a                                                
+                                                id="deleteButton" 
+                                                class="btn btn-danger" 
+                                                data-toggle="modal" data-target="#exampleModalCenter<%= allsp._id %>"
+                                            >Delete</a>   -->
+                                            
+                                            <!-- Modal xoá -->
+                                            <div class="modal fade" id="exampleModalCenter<%= allsp._id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLongTitle">Xoá loại sản phẩm?</h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        Bạn có chắc chắn muốn xoá loại sản phẩm <span style="color: red;"><%= allsp.TenLoaiSP %></span> này không?
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Không</button>
+                                                    <button type="button" class="btn btn-danger" onclick="deleteLoaiSP('<%= allsp._id %>')">Đồng ý xoá</button>
+                                                    </div>
+                                                </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Modal sửa -->
+                                            <form action="/sua-loaisp-nuoc-hoa/<%= allsp._id %>" method="POST" id="doi-mk">
+                                                <!-- <input type="hidden" name="_method" value="PUT"/> -->
+                                                <div class="modal fade" id="exampleModalCenter-<%= allsp._id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle1" aria-hidden="true">
+                                                    <input type="hidden" value="<%= allsp._id %>" name="idSua" id="idSua"/>
+                                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                        <h5 class="modal-title" id="exampleModalLongTitle1">Sửa loại sản phẩm <span style="color: red;"><%= allsp.TenLoaiSP %></span> ?</h5>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <input value="" name="TenLoaiSP" id="TenLoaiSP" class="form-control" required placeholder="Nhập lại tên loại sản phẩm mới..."/>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Không</button>
+                                                            <button type="submit" class="btn btn-danger" >Đồng ý sửa</button>
+                                                        </div>
+                                                    </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+
+                                        </td>                                  
+                                    </tr>                                
+                                    <% }); %>                                         
+                                    <!-- Hiển thị all sản phẩm - end -->   
+                                </tbody>
+                            </table> 
+                        </div>                      
+                    </div>
+                    
+                </div>
+                <!-- /.container-fluid -->
+
+                
+            </div>
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>WebShop &copy; Khắc Tú</span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Bạn có chắc chắn muốn đăng xuất không?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Ấn vào "Logout" để xác nhận đăng xuất.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="/login-admin">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="AdminQL/HomeAdminQL/vendor/jquery/jquery.min.js"></script>
+    <script src="AdminQL/HomeAdminQL/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="AdminQL/HomeAdminQL/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="AdminQL/HomeAdminQL/js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="AdminQL/HomeAdminQL/vendor/chart.js/Chart.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="AdminQL/HomeAdminQL/js/demo/chart-area-demo.js"></script>
+    <script src="AdminQL/HomeAdminQL/js/demo/chart-pie-demo.js"></script>
+
+    <script src="assets\js\hamDinhDangTien_VaLinkAnh.js"></script>
+    <script src="AdminQL/HomeAdminQL/js/xuLyNutXoaSP.js"></script>
+    <script src="AdminQL/HomeAdminQL/thuVienToastr/toastr.min.js"></script>
+
+    <!-- SỬA THÀNH CÔNG NHƯNG CHƯA THÔNG BÁO ĐƯỢC -->
+    <script>
+        function suaLoaiSP(idSua) {
+            fetch(`/sua-loaisp-nuoc-hoa/${idSua}`, {
+                    method: 'POST',
+                    // headers: {
+                    //     'Content-Type': 'application/json'
+                    // },
+                    body: formData
+                    // Có thể thêm các tùy chọn khác như body nếu cần
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+
+                        toastr.options = {
+                            "closeButton": true,
+                            "debug": false,
+                            "newestOnTop": true,
+                            "progressBar": true,
+                            "positionClass": "toast-top-right",
+                            "preventDuplicates": false,
+                            "onclick": null,
+                            "showDuration": "300",
+                            "hideDuration": "1000",
+                            "timeOut": "1500",
+                            "extendedTimeOut": "1000",
+                            "showEasing": "swing",
+                            "hideEasing": "linear",
+                            "showMethod": "fadeIn",
+                            "hideMethod": "fadeOut"
+                        }
+                        toastr["success"](data.message, "Thành Công!")
+                        setTimeout(function() {
+                            toastr.clear();
+                            // window.location.reload();
+                            window.location.href = "/trang-quan-ly-loaisp";
+                        }, 1500); 
+
+                        // alert(data.message)
+                    } else {
+                        // Show error alert
+                        toastr.error('Có lỗi xảy ra khi sửa. Vui lòng thử lại sau.', 'Lỗi!');
+                    }
+                })
+                .catch(error => {
+                    console.error("Error:", error);
+                });
+        }
+    </script>
+
+    <!-- thêm loại sản phẩm -->
+    <script>
+        function createLoaiSP() {
+            // Lấy các giá trị từ form
+            const ThemTenLoaiSP = document.getElementById('ThemTenLoaiSP').value;
+            
+            // Dữ liệu cập nhật
+            const createData = {
+                ThemTenLoaiSP: ThemTenLoaiSP,
+            };
+
+            fetch(`/them-loaisp-nuoc-hoa`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(createData) // Chuyển đổi dữ liệu cập nhật thành chuỗi JSON và gửi đi
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    // Show success alert
+                    toastr.options = {
+                            "closeButton": true,
+                            "debug": false,
+                            "newestOnTop": true,
+                            "progressBar": true,
+                            "positionClass": "toast-top-right",
+                            "preventDuplicates": false,
+                            "onclick": null,
+                            "showDuration": "300",
+                            "hideDuration": "1000",
+                            "timeOut": "1500",
+                            "extendedTimeOut": "1000",
+                            "showEasing": "swing",
+                            "hideEasing": "linear",
+                            "showMethod": "fadeIn",
+                            "hideMethod": "fadeOut"
+                        }
+                        toastr["success"](data.message, "Thành Công!")
+                        setTimeout(function() {
+                            toastr.clear();
+                            window.location.reload();
+                            // window.location.href = "/trang-quan-ly-loaisp";
+                        }, 1500); 
+                } else {                
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Lỗi!',
+                        text: data.message,
+                        confirmButtonText: 'OK SHOP'
+                    });                       
+                }
+            })
+            .catch(error => {
+                console.error("Error:", error);
+            });
+        }
+    </script>
+    
+</body>
+
+</html>

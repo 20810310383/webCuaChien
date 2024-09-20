@@ -1,0 +1,15 @@
+[{
+  "_id": {
+    "$oid": "6628d2455e77c1fb64022736"
+  },
+  "TenDangNhap": "dokhactu1822@gmail.com",
+  "MatKhau": "dokhactu1822@gmail.com",
+  "HoTen": "tú",
+  "NgayTao": {
+    "$date": {
+      "$numberLong": "1713951253689"
+    }
+  },
+  "deleted": false,
+  "__v": 0
+}]

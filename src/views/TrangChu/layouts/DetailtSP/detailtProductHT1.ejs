@@ -1,0 +1,863 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>SHOP KHẮC TÚ -- Chi Tiết SP</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Favicon -->
+        <link rel="shortcut icon" type="image/x-icon" href="assets\img\logo\khactu-logo.png">
+		
+		<!-- all css here -->
+       <link rel="stylesheet" href="assets\css\bootstrap.min.css">
+        <link rel="stylesheet" href="assets\css\plugin.css">
+        <link rel="stylesheet" href="assets\css\bundle.css">
+        <link rel="stylesheet" href="assets\css\style.css">
+        <link rel="stylesheet" href="assets\css\responsive.css">
+        <script src="assets\js\vendor\modernizr-2.8.3.min.js"></script>
+
+        <!-- Thêm Thư Viện Flash -->
+        <script src="link-to-flash-library.js"></script>
+        <!-- Ví dụ với thư viện sweetalert2 -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    </head>
+    <body>
+            <!-- Add your site or application content here -->
+            
+            <!--pos page start-->
+            <div class="pos_page">
+                <div class="container">
+                    <!--pos page inner-->
+                    <div class="pos_page_inner">  
+
+                       <!--header area -->
+                       <div class="header_area">
+                        <!--header top-->                                 
+                         <%- include('../../partials/header_top.ejs') %>
+                         <!--header top end-->
+
+                         <!--header middel--> 
+                         <%- include('../../partials/header_middel.ejs') %>
+                         <!--header middel end-->      
+                     
+                         <!--header bottom--> 
+                         <%- include('../../partials/header_bottom.ejs') %>
+                         <!--header bottom end-->    
+                        </div>
+                        <!--header end -->
+                        
+                         <!--breadcrumbs area start-->
+                        <div class="breadcrumbs_area">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="breadcrumb_content">
+                                        <ul>
+                                            <li><a href="/">home</a></li>
+                                            <li><i class="fa fa-angle-right"></i></li>
+                                            <li>chi tiết sản phẩm</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--breadcrumbs area end-->
+
+
+                         <!--product wrapper start-->
+                        <div class="product_details sidebar">
+                            <div class="row">
+                                <div class="col-lg-3 col-md-12">
+                                    <!--layere categorie"-->
+                                   <div class="sidebar_widget shop_c sidebar">
+                                        <div class="categorie__titile">
+                                            <h4 style="font-family: Arial, Helvetica, sans-serif;">Loại sản phẩm</h4>
+                                        </div>
+                                        <div class="layere_categorie">
+                                            <ul>
+                                                <li>
+                                                    <a href="/shop-list-ht1">
+                                                        <label for="acces">
+                                                            <input type="hidden" name="idPL" value="">
+                                                            <span style="font-size: 16px;">Tất cả</span>                                                                    
+                                                        </label>
+                                                    </a>                                                            
+                                                </li>
+                                                <% tongSL.forEach(function(tongSL) { %>                                                           
+                                                <li>
+                                                    <a href="/shop-list-ht1?idPL=<%= tongSL.IDLoaiSP %>">
+                                                        <label for="acces">
+                                                            <input type="hidden" name="idPL" value="<%= tongSL.IDLoaiSP %>">
+                                                            <span style="font-size: 16px;"><%= tongSL.TenLoaiSP %></span>
+                                                            <span style="font-size: 16px;">(<%= tongSL.soLuongSanPham %>)</span>
+                                                        </label>
+                                                    </a>                                                            
+                                                </li>                                                        
+                                                <% }); %> 
+                                            </ul>
+                                        </div>
+                                    </div>
+                                <!--layere categorie end-->                                
+
+                                 <!--price slider start-->                                     
+                                 <div class="sidebar_widget price">
+                                    <h2 style="font-family: Arial, Helvetica, sans-serif;">Lọc theo giá</h2>
+                                    <div class="ca_search_filters">
+                                        <form action="/shop-list-ht1" method="get" id="searchForm">
+                                            <input title="Click vào đây để tìm sản phẩm" style="font-size: 17px;" type="text" name="price" id="amount" readonly value="<%= cleanedString %>"> 
+                                            <input type="hidden" value="<%= cleanedString %>"> 
+                                            <div title="Click vào đây để tìm sản phẩm" id="slider-range"></div> 
+                                            <button type="submit" id="submitButton" style="display: none;"></button>
+                                        </form>
+                                    </div>
+                                </div>                                                       
+                                <!--price slider end-->
+
+                                <script>                                           
+                                    // Lắng nghe sự kiện nhấn phím trên trường input
+                                    document.getElementById("amount").addEventListener("dblclick", function(event) {
+                                        // Nếu phím nhấn là phím Enter
+                                        // if (event.keyCode === 13) {
+                                        //     // Ngăn chặn hành động mặc định của phím Enter
+                                        //     event.preventDefault();
+                                        //     // Kích hoạt sự kiện click trên nút gửi
+                                            
+                                        // };
+                                        document.getElementById("submitButton").click();
+                                    });
+
+                                    
+                                    // Lưu trạng thái của thông báo vào sessionStorage khi click vào nút gửi
+                                    document.getElementById("submitButton").addEventListener("click", function() {
+                                        // Lấy giá trị của input hidden
+                                        const cleanedString = document.querySelector('input[type="hidden"]').value;
+                                        // Lưu thông báo vào sessionStorage
+                                        sessionStorage.setItem('toastrStatus', 'visible');
+                                    });
+
+                                    // Kiểm tra trạng thái của thông báo trong sessionStorage khi trang được load lại
+                                    window.onload = function() {
+                                        if (sessionStorage.getItem('toastrStatus') === 'visible') {
+                                            // Hiển thị lại thông báo
+                                            toastr.options = {
+                                                "closeButton": true,
+                                                "debug": false,
+                                                "newestOnTop": true,
+                                                "progressBar": true,
+                                                "positionClass": "toast-top-right",
+                                                "preventDuplicates": false,
+                                                "onclick": null,
+                                                "showDuration": "300",
+                                                "hideDuration": "1000",
+                                                "timeOut": "10000",
+                                                "extendedTimeOut": "1000",
+                                                "showEasing": "swing",
+                                                "hideEasing": "linear",
+                                                "showMethod": "fadeIn",
+                                                "hideMethod": "fadeOut"
+                                            };
+                                            toastr["success"]("Đã tìm thấy sản phẩm", "Thành Công!");
+                                            // Xóa trạng thái của thông báo sau khi hiển thị
+                                            sessionStorage.removeItem('toastrStatus');
+                                        }
+                                    }
+                                </script>
+
+                                <!--popular tags area-->
+                                <div class="sidebar_widget tags  mb-30">
+                                    <div class="block_title">
+                                        <h3 style="font-family: Arial, Helvetica, sans-serif;">thẻ danh mục</h3>
+                                    </div>
+                                    <div class="block_tags">
+                                        <% tongSL.forEach(function(tongSL) { %> 
+                                            <input type="hidden" name="idPL" value="<%= tongSL.IDLoaiSP %>">
+                                            <a href="/shop-list-ht1?idPL=<%= tongSL.IDLoaiSP %>"><%= tongSL.TenLoaiSP %></a>
+                                        <% }); %> 
+                                    </div>
+                                </div>
+                                <!--popular tags end-->
+
+                               <!--special product start-->
+                               <div class="sidebar_widget special">
+                                <div class="block_title">
+                                    <h3 style="font-family: Arial, Helvetica, sans-serif;">Sản phẩm bán chạy</h3>
+                                </div>
+                                <% spBanChay.forEach(function(spBanChay) { %> 
+                                <div class="special_product_inner mb-20">
+                                    <div class="special_p_thumb">
+                                        <a href="/detailt-sp-ht1?idDetailtSP=<%= spBanChay._id %>"><img width="120" height="110" src="images/upload/<%= getRelativeImagePath(spBanChay.Image) %>" alt=""></a>
+                                    </div>
+                                    <div class="small_p_desc">
+                                        <div class="product_ratting">
+                                           <ul>
+                                               <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                               <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                               <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                               <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                               <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                           </ul>
+                                       </div>
+                                        <h3><a href="/detailt-sp-ht1?idDetailtSP=<%= spBanChay._id %>"><%= spBanChay.TenSP %></a></h3>
+                                        <div class="special_product_proce">
+                                            <span class="old_price"><%= formatCurrency(spBanChay.GiaCu) %></span>
+                                            <span class="new_price"><%= formatCurrency(spBanChay.GiaBan) %></span>
+                                        </div>
+                                        <p style="position: relative; left: -50px;">Số lượng bán: <%= spBanChay.SoLuongBan %></p>
+                                    </div>
+                                </div>   
+                                <% }); %>                                          
+                            </div>
+                            <!--special product end-->
+                                </div>
+
+                                <div class="col-lg-9 col-md-12">
+                                    <!-- chi tiet san pham -->
+                                    <div class="row">
+                                       <div class="col-lg-6 col-md-6">
+                                            <div class="product_tab sidebar fix"> 
+
+                                                <div class="tab-content produc_tab_c">
+                                                    <div class="tab-pane fade show active" id="p_tab1" role="tabpanel">
+                                                        <div class="modal_img">
+                                                            <a href="#"><img src="images/upload/<%= getRelativeImagePath(productDetails.Image) %>" alt=""></a>                                                  
+
+                                                           <% if (productDetails.New_Hot === "New") { %>
+                                                            <div class="img_icone">
+                                                                <img src="assets\img\cart\span-new.png" alt="">
+                                                            </div>
+                                                            <% } else { %> 
+                                                            <div class="hot_img">
+                                                                <img src="assets\img\cart\span-hot.png" alt="">
+                                                            </div>
+                                                            <% } %>
+
+                                                            <div class="view_img">
+                                                                <a class="large_view" href="images/upload/<%= getRelativeImagePath(productDetails.Image) %>"><i class="fa fa-search-plus"></i></a>
+                                                            </div>    
+                                                        </div>
+                                                    </div>
+                                                    <div class="tab-pane fade" id="p_tab2" role="tabpanel">
+                                                        <div class="modal_img">
+                                                            <a href="#"><img src="images/upload/<%= getRelativeImagePath(productDetails.Image1) %>" alt=""></a>
+                                                            <% if (productDetails.New_Hot === "New") { %>
+                                                                <div class="img_icone">
+                                                                    <img src="assets\img\cart\span-new.png" alt="">
+                                                                </div>
+                                                                <% } else { %> 
+                                                                <div class="hot_img">
+                                                                    <img src="assets\img\cart\span-hot.png" alt="">
+                                                                </div>
+                                                                <% } %>
+                                                            <div class="view_img">
+                                                                <a class="large_view" href="images/upload/<%= getRelativeImagePath(productDetails.Image1) %>"><i class="fa fa-search-plus"></i></a>
+                                                            </div>     
+                                                        </div>
+                                                    </div>
+                                                    <div class="tab-pane fade" id="p_tab3" role="tabpanel">
+                                                        <div class="modal_img">
+                                                            <a href="#"><img src="images/upload/<%= getRelativeImagePath(productDetails.Image2) %>" alt=""></a>
+                                                            <% if (productDetails.New_Hot === "New") { %>
+                                                                <div class="img_icone">
+                                                                    <img src="assets\img\cart\span-new.png" alt="">
+                                                                </div>
+                                                                <% } else { %> 
+                                                                <div class="hot_img">
+                                                                    <img src="assets\img\cart\span-hot.png" alt="">
+                                                                </div>
+                                                                <% } %>
+                                                            <div class="view_img">
+                                                                <a class="large_view" href="images/upload/<%= getRelativeImagePath(productDetails.Image2) %>"> <i class="fa fa-search-plus"></i></a>
+                                                            </div>     
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="product_tab_button">    
+                                                    <ul class="nav" role="tablist">
+                                                        <li>
+                                                            <a class="active" data-toggle="tab" href="#p_tab1" role="tab" aria-controls="p_tab1" aria-selected="false"><img src="images/upload/<%= getRelativeImagePath(productDetails.Image) %>" alt=""></a>
+                                                        </li>
+                                                        <li>
+                                                             <a data-toggle="tab" href="#p_tab2" role="tab" aria-controls="p_tab2" aria-selected="false"><img src="images/upload/<%= getRelativeImagePath(productDetails.Image1) %>" alt=""></a>
+                                                        </li>
+                                                        <li>
+                                                           <a data-toggle="tab" href="#p_tab3" role="tab" aria-controls="p_tab3" aria-selected="false"><img src="images/upload/<%= getRelativeImagePath(productDetails.Image2) %>" alt=""></a>
+                                                        </li>
+                                                    </ul>
+                                                </div> 
+
+                                            </div> 
+                                        </div>
+                                        <div class="col-lg-6 col-md-6">
+                                            <div class="product_d_right">
+                                                <h1 style="font-family: Arial, Helvetica, sans-serif; color: navy;"><%= productDetails.TenSP %></h1>
+                                                 <div class="product_ratting mb-10">
+                                                    <ul>
+                                                        <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                        <li><a href="#"> Write a review </a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="product_desc">
+                                                    <p class="motaODay1"></p>
+                                                    <input type="hidden" name="inpMoTa" id="inpMoTa" value="<%= (productDetails.MoTa) %>">
+                                                </div>
+                                                <form id="form-addtocart" action="/addtocart?productId=<%= productDetails._id %>" method="POST">
+                                                    <div class="content_price mb-15">
+                                                        <!-- <span style="color: red;"><%= formatCurrency(productDetails.GiaBan) %></span>
+                                                        <span class="old-price" style="font-style: italic;"><%= formatCurrency(productDetails.GiaCu) %></span> -->
+
+                                                        <!-- 2 thẻ này chỉ là để lấy giá trị 2 giá xuống js xử lý -->
+                                                        <input type="hidden"  value="<%= (productDetails.GiaBan) %>" id="PriceBanConvert">
+                                                        <input type="hidden"  value="<%= (productDetails.GiaCu) %>"  id="PriceCuConvert">   
+
+                                                        <!-- còn đây là để truyền sang bên controller để lấy được 2 giá trị giá mới -->
+                                                        <input type="hidden" name="PriceBanMoi" value="<%= (productDetails.GiaBan) %>" >
+                                                        <input type="hidden" name="PriceCuMoi" value="<%= (productDetails.GiaCu) %>" >                                                      
+
+                                                        <!-- hiển thị giá mới lên giao diện trang chủ -->
+                                                        <span id="PriceBanMoi" style="color: red;"><%= formatCurrency(productDetails.GiaBan) %></span>
+                                                        <span id="PriceCuMoi" class="old-price" style="font-style: italic;"><%= formatCurrency(productDetails.GiaCu) %></span>
+                                                    </div>
+                                                    <div class="box_quantity mb-20">
+                                                       
+                                                        <label>Số Lượng Mua</label>
+                                                        <input min="0" max="1000" value="1" type="number" name="quantity">
+                                                       
+                                                        <button type="submit"><i class="fa fa-shopping-cart"></i> add to cart</button>
+                                                        <a href="#" title="add to wishlist"><i class="fa fa-heart" aria-hidden="true"></i></a>    
+                                                    </div>                                                    
+
+                                                    <div class="sidebar_widget color">
+                                                        <h2 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">Chọn Size:</h2>
+                                                        <div class="widget_color">                                                           
+                                                            <select name="size" id="group_2" onchange="changePrice()">
+                                                                <option value="100ml">100ml</option>
+                                                                <option value="200ml">200ml</option>
+                                                                <option value="300ml">300ml</option>
+                                                                <option value="400ml">400ml</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>                 
+
+                                                    <script>
+                                                        // Đợi cho trang được tải hoàn toàn trước khi thực hiện các thao tác JavaScript
+                                                        document.addEventListener("DOMContentLoaded", function() {
+                                                            // Lấy giá trị từ phần tử input có id là "inpMoTa"
+                                                            var inpMoTa = document.getElementById("inpMoTa").value;
+                                                            
+                                                            // Gán giá trị vừa lấy được vào phần tử p có id là "motaODay"
+                                                            //document.getElementById("motaODay").innerHTML = inpMoTa;
+                                                            var elements = document.getElementsByClassName("motaODay");
+        
+                                                            for (var i = 0; i < elements.length; i++) {
+                                                                elements[i].innerHTML = inpMoTa;
+                                                            }
+                                                        });  
+                                                    </script>
+                                                    <script>                                                         
+                                                        function changePrice(){
+                                                            var selectedSize = document.getElementById("group_2").value;
+                                                            var giaBan = document.getElementById("PriceBanConvert").value
+                                                            var giaCu = document.getElementById("PriceCuConvert").value
+                                                            //var giaCu = parseInt("<%= productDetails.giaCu %>")
+                                                            console.log("mota: ", inpMoTa);
+
+                                                            console.log("giaban:", giaBan);
+                                                            console.log("selectedSize:", selectedSize);
+                                                            var newGiaBanMoi;
+                                                            var newGiaCuMoi;
+                                                            switch(selectedSize) {
+                                                                case "100ml": 
+                                                                    newGiaBanMoi = giaBan * 1;
+                                                                    newGiaCuMoi = giaCu *1;
+                                                                    break;
+                                                                case "200ml": 
+                                                                    newGiaBanMoi = giaBan * 1.2;
+                                                                    newGiaCuMoi = giaCu *1.2;
+                                                                    break;
+                                                                case "300ml": 
+                                                                    newGiaBanMoi = giaBan * 1.4;
+                                                                    newGiaCuMoi = giaCu *1.4;
+                                                                    break;
+                                                                case "400ml": 
+                                                                    newGiaBanMoi = giaBan * 1.6;
+                                                                    newGiaCuMoi = giaCu *1.6;
+                                                                    break;
+                                                                default: 
+                                                                    newGiaBanMoi = giaBan;
+                                                                    newGiaCuMoi = giaCu;
+                                                                    break;
+                                                            }
+                                                            document.getElementsByName("PriceBanMoi")[0].value = parseInt(newGiaBanMoi);
+                                                            document.getElementsByName("PriceCuMoi")[0].value = parseInt(newGiaCuMoi);
+
+                                                            document.getElementById("PriceBanMoi").innerHTML = formatCurrency(parseInt(newGiaBanMoi));
+                                                            document.getElementById("PriceCuMoi").innerHTML = formatCurrency(parseInt(newGiaCuMoi))
+                                                        }
+                                                    </script>
+
+                                                    <div class="product_stock mb-20">
+                                                        <input type="hidden" name="SoLuongTon" value="<%= productDetails.SoLuongTon  %>" />
+                                                        <input type="hidden" name="SoLuongBan" value="<%= productDetails.SoLuongBan  %>" />
+                                                        <!-- <span> Trong kho còn: <%= productDetails.SoLuongTon  %> </span> -->
+                                                        <span> Đã bán: <%= productDetails.SoLuongBan  %> sản phẩm</span>
+                                                    </div>
+                                                    <div class="wishlist-share">
+                                                        <h4>Share on:</h4>
+                                                        <ul>
+                                                            <li><a href="#"><i class="fa fa-rss"></i></a></li>           
+                                                            <li><a href="#"><i class="fa fa-vimeo"></i></a></li>           
+                                                            <li><a href="#"><i class="fa fa-tumblr"></i></a></li>           
+                                                            <li><a href="#"><i class="fa fa-pinterest"></i></a></li>        
+                                                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>        
+                                                        </ul>      
+                                                    </div>
+
+                                                    <% if (logIn) { %> 
+                                                        <div id="custom-alert" class="custom-alert hidden">
+                                                            <p id="alert-message"></p>
+                                                        </div>   
+                                                        <% } else { %>
+                                                        <div 
+                                                            style="background-color: rgb(249 232 232); 
+                                                                    border: 1px solid #ff0000;
+                                                                    margin: 0 auto;
+                                                                    border-radius: 5px;
+                                                                    font-weight: bold;
+                                                                    display: none;
+                                                                    text-align: center;
+                                                                    padding: 10px 5px 0 5px;                                                                    
+                                                                    justify-content: center;                                                                   
+                                                            " 
+                                                            id="custom-alert" 
+                                                            class="custom-alert hidden"
+                                                        >
+                                                            <p style="color: red; font-size: 20px;">Vui lòng Login trước khi thêm sản phẩm vào giỏ hàng</p>
+                                                        </div> 
+                                                        <% } %> 
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <!--product info start-->
+                                        <div class="product_d_info sidebar">
+                                            <div class="col-12">
+                                                <div class="product_d_inner">   
+                                                    <div class="product_info_button">    
+                                                        <ul class="nav" role="tablist">
+                                                            <li>
+                                                                <a style="font-family: Arial, Helvetica, sans-serif;" class="active" data-toggle="tab" href="#info" role="tab" aria-controls="info" aria-selected="false">Mô tả chi tiết</a>
+                                                            </li>
+                                                            <li>
+                                                                 <a data-toggle="tab" href="#sheet" role="tab" aria-controls="sheet" aria-selected="false">Data sheet</a>
+                                                            </li>
+                                                            <li>
+                                                               <a data-toggle="tab" href="#reviews" role="tab" aria-controls="reviews" aria-selected="false">Reviews</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="tab-content">
+                                                        <div class="tab-pane fade show active" id="info" role="tabpanel">
+                                                            <div class="product_info_content">
+                                                                <p class="motaODay"></p>
+                                                            </div>    
+                                                        </div>
+
+                                                        <div class="tab-pane fade" id="sheet" role="tabpanel">
+                                                            <div class="product_d_table">
+                                                               <form action="#">
+                                                                    <table>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td class="first_child">Compositions</td>
+                                                                                <td>Polyester</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td class="first_child">Styles</td>
+                                                                                <td>Girly</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td class="first_child">Properties</td>
+                                                                                <td>Short Dress</td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </form>
+                                                            </div>
+                                                            <div class="product_info_content">
+                                                                <p>Fashion has been creating well-designed collections since 2010. The brand offers feminine designs delivering stylish separates and statement dresses which have since evolved into a full ready-to-wear collection in which every item is a vital part of a woman's wardrobe. The result? Cool, easy, chic looks with youthful elegance and unmistakable signature style. All the beautiful pieces are made in Italy and manufactured with the greatest attention. Now Fashion extends to a range of accessories including shoes, hats, belts and more!</p>
+                                                            </div>    
+                                                        </div>
+                                                        <div class="tab-pane fade" id="reviews" role="tabpanel">
+                                                            <div class="product_info_content">
+                                                                <p>Fashion has been creating well-designed collections since 2010. The brand offers feminine designs delivering stylish separates and statement dresses which have since evolved into a full ready-to-wear collection in which every item is a vital part of a woman's wardrobe. The result? Cool, easy, chic looks with youthful elegance and unmistakable signature style. All the beautiful pieces are made in Italy and manufactured with the greatest attention. Now Fashion extends to a range of accessories including shoes, hats, belts and more!</p>
+                                                            </div>
+                                                            <div class="product_info_inner">
+                                                                <div class="product_ratting mb-10">
+                                                                    <ul>
+                                                                        <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                                        <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                                        <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                                        <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                                        <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                                    </ul>
+                                                                    <strong>Posthemes</strong> 
+                                                                    <p>09/07/2018</p>
+                                                                </div>
+                                                                <div class="product_demo">
+                                                                    <strong>demo</strong>
+                                                                    <p>That's OK!</p>
+                                                                </div>
+                                                            </div> 
+                                                            <div class="product_review_form">
+                                                                <form action="#">
+                                                                    <h2>Add a review </h2>
+                                                                    <p>Your email address will not be published. Required fields are marked </p>
+                                                                    <div class="row">
+                                                                        <div class="col-12">
+                                                                            <label for="review_comment">Your review </label>
+                                                                            <textarea name="comment" id="review_comment"></textarea>
+                                                                        </div> 
+                                                                        <div class="col-lg-6 col-md-6">
+                                                                            <label for="author">Name</label>
+                                                                            <input id="author" type="text">
+
+                                                                        </div> 
+                                                                        <div class="col-lg-6 col-md-6">
+                                                                            <label for="email">Email </label>
+                                                                            <input id="email" type="text">
+                                                                        </div>  
+                                                                    </div>
+                                                                    <button type="submit">Submit</button>
+                                                                 </form>   
+                                                            </div>     
+                                                        </div>
+                                                    </div>
+                                                </div>     
+                                            </div>
+                                        </div>
+                                    </div>  
+                                       <!-- chi tiet san pham end --> 
+
+
+
+                                        <!--product info end-->
+
+                                       <!--featured product Kieu 1 -> 3 sp start--> 
+                                        <!-- kiểu 1 -- có 3 sản phẩm 1 dòng -->
+                                        <div class="featured_product">
+                                            <div class="block_title">
+                                                <h3 style="font-family: Verdana, Geneva, Tahoma, sans-serif; color: navy;">Sản Phẩm Nổi Bật</h3>
+                                            </div>
+                                            <div class="row">
+                                                <% if (spNoiBat && spNoiBat.length > 0) { %>
+                                                <div class="product_active owl-carousel">
+                                                        <% spNoiBat.forEach(function(spNoiBat) { %>
+                                                    <div class="col-lg-3">
+                                                        <form id="form-addtocart" action="/addtocart?productId=<%= spNoiBat._id %>" method="POST">
+                                                            <div class="single_product">
+                                                                <div class="product_thumb">
+                                                                <a href="/detailt-sp-ht1?idDetailtSP=<%= spNoiBat._id %>"><img height="336.50px" src="images/upload/<%= getRelativeImagePath(spNoiBat.Image) %>" alt=""></a> 
+                                                                <% if (spNoiBat.New_Hot === "New") { %>
+                                                                    <div class="img_icone">
+                                                                        <img src="assets\img\cart\span-new.png" alt="">
+                                                                    </div>
+                                                                    <% } else { %> 
+                                                                    <div class="hot_img">
+                                                                        <img src="assets\img\cart\span-hot.png" alt="">
+                                                                    </div>
+                                                                    <% } %>
+                                                                <!-- <div class="product_action">
+                                                                        <button type="submit" style="cursor: pointer;" class="btn-addtocart">
+                                                                            <i class="fa fa-shopping-cart"></i> Add to cart
+                                                                        </button>
+                                                                        <input value="1" type="hidden" name="quantity">
+                                                                </div> -->
+                                                                <div class="product_action">
+                                                                    <a href="/detailt-sp-ht1?idDetailtSP=<%= spNoiBat._id %>"> <i style="margin-right: 10px;" class="fa fa-shopping-cart"></i> Add to cart</a>
+                                                                </div>
+                                                                </div>
+                                                                <div class="product_content">
+                                                                    <span class="product_price" style="color: red;"><%= formatCurrency(spNoiBat.GiaBan) %></span>
+                                                                    <h3 class="product_title"><a style="font-size: 18px ;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif" href="/detailt-sp-ht1?idDetailtSP=<%= spNoiBat._id %>"><%= spNoiBat.TenSP %></a></h3>
+                                                                </div>
+                                                                <div class="product_info">
+                                                                    <ul>
+                                                                        <li><a href="#" title=" Add to Wishlist ">Add to Wishlist</a></li>
+                                                                        <li><a href="/detailt-sp-ht1?idDetailtSP=<%= spNoiBat._id %>"  title="Quick view">View Detail</a></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                        <% }); %> 
+                                                    </div> 
+                                                    <% } else { %> 
+                                                        <p>Admin chưa update sản phẩm</p>
+                                                    <% } %>           
+                                            </div> 
+                                        </div>   
+                                        <!--featured product end--> 
+                                    
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+                        <!--product details end-->
+
+
+                        
+ 
+
+                    </div>
+                    <!--pos page inner end-->
+                </div>
+            </div>
+            <!--pos page end-->
+            
+            <!--footer area start-->
+            <%- include('../../partials/footer.ejs') %>
+            
+            <!--footer area end-->
+            
+            
+            
+            
+      
+		
+		<!-- all js here -->
+        <script src="assets\js\vendor\jquery-1.12.0.min.js"></script>
+        <script src="assets\js\popper.js"></script>
+        <script src="assets\js\bootstrap.min.js"></script>
+        <script src="assets\js\ajax-mail.js"></script>
+        <script src="assets\js\plugins.js"></script>
+        <script src="assets\js\main.js"></script>
+        <script src="assets\js\hamDinhDangTien_VaLinkAnh.js"></script>
+
+        <!-- view chi tiết tại trang  -->
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    var viewDetailLinks = document.querySelectorAll('#viewDetailt');
+                    viewDetailLinks.forEach(function(link) {
+                        link.addEventListener('click', function(event) {
+                            event.preventDefault();
+                            var productId = link.dataset.productId;
+                            fetch('/detailt-sp', {
+                                method: 'POST',
+                                headers: {
+                                    'Content-Type': 'application/json'
+                                },
+                                body: JSON.stringify({ idDetailtSPP: productId })
+                            })
+                            .then(response => response.json())
+                            .then(data => {
+                                // Lấy dữ liệu từ API
+                                const product = data.productDetails;
+                                console.log("pro: ", product);
+            
+                                // Cập nhật nội dung các phần tử modal với dữ liệu sản phẩm
+                                document.getElementById('anh1').src = product.Image;
+                                document.getElementById('anh1_1').src = product.Image;
+                                document.getElementById('anh2').src = product.Image1;
+                                document.getElementById('anh1_2').src = product.Image1;
+                                document.getElementById('anh3').src = product.Image2;
+                                document.getElementById('anh1_3').src = product.Image2;
+                                document.getElementById('productName').innerHTML = product.TenSP;
+            
+                                // Lấy giá trị sản phẩm từ dữ liệu nhận được từ API
+                                const productPrice = product.GiaBan;
+                                // Lấy thẻ input bằng id
+                                const priceBanConvertInput = document.getElementById('PriceBanConvert');
+                                // Đặt giá trị của input là giá trị sản phẩm
+                                priceBanConvertInput.value = productPrice;
+                                document.getElementById('PriceBanMoi').innerHTML = formatCurrency(productPrice);
+                                document.getElementsByName('PriceBanMoi')[0].value = (productPrice);
+            
+                                const productPriceCu = product.GiaCu;
+                                const priceCuConvertInput = document.getElementById('PriceCuConvert');
+                                priceCuConvertInput.value = productPriceCu;
+                                document.getElementById('PriceCuMoi').innerHTML = formatCurrency(productPriceCu);
+                                document.getElementsByName('PriceCuMoi')[0].value = (productPriceCu);
+            
+                                document.getElementById("idVaoDay").value = product._id
+                                document.getElementById("SoLuongTon").value = product.SoLuongTon
+                                document.getElementById("SoLuongBan").value = product.SoLuongBan
+                                document.getElementById("slBan").textContent = product.SoLuongBan
+            
+                                document.getElementById('productDescription').innerHTML = (product.MoTa);
+                            })
+                            .catch(error => console.error('Error:', error));
+                        });
+                    });
+                });
+            
+                // Đoạn mã JavaScript để chuyển đổi HTML thành văn bản
+                function convertHtml(html) {
+                    const $ = cheerio.load(html);
+                    return $('body').text();
+                }
+            </script>
+
+        <!-- Thong Bao Add To Cart -->
+        <script>
+            $(document).ready(function() {
+                // Bắt sự kiện khi form được submit
+                $('#form-addtocart').submit(function(event) {
+                    event.preventDefault(); // Ngăn chặn hành động mặc định của form
+                    
+                    // Lấy dữ liệu form
+                    const formData = $(this).serialize();
+                    // Gửi yêu cầu thêm sản phẩm vào giỏ hàng
+                    addToCart(formData);
+                });
+            });
+
+
+            // Hàm gửi yêu cầu thêm sản phẩm vào giỏ hàng và cập nhật thông tin giỏ hàng 
+            // cách 1: sử dụng thư viện sweetalert2 để thông báo
+            function addToCart(formData) {
+                fetch('/addtocart?productId=<%= productDetails._id %>', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                    },
+                    body: new URLSearchParams(formData),
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if(data.logged  && data.hoten){
+                        if (data.success) {
+                            // Show success alert
+                            Swal.fire({
+                                icon: 'success',
+                                title: 'Thành công!',
+                                text: data.message,
+                                confirmButtonText: 'Mua Tiếp'
+                            })
+                            .then(() => {
+                                window.location.reload(); // Reload the current page
+                            });
+                        } else {
+                            // Show error alert
+                            Swal.fire({
+                                icon: 'error',
+                                title: 'Hết hàng!',
+                                text: data.message,
+                                confirmButtonText: 'OK SHOP'
+                            })
+                            // .then(() => {
+                            //     window.location.reload(); // Reload the current page
+                            // });
+                        }
+                    } else {
+                        if (data.success) {
+                            Swal.fire({
+                                icon: 'warning',
+                                //title: 'Hãy đăng nhập để tiến hành mua hàng!', 
+                                text: 'Bạn cần đăng nhập để tiến hành mua hàng',
+                                confirmButtonText: 'Đi tới đăng nhập'
+                            })
+                            .then(() => {
+                                window.location.href = '/login-tk-kh';
+                            });
+                        } else {
+                            Swal.fire({
+                                icon: 'error',
+                                title: 'Hết hàng!',
+                                text: data.message,
+                                confirmButtonText: 'OK SHOP'
+                            });                       
+                        }
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+            }
+
+            // cách 2 dùng khi hết hàng thì show dòng chữ 
+            function addToCart1(formData) {
+                const quantity = parseInt($('input[name="quantity"]').val()); // Get the quantity from the form
+                const SoLuongTon = parseInt('<%= productDetails.SoLuongTon %>'); // Get the available quantity from the server-side template
+
+                if (isNaN(quantity) || quantity <= 0) {
+                    // Handle invalid quantity input
+                    console.error('Invalid quantity input');
+                    return;
+                }
+
+                if (quantity > SoLuongTon) {
+                    // If quantity exceeds available quantity, display an alert
+                    showCustomAlert_ThongBaoHetHang(`Số lượng sản phẩm này chỉ còn ${SoLuongTon}`);
+                    return;
+                }
+
+                $.ajax({
+                    url: '/addtocart?productId=<%= productDetails._id %>',
+                    type: 'POST',
+                    data: formData,
+                    success: function(response) {
+                        if (response.success) {    
+                            // Hiển thị thông báo khi thành công
+                            // alert('Đã thêm sản phẩm vào giỏ hàng thành công!');
+                            showCustomAlert('Đã thêm sản phẩm vào giỏ hàng thành công!');
+                            
+                            // Chuyển hướng trang sau khi thêm vào giỏ hàng thành công
+                            // window.location.href = '/detailt-cart-trang-moi';
+                        } else {
+                            // Hiển thị thông báo lỗi từ server
+                            showCustomAlert_ThongBaoHetHang(response.message)
+                            //alert(response.message);
+                        }
+                    },
+                    error: function(error) {
+                        console.error('Lỗi khi thêm vào giỏ hàng:', error);
+                    }
+                });
+            }
+
+            // Hàm hiển thị thông báo tùy chỉnh
+            function showCustomAlert(message) {
+                const alertElement = document.getElementById('custom-alert');
+                const messageElement = document.getElementById('alert-message');
+
+                // Hiển thị thông báo và đặt nội dung
+                alertElement.style.display = 'block';
+                messageElement.innerText = message;
+
+                // Ẩn thông báo sau một khoảng thời gian (ví dụ: 5 giây)
+                setTimeout(() => {
+                    hideCustomAlert();
+                    window.location.href = '/detailt-cart-trang-moi';
+                }, 1000);
+            }
+            function showCustomAlert_ThongBaoHetHang(message) {
+                const alertElement = document.getElementById('custom-alert');
+                const messageElement = document.getElementById('alert-message');
+
+                // Hiển thị thông báo và đặt nội dung
+                alertElement.style.display = 'block';
+                messageElement.innerText = message;
+
+                // Ẩn thông báo sau một khoảng thời gian (ví dụ: 5 giây)
+                setTimeout(() => {
+                    hideCustomAlert();
+                    window.location.reload();
+                    
+                }, 1000);
+            }
+
+            // Hàm ẩn thông báo tùy chỉnh
+            function hideCustomAlert() {
+                const alertElement = document.getElementById('custom-alert');
+
+                // Ẩn thông báo
+                alertElement.style.display = 'none';
+            }
+        </script>
+    </body>
+</html>

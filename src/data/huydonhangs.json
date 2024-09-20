@@ -1,0 +1,560 @@
+[{
+  "_id": {
+    "$oid": "660ae062fefc0446a27f49fc"
+  },
+  "MaKH": {
+    "$oid": "65fd7f99778079515676505b"
+  },
+  "Ho": "Khắc",
+  "Ten": "Tú",
+  "ThanhPho": "10",
+  "QuanHuyen": "083",
+  "PhuongXa": "02782",
+  "DiaChiChiTiet": "Thôn 6, Ngõ Đương, Ngách 1, Số Nhà 12",
+  "SoDienThoai": "01234455677",
+  "Email": "dokhactu1822@gmail.com",
+  "Note": "",
+  "PhiShip": 0,
+  "CanThanhToan": 16255498,
+  "GiamGia": 5,
+  "SoTienGiamGia": 855553,
+  "TongSLDat": 55,
+  "TinhTrangDonHang": "Chưa giao hàng",
+  "TinhTrangThanhToan": "Chưa Thanh Toán",
+  "NgayLap": {
+    "$date": {
+      "$numberLong": "1711988638943"
+    }
+  },
+  "cart": {
+    "items": [
+      {
+        "productId": {
+          "$oid": "65e62eb7a93c0033356cb1d0"
+        },
+        "qty": 55,
+        "donGia": 311110,
+        "size": "300ml",
+        "_id": {
+          "$oid": "660725d98b53e8d91191a74f"
+        }
+      }
+    ]
+  },
+  "deleted": false,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "660b379d2e4c9ec04c3be606"
+  },
+  "MaKH": {
+    "$oid": "660ad08a9952f3e92649a520"
+  },
+  "Ho": "a tú",
+  "Ten": "đẹp trai",
+  "DiaChiChiTiet": "a tú",
+  "SoDienThoai": "0964387922",
+  "Email": "dokhactu1822@gmail.com",
+  "Note": "qqqqqqqqqqqqq",
+  "PhiShip": 0,
+  "CanThanhToan": 218283388,
+  "GiamGia": 5,
+  "SoTienGiamGia": 11488599,
+  "TongSLDat": 22,
+  "TinhTrangDonHang": "Chưa giao hàng",
+  "TinhTrangThanhToan": "Chưa Thanh Toán",
+  "NgayLap": {
+    "$date": {
+      "$numberLong": "1712010244115"
+    }
+  },
+  "cart": {
+    "items": [
+      {
+        "productId": {
+          "$oid": "65eafd90c4bcf8258c5fcf9b"
+        },
+        "qty": 5,
+        "donGia": 18558400,
+        "size": "400ml",
+        "_id": {
+          "$oid": "660b36692e4c9ec04c3be59d"
+        }
+      },
+      {
+        "productId": {
+          "$oid": "65e63048a93c0033356cb207"
+        },
+        "qty": 3,
+        "donGia": 7419998,
+        "size": "300ml",
+        "_id": {
+          "$oid": "660b36692e4c9ec04c3be59e"
+        }
+      },
+      {
+        "productId": {
+          "$oid": "65e63048a93c0033356cb207"
+        },
+        "qty": 2,
+        "donGia": 6359998,
+        "size": "200ml",
+        "_id": {
+          "$oid": "660b36692e4c9ec04c3be59f"
+        }
+      },
+      {
+        "productId": {
+          "$oid": "65e63048a93c0033356cb207"
+        },
+        "qty": 1,
+        "donGia": 5299999,
+        "size": "100ml",
+        "_id": {
+          "$oid": "660b36692e4c9ec04c3be5a0"
+        }
+      },
+      {
+        "productId": {
+          "$oid": "65e743cf140f21e65f6a288e"
+        },
+        "qty": 10,
+        "donGia": 3430000,
+        "size": "300ml",
+        "_id": {
+          "$oid": "660b36692e4c9ec04c3be5a1"
+        }
+      },
+      {
+        "productId": {
+          "$oid": "65e7431f140f21e65f6a2879"
+        },
+        "qty": 1,
+        "donGia": 62399998,
+        "size": "400ml",
+        "_id": {
+          "$oid": "660b36692e4c9ec04c3be5a2"
+        }
+      }
+    ]
+  },
+  "deleted": false,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "660b91346c61fbbabe0744a0"
+  },
+  "MaKH": {
+    "$oid": "65fd7f99778079515676505b"
+  },
+  "Ho": "Khắc",
+  "Ten": "Tú",
+  "ThanhPho": "11",
+  "QuanHuyen": "101",
+  "PhuongXa": "03370",
+  "DiaChiChiTiet": "qqqqqqqqqqqqqqqq",
+  "SoDienThoai": "0972138493",
+  "Email": "dokhactu1822@gmail.com",
+  "Note": "",
+  "PhiShip": 0,
+  "CanThanhToan": 28195992,
+  "GiamGia": 5,
+  "SoTienGiamGia": 1484000,
+  "TongSLDat": 4,
+  "TinhTrangDonHang": "Đang giao hàng",
+  "TinhTrangThanhToan": "Chưa Thanh Toán",
+  "NgayLap": {
+    "$date": {
+      "$numberLong": "1712033788060"
+    }
+  },
+  "cart": {
+    "items": [
+      {
+        "productId": {
+          "$oid": "65e63048a93c0033356cb207"
+        },
+        "qty": 4,
+        "donGia": 7419998,
+        "size": "300ml",
+        "_id": {
+          "$oid": "65ffa4e6a9670465465098f9"
+        }
+      }
+    ]
+  },
+  "deleted": false,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "660b91496c61fbbabe0744cb"
+  },
+  "MaKH": {
+    "$oid": "65fd7f99778079515676505b"
+  },
+  "Ho": "Khắc",
+  "Ten": "Tú",
+  "ThanhPho": "20",
+  "QuanHuyen": "185",
+  "PhuongXa": "06352",
+  "DiaChiChiTiet": "Thôn 6, Ngõ Đương, Ngách 1, Số Nhà 12",
+  "SoDienThoai": "0123456789",
+  "Email": "dokhactu1822@gmail.com",
+  "Note": "",
+  "PhiShip": 0,
+  "CanThanhToan": 13933299,
+  "GiamGia": 5,
+  "SoTienGiamGia": 733332,
+  "TongSLDat": 55,
+  "TinhTrangDonHang": "Chưa giao hàng",
+  "TinhTrangThanhToan": "Chưa Thanh Toán",
+  "NgayLap": {
+    "$date": {
+      "$numberLong": "1712033788060"
+    }
+  },
+  "cart": {
+    "items": [
+      {
+        "productId": {
+          "$oid": "65e62eb7a93c0033356cb1d0"
+        },
+        "qty": 55,
+        "donGia": 266666,
+        "size": "200ml",
+        "_id": {
+          "$oid": "660726380b34d651f31426e9"
+        }
+      }
+    ]
+  },
+  "deleted": false,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "660fb3d92e5ba59c9b58c061"
+  },
+  "MaKH": {
+    "$oid": "660866900604ab826c024d45"
+  },
+  "Ho": "Khắc",
+  "Ten": "Tú",
+  "DiaChiChiTiet": "qqqqqqqqqqqqqqqq",
+  "SoDienThoai": "09729998888",
+  "Email": "dokhactu1822@gmail.com",
+  "Note": "llllllllllll",
+  "PhiShip": 0,
+  "CanThanhToan": 1194662,
+  "GiamGia": 4,
+  "SoTienGiamGia": 49778,
+  "TongSLDat": 4,
+  "TinhTrangDonHang": "Chưa giao hàng",
+  "TinhTrangThanhToan": "Chưa Thanh Toán",
+  "NgayLap": {
+    "$date": {
+      "$numberLong": "1712305028452"
+    }
+  },
+  "cart": {
+    "items": [
+      {
+        "productId": {
+          "$oid": "65e62eb7a93c0033356cb1d0"
+        },
+        "qty": 4,
+        "donGia": 311110,
+        "size": "300ml",
+        "_id": {
+          "$oid": "66086f15876433c77b95003e"
+        }
+      }
+    ]
+  },
+  "deleted": false,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "66157be384becae09ce2a40d"
+  },
+  "MaKH": {
+    "$oid": "66026b2eab91573170c48ffc"
+  },
+  "Ho": "Khắc",
+  "Ten": "Khác",
+  "DiaChiChiTiet": "đông anh",
+  "SoDienThoai": "09729998888",
+  "Email": "dokhactu1822@gmail.com",
+  "Note": "",
+  "PhiShip": 0,
+  "CanThanhToan": 90908238,
+  "GiamGia": 5,
+  "SoTienGiamGia": 4784644,
+  "TongSLDat": 7,
+  "TinhTrangDonHang": "Chưa giao hàng",
+  "TinhTrangThanhToan": "Chưa Thanh Toán",
+  "NgayLap": {
+    "$date": {
+      "$numberLong": "1712683383569"
+    }
+  },
+  "cart": {
+    "items": [
+      {
+        "productId": {
+          "$oid": "65e63048a93c0033356cb207"
+        },
+        "qty": 1,
+        "donGia": 5299999,
+        "size": "100ml",
+        "_id": {
+          "$oid": "66157b1584becae09ce2a33f"
+        }
+      },
+      {
+        "productId": {
+          "$oid": "65e75c8ad1b03e785d6f1959"
+        },
+        "qty": 1,
+        "donGia": 9199888,
+        "size": "100ml",
+        "_id": {
+          "$oid": "66157b1584becae09ce2a340"
+        }
+      },
+      {
+        "productId": {
+          "$oid": "65eafd90c4bcf8258c5fcf9b"
+        },
+        "qty": 5,
+        "donGia": 16238599,
+        "size": "300ml",
+        "_id": {
+          "$oid": "66157b1584becae09ce2a341"
+        }
+      }
+    ]
+  },
+  "deleted": false,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "66157d0b49f85ff14e140a0b"
+  },
+  "MaKH": {
+    "$oid": "66026b2eab91573170c48ffc"
+  },
+  "Ho": "Khắc",
+  "Ten": "helozd",
+  "DiaChiChiTiet": "Thôn 6, Ngõ Đương, Ngách 1, Số Nhà 12",
+  "SoDienThoai": "0888222333",
+  "Email": "dokhactu1822@gmail.com",
+  "Note": "",
+  "PhiShip": 0,
+  "CanThanhToan": 41951487,
+  "GiamGia": 5,
+  "SoTienGiamGia": 2207973,
+  "TongSLDat": 4,
+  "TinhTrangDonHang": "Chưa giao hàng",
+  "TinhTrangThanhToan": "Chưa Thanh Toán",
+  "NgayLap": {
+    "$date": {
+      "$numberLong": "1712684149775"
+    }
+  },
+  "cart": {
+    "items": [
+      {
+        "productId": {
+          "$oid": "65e75c8ad1b03e785d6f1959"
+        },
+        "qty": 4,
+        "donGia": 11039865,
+        "size": "200ml",
+        "_id": {
+          "$oid": "661373e34a9a1a02be138992"
+        }
+      }
+    ]
+  },
+  "deleted": false,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "66157e2849f85ff14e140b7b"
+  },
+  "MaKH": {
+    "$oid": "66026b2eab91573170c48ffc"
+  },
+  "Ho": "a tú",
+  "Ten": "a",
+  "DiaChiChiTiet": "qqqqqqqqqqqqqqqq",
+  "SoDienThoai": "09729998888",
+  "Email": "dokhactu1822@gmail.com",
+  "Note": "",
+  "PhiShip": 0,
+  "CanThanhToan": 7439999,
+  "GiamGia": 4,
+  "SoTienGiamGia": 310000,
+  "TongSLDat": 2,
+  "TinhTrangDonHang": "Chưa giao hàng",
+  "TinhTrangThanhToan": "Chưa Thanh Toán",
+  "NgayLap": {
+    "$date": {
+      "$numberLong": "1712684149775"
+    }
+  },
+  "cart": {
+    "items": [
+      {
+        "productId": {
+          "$oid": "65e743cf140f21e65f6a288e"
+        },
+        "qty": 1,
+        "donGia": 2450000,
+        "size": "100ml",
+        "_id": {
+          "$oid": "66157e0c49f85ff14e140b2d"
+        }
+      },
+      {
+        "productId": {
+          "$oid": "65e63048a93c0033356cb207"
+        },
+        "qty": 1,
+        "donGia": 5299999,
+        "size": "100ml",
+        "_id": {
+          "$oid": "66157e0c49f85ff14e140b2e"
+        }
+      }
+    ]
+  },
+  "deleted": false,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "661588135136ac9bce376032"
+  },
+  "MaKH": {
+    "$oid": "66026b2eab91573170c48ffc"
+  },
+  "Ho": "a tú",
+  "Ten": "ngu",
+  "DiaChiChiTiet": "a tú",
+  "SoDienThoai": "09729998888",
+  "Email": "dokhactu1822@gmail.com",
+  "Note": "",
+  "PhiShip": 0,
+  "CanThanhToan": 2352000,
+  "GiamGia": 4,
+  "SoTienGiamGia": 98000,
+  "TongSLDat": 1,
+  "TinhTrangDonHang": "Chưa giao hàng",
+  "TinhTrangThanhToan": "Chưa Thanh Toán",
+  "NgayLap": {
+    "$date": {
+      "$numberLong": "1712686215618"
+    }
+  },
+  "cart": {
+    "items": [
+      {
+        "productId": {
+          "$oid": "65e743cf140f21e65f6a288e"
+        },
+        "qty": 1,
+        "donGia": 2450000,
+        "size": "100ml",
+        "_id": {
+          "$oid": "661375d04a9a1a02be138b3b"
+        }
+      }
+    ]
+  },
+  "deleted": false,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "66158845908af3c48f114d4f"
+  },
+  "MaKH": {
+    "$oid": "66026b2eab91573170c48ffc"
+  },
+  "Ho": "quyết",
+  "Ten": "ngu",
+  "DiaChiChiTiet": "đông anh",
+  "SoDienThoai": "01234455677",
+  "Email": "dokhactu1822@gmail.com",
+  "Note": "",
+  "PhiShip": 0,
+  "CanThanhToan": 11172000,
+  "GiamGia": 5,
+  "SoTienGiamGia": 588000,
+  "TongSLDat": 3,
+  "TinhTrangDonHang": "Chưa giao hàng",
+  "TinhTrangThanhToan": "Chưa Thanh Toán",
+  "NgayLap": {
+    "$date": {
+      "$numberLong": "1712687144367"
+    }
+  },
+  "cart": {
+    "items": [
+      {
+        "productId": {
+          "$oid": "65e743cf140f21e65f6a288e"
+        },
+        "qty": 3,
+        "donGia": 3920000,
+        "size": "400ml",
+        "_id": {
+          "$oid": "661376854a9a1a02be138c3d"
+        }
+      }
+    ]
+  },
+  "deleted": false,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "66158850908af3c48f114d7c"
+  },
+  "MaKH": {
+    "$oid": "66026b2eab91573170c48ffc"
+  },
+  "Ho": "quyết",
+  "Ten": "helozd",
+  "DiaChiChiTiet": "a tú",
+  "SoDienThoai": "0888222333",
+  "Email": "dokhactu1822@gmail.com",
+  "Note": "",
+  "PhiShip": 0,
+  "CanThanhToan": 5087999,
+  "GiamGia": 4,
+  "SoTienGiamGia": 212000,
+  "TongSLDat": 1,
+  "TinhTrangDonHang": "Đang giao hàng",
+  "TinhTrangThanhToan": "Chưa Thanh Toán",
+  "NgayLap": {
+    "$date": {
+      "$numberLong": "1712687144367"
+    }
+  },
+  "cart": {
+    "items": [
+      {
+        "productId": {
+          "$oid": "65e63048a93c0033356cb207"
+        },
+        "qty": 1,
+        "donGia": 5299999,
+        "size": "100ml",
+        "_id": {
+          "$oid": "66157dd849f85ff14e140a8e"
+        }
+      }
+    ]
+  },
+  "deleted": false,
+  "__v": 0
+}]

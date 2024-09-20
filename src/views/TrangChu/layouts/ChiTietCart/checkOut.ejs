@@ -1,0 +1,529 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>SHOP KHẮC TÚ -- Điền Thông Tin Đặt Hàng</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Favicon -->
+        <link rel="shortcut icon" type="image/x-icon" href="assets\img\logo\khactu-logo.png">
+		
+		<!-- all css here -->
+       <link rel="stylesheet" href="assets\css\bootstrap.min.css">
+        <link rel="stylesheet" href="assets\css\plugin.css">
+        <link rel="stylesheet" href="assets\css\bundle.css">
+        <link rel="stylesheet" href="assets\css\style.css">
+        <link rel="stylesheet" href="assets\css\responsive.css">
+        <script src="assets\js\vendor\modernizr-2.8.3.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/qrcode-generator/umd/qrcode.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <link rel="stylesheet" href="AdminQL/HomeAdminQL/thuVienToastr/toastr.min.css">
+
+        <style>
+            .toast {
+                font-size: 18px;
+            }
+        </style>
+    </head>
+    <body>
+            <!-- Add your site or application content here -->
+            
+            <!--pos page start-->
+            <div class="pos_page">
+                <div class="container">
+                    <!--pos page inner-->
+                    <div class="pos_page_inner">  
+
+                       <!--header area -->
+                       <div class="header_area">
+                        <!--header top-->                                 
+                         <%- include('../../partials/header_top.ejs') %>
+                         <!--header top end-->
+
+                         <!--header middel--> 
+                         <%- include('../../partials/header_middel.ejs') %>
+                         <!--header middel end-->      
+                     
+                         <!--header bottom--> 
+                         <%- include('../../partials/header_bottom.ejs') %>
+                         <!--header bottom end-->    
+                        </div>
+                        <!--header end -->
+                        
+                         <!--breadcrumbs area start-->
+                        <div class="breadcrumbs_area">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="breadcrumb_content">
+                                        <ul>
+                                            <li><a href="/">home</a></li>
+                                            <li><i class="fa fa-angle-right"></i></li>
+                                            <li>Kiểm tra thông tin đặt hàng</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--breadcrumbs area end-->
+
+
+                         <!--checkout start -->   
+                         <!-- Thêm loader.svg vào trang HTML -->
+                        <div id="loader" class="loader">
+                            <img id="loader_page_img" src="assets/css/loader.svg" alt="Loader">
+                        </div>
+
+                        <!--Checkout page section-->
+                        <div class="Checkout_section">
+                            <form action="/dat-hang" method="post" id="dathang">
+                                <div class="checkout_form">
+                                        <div class="row">
+                                            <div class="col-lg-6 col-md-6">
+                                                <!-- <form action="#"> -->
+                                                    <h3 style="font-family: Arial, Helvetica, sans-serif;">Thông tin đặt hàng</h3>
+                                                    <div class="row">
+                                                        <!-- <div class="col-12 mb-30">
+                                                            <label style="font-size: 19px;">Mã Đơn Hàng</label>
+                                                            <input type="text" readonly value="#abc123" style="border: none; font-size: 20px; color: green; font-style: italic;">     
+                                                        </div>      -->
+                                                        <div class="col-lg-6 mb-30">
+                                                            <label for="firstname" style="font-size: 18px;">Họ <span>*</span></label>
+                                                            <input style="height: 50px; font-size: 18px;" name="Ho" id="firstname" placeholder="Nhập họ của bạn..." type="text" required>    
+                                                        </div>
+                                                        <div class="col-lg-6 mb-30">
+                                                            <label for="lastname" style="font-size: 18px;">Tên <span>*</span></label>
+                                                            <input style="height: 50px; font-size: 18px;" name="Ten" id="lastname" placeholder="Nhập tên của bạn..." type="text" required> 
+                                                        </div>                                                                                                   
+                                                                                                    
+                                                        <!-- <div class="col-12 mb-30">
+                                                            <label for="city" style="font-size: 18px;">Tỉnh / Thành Phố <span>*</span></label>
+                                                            <select style="height: 50px; font-size: 18px;" name="ThanhPho" class="form-select form-select-sm mb-3" id="city" aria-label=".form-select-sm">
+                                                                <option value="" selected>Chọn tỉnh / thành</option>  
+                                                            </select> 
+                                                        </div> 
+                                                        <div class="col-12 mb-30">
+                                                            <label for="district" style="font-size: 18px;">Quận / Huyện <span>*</span></label>
+                                                            <select style="height: 50px; font-size: 18px;" name="QuanHuyen" class="form-select form-select-sm mb-3" id="district" aria-label=".form-select-sm">
+                                                                <option value="" selected>Chọn quận / huyện</option>
+                                                            </select>
+                                                        </div> 
+                                                        <div class="col-12 mb-30">
+                                                            <label for="ward" style="font-size: 18px;"> Phường / Xã <span>*</span></label>
+                                                            <select style="height: 50px; font-size: 18px;" name="PhuongXa" class="form-select form-select-sm" id="ward" aria-label=".form-select-sm">
+                                                                <option value="" selected>Chọn phường / xã</option>
+                                                            </select>
+                                                        </div>  -->
+
+                                                        <div class="col-12 mb-30">
+                                                            <label for="dcct" style="font-size: 18px;">Địa chỉ chi tiết  <span>*</span></label>
+                                                            <input style="height: 50px; font-size: 18px;" name="DiaChiChiTiet" id="dcct" placeholder="Nhập Địa chỉ chi tiết..." type="text" required>     
+                                                        </div>
+                                                        <div class="col-lg-6 mb-30">
+                                                            <label for="sdt" style="font-size: 18px;">Phone<span>*</span></label>
+                                                            <input style="height: 50px; font-size: 18px;" name="SoDienThoai" id="sdt" type="phone" placeholder="Nhập Số điện thoại của bạn..." required> 
+
+                                                        </div> 
+                                                        <div class="col-lg-6 mb-30">
+                                                            <label for="mail" style="font-size: 18px;"> Email Address   <span>*</span></label>
+                                                            <input style="height: 50px; font-size: 18px;" name="Email" id="mail" type="email" placeholder="Nhập Email của bạn..." required> 
+
+                                                        </div> 
+                                                        
+                                                
+                                                        <div class="col-12">
+                                                            <div class="order-notes">
+                                                                <label for="order_note" style="font-size: 18px;">Order Notes</label>
+                                                                <textarea name="Note" style="height: 100px;font-size: 18px;" id="order_note" placeholder="..."></textarea>
+                                                            </div>  
+                                                            <br>  
+                                                            <div class="order_button" style="text-align: center;">
+                                                                <button style="font-family: Arial, Helvetica, sans-serif;" type="submit">Tiến hành đặt hàng</button> 
+                                                            </div>
+                                                        </div> 
+                                                        <br> <br>
+                                                        <div class="col-12" style="margin-top: 50px;">
+                                                            <div id="custom-alert" class="custom-alert hidden">
+                                                                <p id="alert-message" style="display: block;"></p>
+                                                            </div>
+                                                            <div id="error-message" style="font-size: 20px;display: none; color: red;text-align: center;background-color: rgb(255, 241, 241); padding: 15px;border-radius: 15px;"></div>
+                                                        </div>
+                                                        
+                                                    </div>
+                                                    
+                                                <!-- </form>     -->                                                
+                                            </div>
+
+                                            <!-- đoạn này là đoạn input ẩn, để lấy giá trị gửi về email khách hàng -->
+                                            <input type="hidden" name="soluongdat" value="<%= cartItemss.totalQuaty %>">
+                                            <% if (totalCartPrice >= 1000000) { %>
+                                                <input type="hidden" name="PhiShip" value="0đ">
+                                            <% } else { %>
+                                                <input type="hidden" name="PhiShip" value="<%= formatCurrency(detailCart.cart.PhiShip) %>">
+                                            <% } %> 
+
+                                            <% if (totalCartPrice >= 1000000) { %>
+                                                <input type="hidden" name="CanThanhToan" value="<%= formatCurrency(totalCartPrice - giam_Gia ) %>">
+                                            <% } else { %>
+                                                <input type="hidden" name="CanThanhToan" value="<%= formatCurrency(detailCart.cart.PhiShip + totalCartPrice - giam_Gia ) %>">
+                                            <% } %>
+                                             <!-- đoạn này là đoạn input ẩn, để lấy giá trị gửi về email khách hàng -- end -->
+
+                                            <div class="col-lg-6 col-md-6">
+                                                <div class="coupon_code">
+                                                    <h3 style="font-family: Arial, Helvetica, sans-serif;">
+                                                        Thông tin đơn hàng      
+                                                        &emsp;                                         
+                                                        &emsp;   
+                                                    </h3>                                                
+                                                    <div class="coupon_inner">
+                                                    <div class="cart_subtotal">
+                                                        <p style="font-family: Arial, Helvetica, sans-serif; font-size: 16px;">Tổng giá <%= cartItemss.totalQuaty !== 0 ? cartItemss.totalQuaty : 0 %> sản phẩm</p>
+                                                        <p class="cart_amount" style="color: navy;"><%= formatCurrency(totalCartPrice) %></p>
+                                                        <input type="hidden" name="TongGia" value="<%= formatCurrency(totalCartPrice) %>">
+                                                    </div>
+                                                    <!-- Math.floor((data.giamGia / data.totalPrice) * 100) -->
+                                                        <div class="cart_subtotal"> 
+                                                            <% const giamgia = Math.floor((giam_Gia / totalCartPrice) * 100); %>
+                                                            <input type="hidden" name="GiamGia" value="<%= giamgia %>">
+                                                            <p style="font-family: Arial, Helvetica, sans-serif; font-size: 16px;">Giảm Giá &ensp;<span style="color: red;"><%= giamgia %>%</span></p>
+                                                            <p class="cart_amount" style="color: rgb(214, 0, 0);">-<%= formatCurrency(giam_Gia) %></p>
+                                                            <input type="hidden" name="SoTienGiamGia" value="<%= formatCurrency(giam_Gia) %>">
+                                                        </div>
+
+                                                    <div class="cart_subtotal " style="border-bottom: 1px solid rgb(172, 169, 169);">
+                                                        <p style="font-family: Arial, Helvetica, sans-serif; font-size: 16px;">Phí giao hàng</p>
+                                                        <% if (totalCartPrice >= 1000000) { %>
+                                                            <!-- <p class="cart_amount" style="color: red; text-decoration-line: line-through; font-style: italic;"> 30.000 đ</p> -->
+                                                            <a href="#" style="pointer-events: none; cursor: pointer; font-size: 16px;border-bottom: none;">Miễn Phí Vận Chuyển</a>
+                                                            <% } else { %>
+                                                                <p class="cart_amount" style="color: red;"> <%= formatCurrency(detailCart.cart.PhiShip) %></p>
+                                                            <% } %>                                                                                                                      
+                                                    </div>
+                                                    <br>
+                                                    
+
+                                                    <div class="cart_subtotal">
+                                                        <p style="font-family: Arial, Helvetica, sans-serif; font-size: 16px;">Số tiền cần thanh toán</p>
+                                                        <input type="hidden" name="SoLuongTon" value="" >
+                                                        <input type="hidden" name="SoLuongBan" value="" >
+
+                                                        <% if (totalCartPrice >= 1000000) { %>
+                                                            <p class="cart_amount" style="color: red; font-weight: bold;"><%= formatCurrency(totalCartPrice - giam_Gia ) %></p>
+                                                            
+                                                        <% } else { %>
+
+                                                            <p class="cart_amount" style="color: red; font-weight: bold;"><%= formatCurrency(detailCart.cart.PhiShip + totalCartPrice - giam_Gia ) %></p>
+                                                        <% } %>
+
+                                                            
+
+                                                    </div>
+
+                                                  
+                                                    </div>
+                                                </div>
+                                                <!-- <img src="assets/img/cart/kmkm.png" alt=""> -->
+                                                <div class="payment_method">
+                                                        
+                                                    <div class="panel-default">
+                                                        <input required id="payment" name="TinhTrangTT" type="radio" value="Chưa Thanh Toán" >
+                                                        <label style="font-size: 18px;" for="payment"  aria-controls="method">Thanh toán khi nhận hàng</label>                                                        
+                                                    </div>     
+                                                                                                                                                                                                           
+
+                                                    <div class="panel-default">
+                                                        <input required id="payment_defult" name="TinhTrangTT" value="Đã Thanh Toán" type="radio" data-toggle="modal" data-target="#exampleModalCenter" >
+                                                        <label style="font-size: 18px;" for="payment_defult" data-toggle="collapse" data-target="#collapsedefultt" aria-controls="collapsedefultt">Momo/Atm <img src="assets\img\visha\papyel.png" alt=""></label>
+                                                        <div class="col-12">
+                                                            <div class="order-notes" >
+                                                                <img style="width: 500px;" src="assets/img/cart/hinhthuctt.jpg" alt="">                                                            
+                                                            </div>    
+                                                        </div> 
+
+
+                                                        <!-- Modal -->
+                                                        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                                            <div class="modal-content">
+                                                                <div class="modal-header">
+                                                                <h5 class="modal-title" id="exampleModalLongTitle" style="font-family: Arial, Helvetica, sans-serif;">Thông tin chuyển khoản</h5>
+                                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                    <span aria-hidden="true">&times;</span>
+                                                                </button>
+                                                                </div>
+                                                                <div class="modal-body">
+                                                                    <div class="col-12">
+                                                                        <div style="display: none;" id="collapsedefult" class="collapse one" data-parent="#accordion">
+                                                                            <div class="card-body1" style="text-align: center;display: block;">
+                                                                                <% if (totalCartPrice >= 1000000) { %>
+                                                                                    <div style="display: inline-block;">
+                                                                                        <img style="width: 500px;" src='https://img.vietqr.io/image/970422-0379755137-print.png?amount=<%= totalCartPrice - giam_Gia %>&addInfo=WebShopNgocHuong+TenKhachHang+SoDienThoai&accountName=Nguyen+Ngoc+Chien'/>
+                                                                                    </div>
+                                                                                    <!-- <div style="display: inline-block;">
+                                                                                        <img style="width: 500px;" src='https://img.vietqr.io/image/970418-21510003260941-print.png?amount=<%= totalCartPrice - giam_Gia %>&addInfo=WebShopNgocHuong+TenKhachHang+SoDienThoai&accountName=Nguyen+Ngoc+Chien'/>
+                                                                                    </div> -->
+                                                                                <% } else { %>   
+                                                                                    <div style="display: inline-block;">
+                                                                                        <img style="width: 500px;" src='https://img.vietqr.io/image/970422-0379755137-print.png?amount=<%= detailCart.cart.PhiShip + totalCartPrice - giam_Gia %>&addInfo=WebShopNgocHuong+TenKhachHang+SoDienThoai&accountName=Nguyen+Ngoc+Chien'/>
+                                                                                    </div>
+                                                                                    <!-- <div style="display: inline-block;">
+                                                                                        <img style="width: 500px;" src='https://img.vietqr.io/image/970418-21510003260941-print.png?amount=<%= detailCart.cart.PhiShip + totalCartPrice - giam_Gia %>&addInfo=WebShopNgocHuong+TenKhachHang+SoDienThoai&accountName=Nguyen+Ngoc+Chien'/>
+                                                                                    </div> -->
+                                                                                <% } %>
+            
+                                                                            </div>
+                                                                            <p style="font-size: 18px;margin: 20px 0">
+                                                                                Bấm vào đây để 
+                                                                                <a target="_blank" style="text-decoration-line: underline; color: blue;" href="https://www.facebook.com/messages/t/dokhactudz">Xác nhận đơn hàng</a>
+                                                                                sau khi chuyển khoản thành công
+                                                                            </p>
+                                                                            
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="modal-footer">
+                                                                <button style="border-radius: 5px;cursor: pointer; height: 40px;font-size: 18px;" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                                <script>
+                                                                    $(document).ready(function() {
+                                                                        // Bắt sự kiện khi modal được đóng
+                                                                        $('#exampleModalCenter').on('hidden.bs.modal', function () {
+                                                                            // Chọn radio button "Thanh toán khi nhận hàng"
+                                                                            $('#payment').prop('checked', true);
+                                                                            
+                                                                        });
+
+                                                                    });
+                                                                </script>
+                                                                <button style="border-radius: 5px;cursor: pointer; height: 40px;font-size: 18px;" type="submit" class="btn btn-primary">Bấm vào đây để đặt hàng khi đã thanh toán thành công</button>
+                                                                </div>
+                                                            </div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- end Modal -->
+
+                                                        <script type="text/javascript">
+                                                            $("#payment").click(function () {
+                                                                $("#collapsedefult").hide();
+                                                            })
+
+                                                            $("#payment_defult").click(function () {
+                                                                $("#collapsedefult").show();
+                                                            })
+                                                        </script>
+                                                    </div>    
+                                                </div> 
+                                            </div>
+                                            
+                                        </div> 
+                                </div>   
+                            </form>     
+                        </div>                        
+                        <!--Checkout page section end-->
+                         <!--checkout end -->
+
+                        
+                    </div>
+                    <!--pos page inner end-->
+                </div>
+            </div>
+            <!--pos page end-->
+            
+            <!--footer area start-->
+            <%- include('../../partials/footer.ejs') %>            
+            <!--footer area end-->
+		<!-- all js here -->
+        <!-- <script src="assets\js\vendor\jquery-1.12.0.min.js"></script> -->
+        <script src="assets\js\popper.js"></script>
+        <script src="assets\js\bootstrap.min.js"></script>
+        <script src="assets\js\ajax-mail.js"></script>
+        <script src="assets\js\plugins.js"></script>
+        <script src="assets\js\main.js"></script>
+        <script src="assets\js\hamDinhDangTien_VaLinkAnh.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+        <script src="assets\js\selector_address.js"></script>
+        
+        <!-- xu ly loader page -->
+        <!-- <script src="assets\js\loader_dathang.js"></script> -->
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                var form = document.getElementById("dathang");
+                var loader = document.getElementById("loader");
+
+                form.addEventListener("submit", function (event) {
+                    event.preventDefault();
+
+                    loader.style.display = "flex";
+
+                    setTimeout(function () {
+                        loader.style.display = "none";
+                    }, 5000);
+                });
+            });
+        </script>
+        <!-- thong bao dat hang thanh cong -->
+        <!-- <script src="assets\js\thongBaoDatHang.js"></script> -->
+        <script>
+            // Hàm hiển thị thông báo tùy chỉnh
+            function showCustomAlert(message) {
+                const alertElement = document.getElementById("custom-alert");
+                const messageElement = document.getElementById("alert-message");
+
+                // Hiển thị thông báo và đặt nội dung
+                alertElement.style.display = "block";
+                messageElement.innerText = message;
+
+                // Ẩn thông báo sau một khoảng thời gian (ví dụ: 1.5 giây)
+                setTimeout(() => {
+                    hideCustomAlert();
+                    window.location.href = "/detailt-cart-trang-moi";
+                }, 1000);
+            }
+
+            // Hàm ẩn thông báo tùy chỉnh
+            function hideCustomAlert() {
+                const alertElement = document.getElementById("custom-alert");
+
+                // Ẩn thông báo
+                alertElement.style.display = "none";
+            }
+
+            document.addEventListener("DOMContentLoaded", function () {
+                const form = document.getElementById("dathang");
+                const errorElement = document.getElementById("error-message");
+
+                form.addEventListener("submit", function (event) {
+                    event.preventDefault(); // Prevent the form from submitting in the traditional way
+
+                    // Assuming you are using FormData to serialize the form data
+                    const formData = new FormData(form);
+
+                    // Make an AJAX request
+                    fetch("/dat-hang", {
+                        method: "POST",
+                        body: formData,
+                    })
+                    .then((response) => response.json())
+                    .then((data) => {
+                        if (data.success) {
+                            // showCustomAlert(data.message);
+
+                            toastr.options = {
+                                "closeButton": true,
+                                "debug": false,
+                                "newestOnTop": true,
+                                "progressBar": true,
+                                "positionClass": "toast-top-right",
+                                "preventDuplicates": false,
+                                "onclick": null,
+                                "showDuration": "300",
+                                "hideDuration": "1000",
+                                "timeOut": "2000",
+                                "extendedTimeOut": "1000",
+                                "showEasing": "swing",
+                                "hideEasing": "linear",
+                                "showMethod": "fadeIn",
+                                "hideMethod": "fadeOut"
+                            }
+                            toastr["success"](data.message, "Thành Công!")
+                            setTimeout(function() {
+                                toastr.clear();
+                                window.location.href = "/detailt-cart-trang-moi";
+                            }, 2000);
+
+                        } else {
+                            if (data.error) {
+                                // errorElement.textContent = data.error; // Hiển thị thông báo lỗi từ máy chủ
+                                // errorElement.style.display = "block";
+
+                                toastr.options = {
+                                    "closeButton": true,
+                                    "debug": false,
+                                    "newestOnTop": true,
+                                    "progressBar": true,
+                                    "positionClass": "toast-top-full-width",
+                                    "preventDuplicates": false,
+                                    "onclick": null,
+                                    "showDuration": "300",
+                                    "hideDuration": "1000",
+                                    "timeOut": "5000",
+                                    "extendedTimeOut": "1000",
+                                    "showEasing": "swing",
+                                    "hideEasing": "linear",
+                                    "showMethod": "fadeIn",
+                                    "hideMethod": "fadeOut"
+                                }
+                                toastr["error"](data.error, "Đặt hàng thất bại")
+
+                            } else if (data.message) {
+                                // errorElement.textContent = data.message; // Hiển thị thông báo từ máy chủ
+                                // errorElement.style.display = "block";
+
+                                toastr.options = {
+                                    "closeButton": true,
+                                    "debug": false,
+                                    "newestOnTop": true,
+                                    "progressBar": true,
+                                    "positionClass": "toast-top-full-width",
+                                    "preventDuplicates": false,
+                                    "onclick": null,
+                                    "showDuration": "300",
+                                    "hideDuration": "1000",
+                                    "timeOut": "5000",
+                                    "extendedTimeOut": "1000",
+                                    "showEasing": "swing",
+                                    "hideEasing": "linear",
+                                    "showMethod": "fadeIn",
+                                    "hideMethod": "fadeOut"
+                                }
+                                toastr["error"](data.message, "Đặt hàng thất bại")
+                            } else {
+                                // errorElement.textContent = 'Có vẻ có một số sản phẩm đã hết hàng. Vui lòng kiểm tra lại giỏ hàng của bạn.'; 
+                                // errorElement.style.display = "block";
+
+                                toastr.options = {
+                                    "closeButton": true,
+                                    "debug": false,
+                                    "newestOnTop": true,
+                                    "progressBar": true,
+                                    "positionClass": "toast-top-full-width",
+                                    "preventDuplicates": false,
+                                    "onclick": null,
+                                    "showDuration": "300",
+                                    "hideDuration": "1000",
+                                    "timeOut": "5000",
+                                    "extendedTimeOut": "1000",
+                                    "showEasing": "swing",
+                                    "hideEasing": "linear",
+                                    "showMethod": "fadeIn",
+                                    "hideMethod": "fadeOut"
+                                }
+                                toastr["error"]('Có vẻ có một số sản phẩm đã hết hàng. Vui lòng kiểm tra lại giỏ hàng của bạn.', "Đặt hàng thất bại")
+                            }
+                        }
+                    })
+                    .catch((error) => {
+                        console.error("Error in dat-hang:", error);
+                    });
+                });
+            });
+        </script>
+         
+        <!-- <script>
+            $(document).ready(function() {
+                $('input[name="check_method"]').change(function() {
+                    var collapsedefult = $('#collapsedefult');
+
+                    if (this.value === 'payment') {
+                        collapsedefult.hide(); // Ẩn phần Momo/ATM
+                    } else if (this.value === 'payment_defult') {
+                        collapsedefult.show(); // Hiển thị phần Momo/ATM
+                    }
+                });
+            });
+        </script> -->
+        <script src="AdminQL/HomeAdminQL/thuVienToastr/toastr.min.js"></script>
+        
+    </body>
+</html>

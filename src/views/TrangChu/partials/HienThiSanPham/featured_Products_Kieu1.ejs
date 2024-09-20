@@ -1,0 +1,54 @@
+<!-- kiểu 1 -- có 3 sản phẩm 1 dòng -->
+<div class="featured_product">
+    <div class="block_title">
+        <h3 style="font-family: Verdana, Geneva, Tahoma, sans-serif; color: navy;">Sản Phẩm Nổi Bật</h3>
+    </div>
+    <div class="row">
+        <% if (spNoiBat && spNoiBat.length > 0) { %>
+        <div class="product_active owl-carousel">
+                <% spNoiBat.forEach(function(spNoiBat) { %>
+            <div class="col-lg-3">
+                <form id="form-addtocart-new" action="/addtocart?productId=<%= spNoiBat._id %>" method="POST">
+                    <div class="single_product">
+                        <div class="product_thumb">
+                        <a href="/detailt-sp-ht1?idDetailtSP=<%= spNoiBat._id %>"><img height="336.50px" src="images/upload/<%= getRelativeImagePath(spNoiBat.Image) %>" alt=""></a> 
+                        <% if (spNoiBat.New_Hot === "New") { %>
+                            <div class="img_icone">
+                                <img src="assets\img\cart\span-new.png" alt="">
+                            </div>
+                            <% } else { %> 
+                            <div class="hot_img">
+                                <img src="assets\img\cart\span-hot.png" alt="">
+                            </div>
+                            <% } %>
+                        <div class="product_action">
+                                <button type="submit" style="cursor: pointer;" class="btn-addtocart">
+                                    <i class="fa fa-shopping-cart"></i> Add to cart
+                                </button>
+                                <input value="1" type="hidden" name="quantity" data-product-id="<%= spNoiBat._id %>">
+                                <input value="100ml" type="hidden" name="size">
+                                <input value="<%= spNoiBat.GiaBan %>" type="hidden" name="PriceBanMoi" >
+                                <input value="<%= spNoiBat.SoLuongTon %>" type="hidden" name="SoLuongTon" >
+                        </div>
+                        </div>
+                        <div class="product_content">
+                            <span class="product_price" style="color: red;"><%= formatCurrency(spNoiBat.GiaBan) %></span>
+                            <h3 class="product_title"><a style="font-size: 18px ;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif" href="/detailt-sp-ht1?idDetailtSP=<%= spNoiBat._id %>"><%= spNoiBat.TenSP %></a></h3>
+                        </div>
+                        <div class="product_info">
+                            <ul>
+                                <li><a href="#" title=" Add to Wishlist ">Add to Wishlist</a></li>
+                                <input type="hidden" name="idDetailtSPP" value="<%= spNoiBat._id %>">
+                                <li><a id="viewDetailt" href="#" data-product-id="<%= spNoiBat._id %>"  data-toggle="modal" data-target="#modal_box" title="Quick view" >View Detail</a></li>                                                                                
+                            </ul>
+                        </div>
+                    </div>
+                </form>
+            </div>
+                <% }); %> 
+            </div> 
+            <% } else { %> 
+                <p>Admin chưa update sản phẩm</p>
+            <% } %>           
+    </div> 
+</div>   
